@@ -33,6 +33,10 @@
 * **物理位置**: 900 sqft Mezzanine 阁楼**必须位于后区 35ft 高顶钢构区**（檐高 24ft/7.3m），一楼与二楼净高各 11ft (3.35m)。
 * **严禁规则**: 严禁将阁楼设计在 40ft HC 集装箱箱体内部（因箱内净高仅 8'10" / 2.69m）。
 
+### 4. 工程预验算与审批边界
+* **计算母本**: 热浮力、Mezzanine 梁柱、Site Plan 消防通道 / U-Drain / 化粪池的概念预验算均记录在 `architectural_design_drawings.md`；修改任一输入参数后必须重新计算。
+* **审批边界**: 预验算是方案筛选工具，不能替代马来西亚注册建筑师、专业工程师、消防顾问或 MPK OSC 的签证与批准；退缩线、消防车道、化粪池最终容量须按地契、分区、道路保留地及当期官方要求确认。
+
 ---
 
 ## 🛠️ Codex 工具链操作快速指令 (Codex Quick CLI Commands)
@@ -61,6 +65,6 @@ vercel --prod --yes
 
 ## 🤝 跨 Agent 相互配合与学习流 (Multi-Agent Workflow)
 
-1. **修改规范**: 涉及修改工程图纸、配色、HTML 或逻辑时，请务必更新根目录下的 `CODEX_GUIDE.md` 与 `architectural_design_drawings.md`。
+1. **修改规范**: 涉及修改工程图纸、配色、HTML 或逻辑时，请务必更新根目录下的 `CODEX_GUIDE.md` 与 `architectural_design_drawings.md`。其中 `architectural_design_drawings.md` 是平面、屋顶标高与集装箱朝向的文字版母图；出现旧图或旧文案冲突时，以该文件及本节硬性规则为准。
 2. **提交规范**: 使用清晰的 Conventional Commits（如 `fix(cad): update elevation pitch height`）。
 3. **推送到 Master**: `git push origin master` 触发 Vercel 自动增量更新，保证公网分享链接实时最新。

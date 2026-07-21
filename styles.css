@@ -372,6 +372,138 @@ a {
   font-size: 0.95rem;
 }
 
+/* ================= Design Control Matrix ================= */
+.design-control-section {
+  background: #fffdf7;
+}
+
+.design-control-grid {
+  display: grid;
+  grid-template-columns: 1.25fr 0.75fr 0.9fr;
+  gap: 18px;
+}
+
+.control-card {
+  background: #fff;
+  border: 1px solid #eadfc8;
+  border-radius: var(--radius-md);
+  padding: 22px;
+  box-shadow: var(--shadow-sm);
+}
+
+.control-kicker {
+  display: block;
+  color: var(--accent-gold);
+  font-size: .68rem;
+  font-weight: 800;
+  letter-spacing: 1.25px;
+  margin-bottom: 8px;
+}
+
+.control-card h3 {
+  font-size: 1.05rem;
+  margin-bottom: 10px;
+}
+
+.control-card p {
+  color: var(--text-muted);
+  font-size: .84rem;
+}
+
+.plan-rule {
+  display: grid;
+  grid-template-columns: 8fr 34fr 8fr;
+  min-height: 86px;
+  margin: 16px 0 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.plan-block {
+  align-content: center;
+  padding: 8px 3px;
+  text-align: center;
+  font-size: .72rem;
+  font-weight: 700;
+}
+
+.plan-block small { font-size: .62rem; font-weight: 500; }
+.container-block { background: #334155; color: #fff; }
+.atrium-block { background: #dcfce7; color: #14532d; }
+.control-stat { color: var(--primary); font-size: 1.45rem; font-weight: 800; margin-top: 22px; }
+.roof-card code { color: #92400e; font-size: .75rem; }
+
+.roof-levels {
+  display: grid;
+  gap: 7px;
+  margin-top: 15px;
+}
+
+.roof-levels span {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--bg-light);
+  border-radius: 6px;
+  color: var(--text-muted);
+  font-size: .72rem;
+  padding: 7px 9px;
+}
+
+.roof-levels strong { color: var(--primary); font-size: .82rem; }
+.control-note { color: var(--text-muted); font-size: .8rem; margin-top: 16px; }
+.control-note a { color: var(--accent-gold); font-weight: 700; text-decoration: underline; }
+
+/* ================= Engineering Pre-checks ================= */
+.engineering-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.engineering-card {
+  background: #fff;
+  border: 1px solid var(--border-color);
+  border-top: 4px solid var(--primary);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  padding: 22px;
+}
+
+.thermal-card { border-top-color: var(--accent-green); }
+.structure-card { border-top-color: #2563eb; }
+.site-card { border-top-color: var(--accent-gold); }
+
+.engineering-card h3 {
+  font-size: 1.32rem;
+  margin-bottom: 8px;
+}
+
+.engineering-card > p {
+  color: var(--text-muted);
+  font-size: .84rem;
+}
+
+.calc-list {
+  display: grid;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.calc-list div {
+  align-items: center;
+  background: var(--bg-light);
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 10px;
+}
+
+.calc-list dt { color: var(--text-muted); font-size: .73rem; }
+.calc-list dd { color: var(--primary); font-size: .8rem; font-weight: 800; margin: 0; }
+.engineering-card .warning-text { color: #92400e; font-weight: 600; margin-top: 14px; }
+
 /* ================= 0-1 GIF Build Process Showcase ================= */
 .gif-showcase-box {
   display: grid;
@@ -807,6 +939,14 @@ a {
   }
   
   .style-views-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .design-control-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .engineering-grid {
     grid-template-columns: 1fr;
   }
 

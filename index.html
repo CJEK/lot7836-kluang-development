@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lot 7836 居銮 50x75ft 现代热带 Loft Bungalow 完整开发提案</title>
   <meta name="description" content="Kluang Lot 7836 50x75ft Modern Tropical Malay Bungalow Warehouse complete architectural development pack, Style 2 Breeze Block Container Build GIF, CAD blueprints.">
+  <link rel="preload" as="image" href="assets/style2_container_to_breeze_block_build.gif" fetchpriority="high">
   
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="favicon.ico">
@@ -17,11 +18,6 @@
   <meta property="og:type" content="website">
   <meta property="og:image" content="assets/style2-ext.jpg">
   <meta name="twitter:card" content="summary_large_image">
-  
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -36,6 +32,8 @@
       </a>
       <nav class="nav-links" id="main-nav">
         <a href="#overview" class="active">项目总览</a>
+        <a href="#design-control">设计控制线</a>
+        <a href="#engineering">工程预验算</a>
         <a href="#multi-angle">多方位外观展示</a>
         <a href="#style2-gif">0-1 施工 GIF</a>
         <a href="#style2-pkg">风格 2：花砖屏风墙 (推荐)</a>
@@ -70,6 +68,7 @@
           <div class="quick-title">⚡ 快速导航与风格直达 (Style & Blueprint Quick Access)</div>
           <div class="quick-grid">
             <a href="#multi-angle" class="quick-btn">📐 全局多方位外观展示 (3D Viewports)</a>
+            <a href="#design-control" class="quick-btn">📏 50×75ft 建筑控制线</a>
             <a href="#style2-gif" class="quick-btn">🎞️ 集装箱 0-1 改造施工 GIF</a>
             <a href="#style2-pkg" class="quick-btn">🟢 风格 2：马六甲风砖屏风墙 (推荐)</a>
             <a href="#style1-pkg" class="quick-btn">🔴 风格 1：赤陶红现代热带风</a>
@@ -103,13 +102,79 @@
       <!-- Hero Visual Cover GIF -->
       <div class="hero-cover-card" onclick="openLightbox('assets/style2_container_to_breeze_block_build.gif', '风格2 马六甲度假村风砖屏风墙 0-1 施工 GIF')">
         <div class="image-wrapper">
-          <img src="assets/style2_container_to_breeze_block_build.gif" alt="Style 2 Breeze Block Container Build GIF">
+          <img src="assets/style2_container_to_breeze_block_build.gif" alt="Style 2 Breeze Block Container Build GIF" width="1280" height="720" decoding="async" fetchpriority="high">
           <span class="view-tag">🎞️ 点击全屏播放 0-1 施工 GIF 动画</span>
         </div>
         <div class="cover-caption">
           <strong>集装箱 0-1 改造施工 GIF</strong>：真实展示地基定位、等离子切割、100mm 方钢补强、柱网与 Batu Angin 花砖砌筑过程。
         </div>
       </div>
+    </div>
+  </section>
+
+  <section class="section bg-light" id="engineering">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">ENGINEERING PRE-CHECKS</span>
+        <h2>热工、阁楼结构与 Site Plan 的可复核预验算</h2>
+        <p>所有数值均为方案阶段的透明计算；施工、消防与报批前必须由相应马来西亚注册专业人士复核。</p>
+      </div>
+      <div class="engineering-grid">
+        <article class="engineering-card thermal-card">
+          <span class="control-kicker">STACK EFFECT / 自然排风</span>
+          <h3>5,087 CFM · 2.61 ACH</h3>
+          <p>32°C 室外、36°C 室内、46ft 有效高度，采用 Cd=0.60 与进 / 排风各 3.0m² 自由面积（Aeff=2.121m²）。</p>
+          <dl class="calc-list"><div><dt>可移除显热</dt><dd>约 11.6 kW</dd></div><div><dt>条件性降温</dt><dd>相对无通风 3–5°C</dd></div></dl>
+        </article>
+        <article class="engineering-card structure-card">
+          <span class="control-kicker">MEZZANINE / 结构</span>
+          <h3>13.98mm &lt; L/360</h3>
+          <p>17ft 简支 H250×125×6×9 等效主梁，Gk+Qk=4.0kN/m²，最大分担宽度 2.90m。</p>
+          <dl class="calc-list"><div><dt>ULS 弯矩</dt><dd>56.21 kN·m</dd></div><div><dt>概念抗弯</dt><dd>77.08 kN·m</dd></div></dl>
+        </article>
+        <article class="engineering-card site-card">
+          <span class="control-kicker">SITE PLAN / 送审控制</span>
+          <h3>6.0m 消防通道</h3>
+          <p>总平面须明确 20ft 净宽消防车道、300mm U-Drain 流向 / 检修井及 4.0m³ 化粪池占位。</p>
+          <p class="warning-text">退缩线与最终消防条件待 MPK OSC、BOMBA、地契与测量图确认。</p>
+        </article>
+      </div>
+      <p class="control-note">完整公式、荷载组合、截面假设与审批边界见 <a href="architectural_design_drawings.md">architectural_design_drawings.md</a>。</p>
+    </div>
+  </section>
+
+  <section class="section design-control-section" id="design-control">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">NON-NEGOTIABLE DESIGN CONTROL</span>
+        <h2>50 × 75ft 建筑控制线：先锁定几何，再发展风格</h2>
+        <p>这一组参数是供 Codex、Antigravity、顾问与承包商共用的单一事实来源；所有风格方案都必须在此边界内演进。</p>
+      </div>
+      <div class="design-control-grid">
+        <article class="control-card control-card-wide">
+          <span class="control-kicker">PLAN / 平面</span>
+          <h3>前 40ft：双侧纵向集装箱 + 34ft 中央挑高中庭</h3>
+          <div class="plan-rule" aria-label="50ft frontage layout: 8ft container, 34ft atrium, 8ft container">
+            <span class="plan-block container-block">8ft<br>40ft HC</span>
+            <span class="plan-block atrium-block">34ft 中庭<br><small>无遮挡主空间 / 穿堂风</small></span>
+            <span class="plan-block container-block">8ft<br>40ft HC</span>
+          </div>
+          <p>总横向校核：8ft + 34ft + 8ft = 50ft。两个 40ft HC 的长边一律沿 75ft 进深方向，且只占前 40ft。</p>
+        </article>
+        <article class="control-card">
+          <span class="control-kicker">REAR 35FT / 后区</span>
+          <h3>轻钢高顶延伸段</h3>
+          <p>40ft 以后连续 35ft，承载湿区、仓储扩展与 900 sqft Mezzanine；阁楼不进入集装箱本体。</p>
+          <div class="control-stat">50ft × 35ft</div>
+        </article>
+        <article class="control-card roof-card">
+          <span class="control-kicker">ROOF / 标高</span>
+          <h3>30° 坡屋顶控制公式</h3>
+          <p><code>24ft + 25ft × tan(30°)</code></p>
+          <div class="roof-levels"><span>屋檐<br><strong>+24'-0"</strong></span><span>主屋脊基座<br><strong>+38'-5"</strong></span><span>Jack Roof 顶<br><strong>+47'-0"</strong></span></div>
+        </article>
+      </div>
+      <p class="control-note">施工与报批阶段须由马来西亚注册建筑、结构、MEP 及消防专业人士复核。完整协作规则见 <a href="architectural_design_drawings.md">architectural_design_drawings.md</a>。</p>
     </div>
   </section>
 
@@ -124,7 +189,7 @@
 
       <div class="style-views-grid">
         <div class="view-card" onclick="openLightbox('assets/iso-3d.jpg', '项目 3/4 轴测透视全景图')">
-          <div class="img-box"><img src="assets/iso-3d.jpg" alt="3/4 轴测图"></div>
+          <div class="img-box"><img src="assets/iso-3d.jpg" alt="3/4 轴测图" width="1376" height="768" loading="lazy" decoding="async"></div>
           <div class="view-caption">
             <h4>1. 3/4 轴测全景透视 (3/4 Isometric View)</h4>
             <p>展现 50ft 面宽与 75ft 进深比例，高坡屋顶与中央拔风塔对流结构。</p>
@@ -132,7 +197,7 @@
         </div>
 
         <div class="view-card" onclick="openLightbox('assets/birds-eye.jpg', '项目鸟瞰全景图')">
-          <div class="img-box"><img src="assets/birds-eye.jpg" alt="鸟瞰全景图"></div>
+          <div class="img-box"><img src="assets/birds-eye.jpg" alt="鸟瞰全景图" width="1376" height="768" loading="lazy" decoding="async"></div>
           <div class="view-caption">
             <h4>2. 鸟瞰全景视角 (Bird's Eye Aerial View)</h4>
             <p>呈现地块退缩线、绿化景观中庭、后区服务通道与高空采光布局。</p>
@@ -140,7 +205,7 @@
         </div>
 
         <div class="view-card" onclick="openLightbox('assets/side-facade.jpg', '75ft 侧立面与服务排水沟图')">
-          <div class="img-box"><img src="assets/side-facade.jpg" alt="75ft 侧立面图"></div>
+          <div class="img-box"><img src="assets/side-facade.jpg" alt="75ft 侧立面图" width="1376" height="768" loading="lazy" decoding="async"></div>
           <div class="view-caption">
             <h4>3. 75ft 侧立面与排水沟 (Side View & Drainage)</h4>
             <p>展示高位侧采光窗、深檐遮阳避雨结构及周圈 U 型服务排水沟。</p>
@@ -161,7 +226,7 @@
 
       <div class="gif-showcase-box">
         <div class="gif-frame-container" onclick="openLightbox('assets/style2_container_to_breeze_block_build.gif', '风格2 风砖屏风墙 6 阶段施工演示')">
-          <img src="assets/style2_container_to_breeze_block_build.gif" alt="Style 2 Breeze Block Build GIF">
+          <img src="assets/style2_container_to_breeze_block_build.gif" alt="Style 2 Breeze Block Build GIF" width="1280" height="720" loading="lazy" decoding="async">
         </div>
         <div class="build-steps-timeline">
           <div class="timeline-item">
@@ -172,7 +237,7 @@
           <div class="timeline-item">
             <div class="timeline-badge">STAGE 02</div>
             <h4>波纹板等离子切割与 100mm 方钢补强</h4>
-            <p>等离子切割开出 36'×16' 大厅与屏风窗框，切口周圈焊接 100mm×100mm RHS 方钢防止变形。</p>
+            <p>保留 34ft 中央挑高中庭；集装箱开口与屏风窗框切割后，切口周圈以 100mm×100mm RHS 概念补强，最终尺寸须由结构工程师复核。</p>
           </div>
           <div class="timeline-item">
             <div class="timeline-badge">STAGE 03</div>
@@ -210,7 +275,7 @@
 
       <div class="style-views-grid style-2-grid">
         <div class="view-card" onclick="openLightbox('assets/style2-ext.jpg', '风格2：外观正立面透视图')">
-          <div class="img-box"><img src="assets/style2-ext.jpg" alt="风格2 外观正立面" loading="lazy"></div>
+          <div class="img-box"><img src="assets/style2-ext.jpg" alt="风格2 外观正立面" width="1376" height="768" loading="lazy" decoding="async"></div>
           <div class="view-caption">
             <h4>1. 外观正立面 (Front Exterior Elevation)</h4>
             <p>森林绿屋顶与红陶/白色 Batu Angin 通风花砖透气屏风墙。</p>
@@ -218,7 +283,7 @@
         </div>
 
         <div class="view-card" onclick="openLightbox('assets/style2-int.jpg', '风格2：室内花砖日光影与绿植天井中庭')">
-          <div class="img-box"><img src="assets/style2-int.jpg" alt="风格2 室内中庭" loading="lazy"></div>
+          <div class="img-box"><img src="assets/style2-int.jpg" alt="风格2 室内中庭" width="1376" height="768" loading="lazy" decoding="async"></div>
           <div class="view-caption">
             <h4>2. 室内花砖光影中庭 (Interior Space)</h4>
             <p>阳光透过风砖在水磨石地面上投射几何阴影，设室内蕨类中庭。</p>
@@ -248,7 +313,7 @@
 
       <div class="style-views-grid style-2-grid">
         <div class="view-card" onclick="openLightbox('assets/style1-ext.jpg', '风格1：外观正立面透视图')">
-          <div class="img-box"><img src="assets/style1-ext.jpg" alt="风格1 外观正立面"></div>
+          <div class="img-box"><img src="assets/style1-ext.jpg" alt="风格1 外观正立面" width="1376" height="768" loading="lazy" decoding="async"></div>
           <div class="view-caption">
             <h4>1. 外观正立面 (Front Exterior Elevation)</h4>
             <p>赤陶红斜屋顶与 50ft 度假村风入口，极简防热开窗。</p>
@@ -256,7 +321,7 @@
         </div>
 
         <div class="view-card" onclick="openLightbox('assets/style1-int.jpg', '风格1：内部挑高大厅与 Mezzanine 平台')">
-          <div class="img-box"><img src="assets/style1-int.jpg" alt="风格1 内部大厅"></div>
+          <div class="img-box"><img src="assets/style1-int.jpg" alt="风格1 内部大厅" width="1376" height="768" loading="lazy" decoding="async"></div>
           <div class="view-caption">
             <h4>2. 内部挑高大厅 (Interior Space)</h4>
             <p>裸露柚木屋架与中空采光窗，抛光混凝土地板与二层办公平台。</p>
@@ -285,7 +350,7 @@
 
       <div class="style-views-grid style-2-grid">
         <div class="view-card" onclick="openLightbox('assets/style3-ext.jpg', '风格3：外观正立面透视图')">
-          <div class="img-box"><img src="assets/style3-ext.jpg" alt="风格3 外观正立面"></div>
+          <div class="img-box"><img src="assets/style3-ext.jpg" alt="风格3 外观正立面" width="1376" height="768" loading="lazy" decoding="async"></div>
           <div class="view-caption">
             <h4>1. 外观正立面 (Front Exterior Elevation)</h4>
             <p>纯白谷仓轮廓搭配深色柚木百叶推拉门与高通风窗。</p>
@@ -293,7 +358,7 @@
         </div>
 
         <div class="view-card" onclick="openLightbox('assets/style3-int.jpg', '风格3：纯白大厅与百叶门隔断')">
-          <div class="img-box"><img src="assets/style3-int.jpg" alt="风格3 内部大厅"></div>
+          <div class="img-box"><img src="assets/style3-int.jpg" alt="风格3 内部大厅" width="1376" height="768" loading="lazy" decoding="async"></div>
           <div class="view-caption">
             <h4>2. 纯白大厅与柚木地板 (Interior Space)</h4>
             <p>双倍层高纯白钢桁架 ceiling，柚木实木地板与百叶推拉门。</p>
@@ -323,8 +388,8 @@
       <!-- Blueprint Selector Tabs -->
       <div class="bp-tabs">
         <button class="bp-btn active" data-bp-key="container" onclick="switchBlueprint('assets/container_splicing_blueprint.jpg', '集装箱切割与拼接 CAD 节点图 (Container Modification Detail)', '包含切口 100x100mm 方钢补强节点、模块拼接与 Batu Angin 花砖锚固 Detail', this)">集装箱切割/拼接 Detail</button>
-        <button class="bp-btn" data-bp-key="siteplan" onclick="switchBlueprint('assets/siteplan-bp.jpg', '总平面图 (Site Plan)', '50ft 正面边界、75ft 进深、U型排水沟、化粪池与停车场', this)">总平面图 Site Plan</button>
-        <button class="bp-btn" data-bp-key="elevation" onclick="switchBlueprint('assets/elevation-bp.jpg', '正立面施工图 (Elevation Blueprint)', '标高：+36ft 拔风塔顶、+24ft 屋檐高度，30度坡屋顶结构', this)">正立面图 Elevation</button>
+        <button class="bp-btn" data-bp-key="siteplan" onclick="switchBlueprint('assets/siteplan-bp.jpg', '总平面图 (Site Plan)', 'Jalan Pakis 50ft 正面、75ft 进深；送审红线须补 6.0m 消防车通道、300mm U-Drain 流向 / 检修井与 4.0m³ 化粪池占位（最终以 MPK / BOMBA 批准为准）', this)">总平面图 Site Plan</button>
+        <button class="bp-btn" data-bp-key="elevation" onclick="switchBlueprint('assets/elevation-bp.jpg', '正立面施工图 (Elevation Blueprint)', '控制标高：+24ft 屋檐、+38ft 5in 主屋脊基座、+47ft Jack Roof 顶；30° 坡屋顶结构', this)">正立面图 Elevation</button>
         <button class="bp-btn" data-bp-key="floorplan" onclick="switchBlueprint('assets/floorplan-bp.jpg', '2D 平面功能布局图 (Floor Plan)', '前区工作岛、后区货架区、柱网分布与双厕位置', this)">2D 平面图 Floor Plan</button>
         <button class="bp-btn" data-bp-key="mep" onclick="switchBlueprint('assets/mep-bp.jpg', 'MEP 水电与排水工程图 (MEP & Drainage)', '黑水/灰水管线、雨水 U 型沟、IC 检修井与照明风扇网格', this)">MEP 水电排水图 MEP Plan</button>
       </div>
@@ -332,7 +397,7 @@
       <!-- Interactive Blueprint Display Box -->
       <div class="blueprint-viewer-box">
         <div class="bp-main-image" onclick="openLightbox(currentBpSrc, currentBpTitle)">
-          <img id="bp-img" src="assets/container_splicing_blueprint.jpg" alt="Blueprint Preview" loading="lazy">
+          <img id="bp-img" src="assets/container_splicing_blueprint.jpg" alt="Blueprint Preview" width="1280" height="800" loading="lazy" decoding="async">
           <div class="bp-overlay"><span>🔍 点击全屏高清查看 CAD 工程图纸</span></div>
         </div>
         <div class="bp-desc-bar">
@@ -423,7 +488,7 @@
   <!-- Lightbox Modal -->
   <div class="lightbox-modal" id="lightbox" onclick="closeLightbox()">
     <span class="close-btn">&times;</span>
-    <img id="lightbox-img" src="" alt="Full view">
+    <img id="lightbox-img" src="" alt="Full view" decoding="async">
     <div class="lightbox-caption" id="lightbox-caption"></div>
   </div>
 
