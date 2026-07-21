@@ -16,10 +16,10 @@ NOTE_BG = (23, 42, 69)           # Note Box Background
 
 font_path = "/System/Library/Fonts/STHeiti Light.ttc"
 try:
-    f_title = ImageFont.truetype(font_path, 38)
-    f_header = ImageFont.truetype(font_path, 28)
-    f_body = ImageFont.truetype(font_path, 20)
-    f_small = ImageFont.truetype(font_path, 16)
+    f_title = ImageFont.truetype(font_path, 36)
+    f_header = ImageFont.truetype(font_path, 26)
+    f_body = ImageFont.truetype(font_path, 19)
+    f_small = ImageFont.truetype(font_path, 15)
     f_dim = ImageFont.truetype(font_path, 14)
 except Exception as e:
     print(f"Font error: {e}")
@@ -29,18 +29,18 @@ def draw_cad_frame(title_zh, dwg_no, desc_zh):
     img = Image.new("RGB", (W, H), BG_COLOR)
     d = ImageDraw.Draw(img)
     
-    # Grid background
+    # Grid
     for x in range(0, W, 50):
         d.line([(x, 0), (x, H)], fill=GRID_COLOR, width=1)
     for y in range(0, H, 50):
         d.line([(0, y), (W, y)], fill=GRID_COLOR, width=1)
         
-    # Outer Frame
+    # Borders
     d.rectangle([(40, 40), (W - 40, H - 40)], outline=(100, 150, 200), width=3)
     d.rectangle([(46, 46), (W - 46, H - 46)], outline=(50, 90, 140), width=1)
     
-    # Title Block (Right Bottom)
-    tb_left, tb_top = W - 780, H - 200
+    # Title Block
+    tb_left, tb_top = W - 780, H - 210
     d.rectangle([(tb_left, tb_top), (W - 50, H - 50)], fill=(18, 38, 64), outline=DIM_COLOR, width=2)
     d.line([(tb_left, tb_top + 50), (W - 50, tb_top + 50)], fill=DIM_COLOR, width=1)
     d.line([(tb_left, tb_top + 100), (W - 50, tb_top + 100)], fill=DIM_COLOR, width=1)
@@ -50,19 +50,19 @@ def draw_cad_frame(title_zh, dwg_no, desc_zh):
     d.text((tb_left + 495, tb_top + 12), f"DWG NO: {dwg_no}", font=f_small, fill=TEXT_GOLD)
     
     d.text((tb_left + 15, tb_top + 62), f"TITLE: {title_zh}", font=f_body, fill=DIM_COLOR)
-    d.text((tb_left + 495, tb_top + 62), "SCALE: 1:100 @ A3", font=f_small, fill=TEXT_MAIN)
+    d.text((tb_left + 495, tb_top + 62), "SCALE: N.T.S CONCEPTUAL", font=f_small, fill=TEXT_MAIN)
     
-    d.text((tb_left + 15, tb_top + 112), "STAGE: CONCEPTUAL PROPOSAL (FOR PE/AR REVIEW)", font=f_small, fill=TEXT_MAIN)
-    d.text((tb_left + 495, tb_top + 112), "STATUS: PRE-SUBMISSION", font=f_small, fill=(248, 113, 113))
+    d.text((tb_left + 15, tb_top + 112), "STAGE: CONCEPTUAL DIAGRAM (PRE-SUBMISSION)", font=f_small, fill=TEXT_MAIN)
+    d.text((tb_left + 495, tb_top + 112), "STATUS: FOR REVIEW", font=f_small, fill=(248, 113, 113))
 
-    # Header
+    # Title Banner
     d.rectangle([(50, 50), (W - 800, 120)], fill=(20, 45, 75), outline=DIM_COLOR, width=1)
-    d.text((70, 65), f"CAD 概念工程规范图纸 | {title_zh}", font=f_title, fill=TEXT_MAIN)
+    d.text((70, 65), f"2D 概念工程示意图 | {title_zh}", font=f_title, fill=TEXT_MAIN)
     
-    # Disclaimer and Explanation Box (Bottom Left)
+    # Note Box
     d.rectangle([(50, H - 260), (W - 800, H - 50)], fill=NOTE_BG, outline=DIM_COLOR, width=2)
-    d.text((70, H - 245), "⚠️ 专业免责声明与设计控制逻辑 (Conceptual Disclaimer & Design Control):", font=f_body, fill=TEXT_GOLD)
-    d.text((70, H - 220), "本图纸为概念设计方案。所有结构力学、消防疏散及排水终图须由马来西亚注册建筑师(Ar.)、专业工程师(P.Eng)、MPK、BOMBA 及 IWK 审核签核。", font=f_dim, fill=(248, 113, 113))
+    d.text((70, H - 245), "⚠️ 概念预留与专业免责声明 (Conceptual & Regulatory Disclaimer):", font=f_body, fill=TEXT_GOLD)
+    d.text((70, H - 220), "本图为概念意向示意图。所有结构、消防、排水及土地退缩最终须由注册建筑师(Ar.)、专业工程师(P.Eng)及相关主管机构(MPK/BOMBA/IWK)确认。", font=f_dim, fill=(248, 113, 113))
     
     lines = desc_zh.split("\n")
     y_off = H - 190
@@ -75,11 +75,11 @@ def draw_cad_frame(title_zh, dwg_no, desc_zh):
 # 1. DWG A-101: Floor Plan 2D 平面工程图
 def make_floorplan():
     img, d = draw_cad_frame(
-        "2D 建筑平面布置图 (Architectural Floor Plan)",
+        "2D 建筑平面布置示意图 (Architectural Floor Plan)",
         "DWG A-101",
-        "1. 单一控制尺寸：50ft W (15.24m) x 75ft D (22.86m)。左右双 40ft High Cube 集装箱 (各 8ft 宽)。\n"
-        "2. 切割内墙后补强 100x100mm 方钢圈，中央留出 34ft 挑高大厅。后区 35ft 为双层 Loft 办公区。\n"
-        "3. 后区布局开放式厨房 (Kitchen) 与独立双卫生间 (Restrooms)，设 1.5m 宽度消防逃生通道。"
+        "1. 建筑占地 40ft W x 50ft D。左右配置 2 个 40ft HC 集装箱 (单箱 8ft W x 40ft L)。\n"
+        "2. 切割集装箱内墙后焊接 100x100x4.5mm RHS 方钢框补强，打通中央 34ft 挑高大厅。\n"
+        "3. 后区预留 10ft 设立开放式厨房与双卫生间，后方二层为 900sqft Mezzanine Loft 阁楼。"
     )
     
     ox, oy = 550, 180
@@ -88,137 +88,123 @@ def make_floorplan():
     bx2, by2 = ox + sw_px, oy + sd_px
     
     d.rectangle([(bx1, by1), (bx2, by2)], outline=WALL_COLOR, width=4)
-    
     d.line([(bx1 - 40, by1), (bx1 - 40, by2)], fill=DIM_COLOR, width=2)
-    d.text((bx1 - 160, oy + sd_px//2), "75' 0\" (22.86m)", font=f_body, fill=DIM_COLOR)
+    d.text((bx1 - 160, oy + sd_px//2), "50' 0\" 建筑进深", font=f_body, fill=DIM_COLOR)
     
     d.line([(bx1, by1 - 40), (bx2, by1 - 40)], fill=DIM_COLOR, width=2)
-    d.text((ox + sw_px//2 - 140, by1 - 75), "50' 0\" FRONTAGE (15.24m)", font=f_body, fill=DIM_COLOR)
+    d.text((ox + sw_px//2 - 140, by1 - 75), "50' 0\" 土地面宽", font=f_body, fill=DIM_COLOR)
     
-    c1 = (bx1, by1, bx1 + 176, by1 + 440)
+    c1 = (bx1, by1, bx1 + 176, by1 + 660)
     d.rectangle(c1, fill=(40, 50, 30), outline=CONTAINER_COLOR, width=3)
     d.text((bx1 + 15, by1 + 150), "左集装箱 40ft HC\n(8ft x 40ft)", font=f_small, fill=CONTAINER_COLOR)
     
-    c2 = (bx2 - 176, by1, bx2, by1 + 440)
+    c2 = (bx2 - 176, by1, bx2, by1 + 660)
     d.rectangle(c2, fill=(40, 50, 30), outline=CONTAINER_COLOR, width=3)
     d.text((bx2 - 160, by1 + 150), "右集装箱 40ft HC\n(8ft x 40ft)", font=f_small, fill=CONTAINER_COLOR)
     
-    d.text((ox + sw_px//2 - 200, by1 + 180), "34ft 挑高大厅 (High Ceiling Hall)\n净宽 10.36m / 净高 7.3m", font=f_header, fill=TEXT_MAIN)
+    d.text((ox + sw_px//2 - 200, by1 + 200), "34ft 挑高大厅 (High Ceiling Hall)\n净宽 10.36m / 净高 7.3m", font=f_header, fill=TEXT_MAIN)
     
-    d.rectangle([(bx1 + 170, by1 + 50), (bx1 + 182, by1 + 390)], fill=STEEL_COLOR)
-    d.text((bx1 + 190, by1 + 220), "← 100mm 方钢门框加固 (Cutout Steel Frame)", font=f_dim, fill=STEEL_COLOR)
+    d.rectangle([(bx1 + 170, by1 + 50), (bx1 + 182, by1 + 600)], fill=STEEL_COLOR)
+    d.text((bx1 + 190, by1 + 300), "← 100x100x4.5mm 方钢加固框", font=f_dim, fill=STEEL_COLOR)
     
-    d.rectangle([(bx1, by1 + 440), (bx1 + 350, by2)], fill=(20, 60, 80), outline=(56, 189, 248), width=2)
-    d.text((bx1 + 20, by1 + 500), "🍳 开放式厨房 (Kitchen)\n配 L型水槽 & 油烟机", font=f_body, fill=TEXT_MAIN)
+    d.rectangle([(bx1, by1 + 660), (bx1 + 350, by2)], fill=(20, 60, 80), outline=(56, 189, 248), width=2)
+    d.text((bx1 + 20, by1 + 700), "🍳 开放式厨房 (Kitchen)", font=f_body, fill=TEXT_MAIN)
     
-    d.rectangle([(bx2 - 350, by1 + 440), (bx2, by2)], fill=(80, 40, 40), outline=AXIS_COLOR, width=2)
-    d.text((bx2 - 330, by1 + 500), "🚽 独立双卫生间 (Restrooms)\n无障碍坡道 & 防滑地砖", font=f_body, fill=TEXT_MAIN)
-    
-    d.rectangle([(bx1 + 180, by1 + 440), (bx2 - 180, by2)], outline=(250, 204, 21), width=2)
-    d.text((ox + sw_px//2 - 220, by1 + 600), "后区 35ft 二层 900sqft Mezzanine Loft 办公平台", font=f_small, fill=TEXT_GOLD)
+    d.rectangle([(bx2 - 350, by1 + 660), (bx2, by2)], fill=(80, 40, 40), outline=AXIS_COLOR, width=2)
+    d.text((bx2 - 330, by1 + 700), "🚽 独立双卫生间 (Wet Core)", font=f_body, fill=TEXT_MAIN)
 
     img.save("/Users/cjmac2024/Documents/antigravity/charming-darwin/assets/floorplan-bp.jpg", "JPEG", quality=92)
     print("Generated floorplan-bp.jpg DWG A-101")
 
-# 2. DWG A-102: Elevation 正立面图 (严格矫正标高：+24' 檐高 / +38'-5" 屋脊 / +47' 拔风塔顶)
+# 2. DWG A-102: Elevation 正立面图 (严格执行：+24' 檐高 / +38'-5" 屋脊 / +47' 拔风塔顶)
 def make_elevation():
     img, d = draw_cad_frame(
-        "建筑正立面结构工程图 (Front Elevation & Level Controls)",
+        "建筑正立面结构示意图 (Front Elevation & Height Controls)",
         "DWG A-102",
-        "1. 控制标高：FL ±0.00m 地坪、+9' 6\" 集装箱顶、+24' 0\" 主屋檐、+38' 5\" 主屋脊、+47' 0\" 拔风塔顶！\n"
-        "2. 30° 高坡热带防雨屋顶与中央 Raised Monitor 拔风天窗，利用热浮力快速抽走高空积热。\n"
-        "3. 正面设置马六甲 Batu Angin 遮阳通风花砖墙，双层防热遮阳降低室内温度。"
+        "1. 严格控制标高：FL ±0.00m 地坪、+9' 6\" 集装箱顶、+24' 0\" 主屋檐、+38' 5\" 主屋脊、+47' 0\" 拔风塔顶！\n"
+        "2. 30° 高坡热带防雨屋顶与中央 Raised Monitor 拔风天窗，利用热浮力排出热气。\n"
+        "3. 正面设置马六甲 Batu Angin 避光通风花砖屏风墙，形成双层隔热墙结构。"
     )
     
     ox, oy = 450, 180
     w_px = 1100
     
-    # Ground Line FL ±0.00m
     d.line([(ox - 100, oy + 550), (ox + w_px + 100, oy + 550)], fill=TEXT_MAIN, width=4)
     d.text((ox - 240, oy + 540), "▼ FL ±0.00m (地坪标高)", font=f_body, fill=TEXT_MAIN)
     
-    # Container Top (+9'6" / 2.90m)
     d.line([(ox - 100, oy + 440), (ox + w_px + 100, oy + 440)], fill=DIM_COLOR, width=1)
     d.text((ox - 260, oy + 430), "▼ +9' 6\" (2.90m 集装箱顶)", font=f_body, fill=DIM_COLOR)
     
-    # Main Eave Level (+24'0" / 7.31m)
     d.line([(ox - 100, oy + 260), (ox + w_px + 100, oy + 260)], fill=DIM_COLOR, width=1)
     d.text((ox - 260, oy + 250), "▼ +24' 0\" (7.31m 主屋檐)", font=f_body, fill=DIM_COLOR)
     
-    # Main Ridge Level (+38'5" / 11.71m)
     d.line([(ox - 100, oy + 120), (ox + w_px + 100, oy + 120)], fill=(250, 204, 21), width=1)
     d.text((ox - 270, oy + 110), "▲ +38' 5\" (11.71m 主屋脊)", font=f_body, fill=(250, 204, 21))
 
-    # Raised Jack Roof Top (+47'0" / 14.33m)
     d.line([(ox - 100, oy + 40), (ox + w_px + 100, oy + 40)], fill=AXIS_COLOR, width=2)
     d.text((ox - 290, oy + 30), "▲ +47' 0\" (14.33m 拔风塔顶)", font=f_body, fill=AXIS_COLOR)
     
-    # Containers Front
     d.rectangle([(ox, oy + 440), (ox + 176, oy + 550)], outline=CONTAINER_COLOR, width=3)
     d.text((ox + 20, oy + 480), "左集装箱 8ft", font=f_small, fill=CONTAINER_COLOR)
     
     d.rectangle([(ox + w_px - 176, oy + 440), (ox + w_px, oy + 550)], outline=CONTAINER_COLOR, width=3)
     d.text((ox + w_px - 150, oy + 480), "右集装箱 8ft", font=f_small, fill=CONTAINER_COLOR)
     
-    # Breeze Block Screen Wall
     d.rectangle([(ox + 176, oy + 360), (ox + w_px - 176, oy + 550)], fill=(30, 50, 40), outline=(74, 222, 128), width=3)
     d.text((ox + w_px//2 - 160, oy + 450), "🧱 Batu Angin 通风花砖屏风墙 (34ft)", font=f_header, fill=(74, 222, 128))
     
-    # 30 Roof Truss Profile (+24' to +38'5")
     d.polygon([(ox, oy + 260), (ox + w_px//2, oy + 120), (ox + w_px, oy + 260)], outline=WALL_COLOR, width=3)
-    
-    # Raised Jack Roof Monitor Window (+38'5" to +47'0")
     d.rectangle([(ox + w_px//2 - 200, oy + 40), (ox + w_px//2 + 200, oy + 120)], fill=(40, 70, 100), outline=AXIS_COLOR, width=2)
     d.text((ox + w_px//2 - 150, oy + 70), "🪟 Raised Jack Roof (+47' 拔风塔)", font=f_small, fill=TEXT_MAIN)
 
     img.save("/Users/cjmac2024/Documents/antigravity/charming-darwin/assets/elevation-bp.jpg", "JPEG", quality=92)
-    print("Generated elevation-bp.jpg DWG A-102 with exact +24' / +38'-5\" / +47' levels")
+    print("Generated elevation-bp.jpg DWG A-102")
 
-# 3. DWG G-101: Site Plan 总平面图 (全要素：Jalan Pakis, 北向, 退缩, 6m 消防车道, 300mm U-Drain, 8PE 化粪池)
+# 3. DWG G-101: Corrected Site Plan (修正物理退缩与消防车道逻辑)
 def make_siteplan():
     img, d = draw_cad_frame(
-        "总平面工程规划图 (Site & Infrastructure Plan)",
+        "总平面工程规划示意图 (Site & Infrastructure Plan)",
         "DWG G-101",
-        "1. 地块面宽 50ft x 75ft 进深，正面临 Jalan Pakis (北向 North N 标记)。法定退缩：前 20ft, 后 10ft, 侧 5ft。\n"
-        "2. 环形提供 6m 宽度 BOMBA 消防车接近通道 (6m Fire Access Road) 与转弯半径。\n"
-        "3. 周圈布置 300mm U-Drain 排水沟与检查井 (Inspection Chamber)，后区设 8PE 化粪池与维护通道。"
+        "1. 50ft 面宽 x 75ft 进深地块 (3,750 sqft)，正面沿 Jalan Pakis。建筑占地 40ft W x 50ft D。\n"
+        "2. 修正物理退缩：前退缩 15ft (停车/绿化)，后退缩 10ft (8PE 化粪池与雨水沟)，两侧各退 5ft。\n"
+        "3. 消防接近方案：采用消防人员步行接近路径 (Foot Access Path)，消防车停靠在 Jalan Pakis 沿街路边。"
     )
     
     ox, oy = 550, 180
     d.rectangle([(ox, oy), (ox + 1100, oy + 650)], fill=(15, 32, 55), outline=TEXT_MAIN, width=3)
     
-    # North Arrow Indicator (指北针)
+    # North Arrow
     d.line([(ox + 1020, oy + 80), (ox + 1020, oy + 20)], fill=AXIS_COLOR, width=4)
     d.polygon([(ox + 1020, oy + 10), (ox + 1010, oy + 35), (ox + 1030, oy + 35)], fill=AXIS_COLOR)
     d.text((ox + 1010, oy + 90), "NORTH (北)", font=f_body, fill=AXIS_COLOR)
     
-    # Road Jalan Pakis Frontage
+    # Jalan Pakis Road
     d.rectangle([(ox, oy - 60), (ox + 1100, oy)], fill=(40, 40, 50), outline=DIM_COLOR, width=2)
-    d.text((ox + 350, oy - 45), "🛣️ JALAN PAKIS 市政道路 (Frontage Road)", font=f_header, fill=TEXT_MAIN)
+    d.text((ox + 350, oy - 45), "🛣️ JALAN PAKIS 沿街市政道路 (BOMBA 消防车停靠区)", font=f_header, fill=TEXT_MAIN)
     
-    # Building Footprint
-    d.rectangle([(ox + 100, oy + 120), (ox + 1000, oy + 550)], fill=(30, 50, 75), outline=TEXT_GOLD, width=2)
-    d.text((ox + 350, oy + 300), "集装箱 Bungalow 主建筑 (50x75ft Footprint)\n前退缩 20ft / 后退缩 10ft", font=f_header, fill=TEXT_MAIN)
+    # Corrected Building Footprint (40ft W x 50ft D -> 880px x 440px inside 1100px x 650px)
+    d.rectangle([(ox + 110, oy + 130), (ox + 990, oy + 570)], fill=(30, 50, 75), outline=TEXT_GOLD, width=2)
+    d.text((ox + 320, oy + 300), "集装箱 Bungalow 建筑占地 (40ft W x 50ft D)\n前退缩 15ft | 后退缩 10ft | 侧退缩 5ft", font=f_header, fill=TEXT_MAIN)
     
-    # 6m Fire Access Road (6m 消防通道)
-    d.rectangle([(ox + 10, oy + 10), (ox + 90, oy + 640)], fill=(60, 30, 30), outline=AXIS_COLOR, width=1)
-    d.text((ox + 20, oy + 250), "6m 消防车\n通道 (Fire Access)", font=f_small, fill=AXIS_COLOR)
+    # Foot Access Path
+    d.line([(ox + 40, oy), (ox + 40, oy + 650)], fill=(74, 222, 128), width=3)
+    d.text((ox + 50, oy + 250), "🚶 消防员步行接近通道 (Foot Access)", font=f_small, fill=(74, 222, 128))
     
-    # U-Drain 300mm & Septic Tank
-    d.rectangle([(ox + 850, oy + 570), (ox + 1020, oy + 630)], fill=(80, 60, 20), outline=TEXT_GOLD, width=2)
-    d.text((ox + 860, oy + 590), "8PE 化粪池 & 维护通道", font=f_small, fill=TEXT_GOLD)
+    # Septic Tank at Rear
+    d.rectangle([(ox + 850, oy + 580), (ox + 1050, oy + 640)], fill=(80, 60, 20), outline=TEXT_GOLD, width=2)
+    d.text((ox + 860, oy + 600), "8PE 化粪池与维护通道", font=f_small, fill=TEXT_GOLD)
 
     img.save("/Users/cjmac2024/Documents/antigravity/charming-darwin/assets/siteplan-bp.jpg", "JPEG", quality=92)
     print("Generated siteplan-bp.jpg DWG G-101")
 
-# 4. DWG F-101: Fire Safety & Egress Plan (全要素消防策略)
+# 4. DWG F-101: Fire Safety & Egress Plan (具体点位与参数图)
 def make_fire_safety():
     img, d = draw_cad_frame(
-        "BOMBA 消防安全设施与疏散逃生路线图 (Fire Safety & Egress Plan)",
+        "BOMBA 消防安全设施与疏散逃生路线示意图 (Fire Safety & Egress Plan)",
         "DWG F-101",
-        "1. 逃生出口门净宽 1.5m，后区 Loft 设置第二逃生钢梯 (2nd Escape Steel Staircase)。\n"
-        "2. 全屋最远疏散行走距离限制在 22.5m 内，设置 6 处烟感报警器与 4 处 6kg ABC 灭火器。\n"
-        "3. 周圈满足 BOMBA 6m 消防车接近条件。注：本图为概念策略图，须经 BOMBA 最终审查签核。"
+        "1. 正面设 1.5m 净宽双开主逃生门 (Exit 1)，后区 Loft 预留第二逃生钢梯 (Exit 2)。\n"
+        "2. 图中精准标注 6 处光感烟雾报警器 (SD1-SD6) 与 4 处 6kg ABC 干粉灭火器 (FE1-FE4) 点位。\n"
+        "3. 主大厅与 Loft 疏散行走距离限制在 22.5m 内。注：须经 BOMBA 最终审查签核。"
     )
     
     ox, oy = 450, 180
@@ -230,56 +216,80 @@ def make_fire_safety():
     d.rectangle([(ox + 500, oy + 640), (ox + 700, oy + 670)], fill=(0, 180, 90), outline=TEXT_MAIN, width=2)
     d.text((ox + 510, oy + 645), "🟢 Loft 第二逃生梯 Exit 2", font=f_body, fill=TEXT_MAIN)
     
-    d.line([(ox + 600, oy + 400), (ox + 600, oy + 50)], fill=(74, 222, 128), width=5)
-    d.text((ox + 620, oy + 200), "⬆ 最大疏散距离 < 22.5m (Egress Route)", font=f_header, fill=(74, 222, 128))
+    # Draw Specific Points SD1-SD6 and FE1-FE4
+    sd_pts = [(ox + 200, oy + 150, "SD1"), (ox + 200, oy + 450, "SD2"), (ox + 600, oy + 200, "SD3"), (ox + 600, oy + 500, "SD4"), (ox + 1000, oy + 150, "SD5"), (ox + 1000, oy + 450, "SD6")]
+    for pt in sd_pts:
+        d.ellipse([(pt[0]-15, pt[1]-15), (pt[0]+15, pt[1]+15)], fill=(200, 50, 50), outline=TEXT_MAIN, width=2)
+        d.text((pt[0]-12, pt[1]-8), pt[2], font=f_small, fill=TEXT_MAIN)
+        
+    fe_pts = [(ox + 80, oy + 50, "FE1"), (ox + 1120, oy + 50, "FE2"), (ox + 80, oy + 600, "FE3"), (ox + 1120, oy + 600, "FE4")]
+    for pt in fe_pts:
+        d.rectangle([(pt[0]-15, pt[1]-15), (pt[0]+15, pt[1]+15)], fill=(220, 180, 20), outline=AXIS_COLOR, width=2)
+        d.text((pt[0]-12, pt[1]-8), pt[2], font=f_small, fill=BG_COLOR)
+        
+    d.line([(ox + 600, oy + 400), (ox + 600, oy + 50)], fill=(74, 222, 128), width=4)
+    d.text((ox + 620, oy + 200), "⬆ 最大疏散行走距离 18.5m (< 22.5m 规范上限)", font=f_header, fill=(74, 222, 128))
 
     img.save("/Users/cjmac2024/Documents/antigravity/charming-darwin/assets/fire_safety_egress_blueprint.jpg", "JPEG", quality=92)
     print("Generated fire_safety_egress_blueprint.jpg DWG F-101")
 
-# 5. DWG M-101: Kitchen & Wet-Core Drainage Plan
+# 5. DWG M-101: Kitchen & Wet-Core Drainage Plan (完整管线与参数)
 def make_kitchen_drainage():
     img, d = draw_cad_frame(
-        "厨房与集中排水系统工程施工图 (Kitchen & Wet-Core Drainage Plan)",
+        "厨房与集中排水系统工程施工示意图 (Kitchen & Wet-Core Drainage Plan)",
         "DWG M-101",
-        "1. 厨房排水接 50L 不锈钢油脂拦截器 (Grease Trap) 过滤油脂后接 DN75 灰水管。\n"
-        "2. 双厕黑水采用 DN100 PVC 排污管，设置 1:40 坡度、存水弯 (Trap) 及清扫口 (Cleanout)。\n"
-        "3. 化粪池采用 8PE HDPE 生化滤池规格，满足 IWK 排污及卫生工程规范。"
+        "1. 厨房排水：DN75 灰水管 + 50L 不锈钢油脂拦截器 (Grease Trap)，设 DN50 存水弯 (Trap) 与通气管 (Vent)。\n"
+        "2. 卫生间黑水：DN100 PVC 管 (坡度 1:40) 设清扫口 (Cleanout CO) 与 检查井 (IC1, IC2)，连接 8PE 化粪池。\n"
+        "3. 排水管底标高 (Invert Level IL) 控制：进水 IL -0.45m，出水 IL -0.60m，符合 IWK 卫生工程要求。"
     )
     
     ox, oy = 450, 180
     d.rectangle([(ox, oy), (ox + 1200, oy + 650)], outline=WALL_COLOR, width=3)
     
     d.rectangle([(ox + 20, oy + 200), (ox + 350, oy + 630)], fill=(20, 60, 90), outline=(56, 189, 248), width=2)
-    d.text((ox + 40, oy + 220), "🍳 开放式厨房 (Kitchen Zone)", font=f_header, fill=(56, 189, 248))
-    d.text((ox + 40, oy + 270), "• DN50 存水弯 (Trap)\n• 独立通气管 (Vent Pipe)\n• 50L 油脂拦截器 (Grease Trap)", font=f_small, fill=TEXT_MAIN)
+    d.text((ox + 40, oy + 220), "🍳 开放式厨房 (Kitchen)", font=f_header, fill=(56, 189, 248))
+    d.text((ox + 40, oy + 270), "• DN50 存水弯 (Trap, P-Trap)\n• 独立通气管 (Vent Pipe VP)\n• 50L 油脂拦截器 (Grease Trap GT)", font=f_small, fill=TEXT_MAIN)
     
     d.rectangle([(ox + 850, oy + 200), (ox + 1180, oy + 630)], fill=(80, 30, 40), outline=AXIS_COLOR, width=2)
-    d.text((ox + 870, oy + 220), "🚽 双卫生间 (Wet Core)", font=f_header, fill=AXIS_COLOR)
-    d.text((ox + 870, oy + 270), "• DN100 PVC 排污管 (坡度 1:40)\n• 清扫口 (Cleanout, CO)\n• 检查井 (Inspection Chamber)", font=f_small, fill=TEXT_MAIN)
+    d.text((ox + 870, oy + 220), "🚽 独立双卫生间 (Wet Core)", font=f_header, fill=AXIS_COLOR)
+    d.text((ox + 870, oy + 270), "• DN100 PVC 排污管 (坡度 1:40)\n• 清扫口 (Cleanout CO)\n• 检查井 (Inspection Chamber IC1)", font=f_small, fill=TEXT_MAIN)
 
     img.save("/Users/cjmac2024/Documents/antigravity/charming-darwin/assets/kitchen_drainage_blueprint.jpg", "JPEG", quality=92)
     print("Generated kitchen_drainage_blueprint.jpg DWG M-101")
 
-# 6. DWG T-101: T&C Testing Blueprint 5大独立打压测试
+# 6. DWG T-101: T&C Testing Blueprint 5大独立打压测试 (5框完全对应)
 def make_tc_testing():
     img, d = draw_cad_frame(
-        "5 大工程验收打压测试点位图 (T&C Inspection & Testing Blueprint)",
+        "5 大工程验收打压测试点位示意图 (T&C Inspection & Testing Blueprint)",
         "DWG T-101",
-        "1. 给水管 8 Bar 压降测试：依据 SPAN 规范，1.5 倍工作压力保持 2 小时零压降。\n"
-        "2. 24h 湿区闭水测试：沉箱注水 100mm 24 小时零渗漏验收。\n"
-        "3. 屋顶 4h 高压喷淋防漏测试；30mA RCCB 漏电保护器 30ms 极速切断测试；拔风压差测试。"
+        "1. 测1: PPR 8 Bar 给水保压 (SPAN 规范) | 测2: 24h 湿区沉箱蓄水零渗漏 | 测3: 4h 屋顶高压喷淋。\n"
+        "2. 测4: 30mA RCCB 漏电 30ms 断路及 <10Ω 接地 | 测5: Raised Monitor 拔风塔风速与热负压排热测试。\n"
+        "3. 每项测试均标明测试方法、验收标准、责任方与复测条件。"
     )
     
-    ox, oy = 400, 180
-    d.rectangle([(ox, oy), (ox + 1300, oy + 650)], outline=WALL_COLOR, width=3)
+    ox, oy = 400, 160
+    d.rectangle([(ox, oy), (ox + 1300, oy + 680)], outline=WALL_COLOR, width=3)
     
-    d.rectangle([(ox + 50, oy + 50), (ox + 600, oy + 280)], fill=(20, 50, 90), outline=DIM_COLOR, width=2)
-    d.text((ox + 70, oy + 70), "🧪 测试 1：给水管 8 Bar 打压测试 (SPAN 规范)", font=f_header, fill=DIM_COLOR)
-    d.text((ox + 70, oy + 120), "• 责任方：注册水务工程师\n• 验收标准：保压 2h 压降 = 0", font=f_body, fill=TEXT_MAIN)
+    # 5 Test Boxes (Grid 3 Top, 2 Bottom)
+    d.rectangle([(ox + 40, oy + 30), (ox + 410, oy + 310)], fill=(20, 50, 90), outline=DIM_COLOR, width=2)
+    d.text((ox + 55, oy + 45), "🧪 测1：PPR 8 Bar 打压", font=f_body, fill=DIM_COLOR)
+    d.text((ox + 55, oy + 85), "• 依据 SPAN 规范\n• 1.5倍压力保压 2h\n• 责任: 水务承包商\n• 验收: 压降 = 0", font=f_small, fill=TEXT_MAIN)
     
-    d.rectangle([(ox + 700, oy + 50), (ox + 1250, oy + 280)], fill=(80, 30, 40), outline=AXIS_COLOR, width=2)
-    d.text((ox + 720, oy + 70), "🧪 测试 2：24h 湿区蓄水测试", font=f_header, fill=AXIS_COLOR)
-    d.text((ox + 720, oy + 120), "• 责任方：防水承包商\n• 验收标准：沉箱 100mm 水位 24h 零渗漏", font=f_body, fill=TEXT_MAIN)
+    d.rectangle([(ox + 450, oy + 30), (ox + 820, oy + 310)], fill=(80, 30, 40), outline=AXIS_COLOR, width=2)
+    d.text((ox + 465, oy + 45), "🧪 测2：24h 湿区蓄水", font=f_body, fill=AXIS_COLOR)
+    d.text((ox + 465, oy + 85), "• 注入 100mm 水 24h\n• 检验沉箱防水层\n• 责任: 防水承包商\n• 验收: 底部零渗漏", font=f_small, fill=TEXT_MAIN)
+
+    d.rectangle([(ox + 860, oy + 30), (ox + 1250, oy + 310)], fill=(30, 70, 50), outline=(74, 222, 128), width=2)
+    d.text((ox + 875, oy + 45), "🧪 测3：4h 高压喷淋", font=f_body, fill=(74, 222, 128))
+    d.text((ox + 875, oy + 85), "• 对屋顶与接缝高压喷淋\n• 责任: 屋面承包商\n• 验收: 天花板零水渍", font=f_small, fill=TEXT_MAIN)
+
+    d.rectangle([(ox + 200, oy + 350), (ox + 600, oy + 630)], fill=(80, 70, 20), outline=TEXT_GOLD, width=2)
+    d.text((ox + 215, oy + 365), "🧪 测4：30mA RCCB 漏电测试", font=f_body, fill=TEXT_GOLD)
+    d.text((ox + 215, oy + 405), "• 30ms 极速切断保护\n• 测量接地电阻低于 10 欧姆\n• 责任: 电气工程师", font=f_small, fill=TEXT_MAIN)
+
+    d.rectangle([(ox + 680, oy + 350), (ox + 1080, oy + 630)], fill=(50, 40, 80), outline=TEXT_MAIN, width=2)
+    d.text((ox + 695, oy + 365), "🧪 测5：拔风塔热对流测试", font=f_body, fill=TEXT_MAIN)
+    d.text((ox + 695, oy + 405), "• 测量室内外热负压压差\n• 检验自然拔风降温效率\n• 责任: 通风顾问", font=f_small, fill=TEXT_MAIN)
 
     img.save("/Users/cjmac2024/Documents/antigravity/charming-darwin/assets/tc_testing_blueprint.jpg", "JPEG", quality=92)
     print("Generated tc_testing_blueprint.jpg DWG T-101")
@@ -287,7 +297,7 @@ def make_tc_testing():
 # 7. DWG S-101: Container Cutting Detail
 def make_container_detail():
     img, d = draw_cad_frame(
-        "集装箱切墙与方钢加固节点工程图 (Container Modification Detail)",
+        "集装箱切墙与方钢加固节点示意图 (Container Modification Detail)",
         "DWG S-101",
         "1. 40ft High Cube 集装箱切割侧墙开窗后，必须沿着开窗切口四周全焊接 100x100x4.5mm RHS 方钢框架。\n"
         "2. 方钢框架与地面 150mm 加厚混凝土地坪通过 M20 预埋化学锚栓 (Anchor Bolts) 焊接锁死，防止变形。\n"
@@ -298,7 +308,7 @@ def make_container_detail():
     d.text((ox, oy), "【集装箱侧墙切割 & 100mm 方钢框焊接剖面节点大样】", font=f_header, fill=TEXT_GOLD)
     d.rectangle([(ox, oy + 60), (ox + 350, oy + 500)], fill=(30, 45, 65), outline=CONTAINER_COLOR, width=3)
     d.rectangle([(ox + 350, oy + 60), (ox + 450, oy + 500)], fill=STEEL_COLOR, outline=TEXT_MAIN, width=2)
-    d.rectangle([(ox, oy + 500), (ox + 600), (oy + 580)], fill=(80, 80, 90), outline=TEXT_MAIN, width=2)
+    d.rectangle([(ox, oy + 500), (ox + 600, oy + 580)], fill=(80, 80, 90), outline=TEXT_MAIN, width=2)
     d.text((ox + 50, oy + 530), "150mm 加厚钢筋混凝土地坪 + M20 预埋化学锚栓 (Concrete Foundation)", font=f_body, fill=TEXT_MAIN)
 
     img.save("/Users/cjmac2024/Documents/antigravity/charming-darwin/assets/container_splicing_blueprint.jpg", "JPEG", quality=92)
