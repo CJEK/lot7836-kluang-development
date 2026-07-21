@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Lot 7836 Modern Tropical Development Portal - Stylesheet (V3 Optimized)
+   Lot 7836 Modern Tropical Development Portal - Stylesheet (V3.1 Production Stable)
    ========================================================================== */
 
 :root {
@@ -36,6 +36,10 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+body.no-scroll {
+  overflow: hidden !important;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Outfit', sans-serif;
   color: var(--primary);
@@ -58,7 +62,7 @@ a {
   position: sticky;
   top: 0;
   z-index: 100;
-  background-color: rgba(255, 255, 255, 0.92);
+  background-color: rgba(255, 255, 255, 0.94);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border-color);
   padding: 12px 0;
@@ -97,6 +101,10 @@ a {
   gap: 20px;
   overflow-x: auto;
   padding: 4px 0;
+  scrollbar-width: none;
+}
+.nav-links::-webkit-scrollbar {
+  display: none;
 }
 
 .nav-links a {
@@ -406,6 +414,7 @@ a {
   position: relative;
   padding-left: 24px;
   border-left: 2px solid var(--border-color);
+  transition: var(--transition);
 }
 
 .timeline-item:hover {
@@ -536,6 +545,10 @@ a {
   overflow-x: auto;
   margin-bottom: 20px;
   padding-bottom: 4px;
+  scrollbar-width: none;
+}
+.bp-tabs::-webkit-scrollbar {
+  display: none;
 }
 
 .bp-btn {
@@ -741,12 +754,13 @@ a {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.9);
+  background: rgba(0, 0, 0, 0.92);
   z-index: 1000;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   padding: 20px;
+  backdrop-filter: blur(8px);
 }
 
 .lightbox-modal.active {
@@ -754,10 +768,11 @@ a {
 }
 
 .lightbox-modal img {
-  max-width: 90%;
-  max-height: 80vh;
+  max-width: 92%;
+  max-height: 82vh;
   object-fit: contain;
   border-radius: var(--radius-sm);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.5);
 }
 
 .lightbox-caption {
@@ -765,6 +780,9 @@ a {
   margin-top: 16px;
   font-size: 0.95rem;
   text-align: center;
+  background: rgba(15, 23, 42, 0.8);
+  padding: 8px 20px;
+  border-radius: 20px;
 }
 
 .close-btn {
@@ -774,6 +792,10 @@ a {
   color: #fff;
   font-size: 2.5rem;
   cursor: pointer;
+  transition: var(--transition);
+}
+.close-btn:hover {
+  color: var(--accent-gold);
 }
 
 /* ================= Responsive Styles ================= */
@@ -790,5 +812,31 @@ a {
 
   .metrics-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ================= Print Stylesheet Optimization ================= */
+@media print {
+  .topbar, .nav-actions, .quick-access-box, .share-box, .bp-tabs, .bp-overlay {
+    display: none !important;
+  }
+
+  body {
+    background: #fff !important;
+    color: #000 !important;
+  }
+
+  .section {
+    padding: 24px 0 !important;
+    page-break-inside: avoid;
+  }
+
+  .hero {
+    padding: 16px 0 !important;
+  }
+
+  .view-card, .budget-card, .blueprint-viewer-box {
+    box-shadow: none !important;
+    border: 1px solid #ccc !important;
   }
 }

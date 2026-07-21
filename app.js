@@ -1,11 +1,11 @@
 /* ==========================================================================
-   Lot 7836 Development Pack - Application Logic (V3 Optimized)
+   Lot 7836 Development Pack - Application Logic (V3.1 Production Stable)
    ========================================================================== */
 
 let currentBpSrc = 'assets/container_splicing_blueprint.jpg';
 let currentBpTitle = '集装箱切割与拼接 CAD 节点图 (Container Modification Detail)';
 
-// Blueprint Selector Switcher using precise button reference or data attribute
+// Blueprint Selector Switcher using precise button reference
 function switchBlueprint(src, title, desc, btnEl) {
   const bpImg = document.getElementById('bp-img');
   const bpTitle = document.getElementById('bp-title');
@@ -28,7 +28,7 @@ function switchBlueprint(src, title, desc, btnEl) {
   });
 }
 
-// Lightbox Modal Functions
+// Lightbox Modal Functions with Lock-scroll and Keyboard ESC Listener
 function openLightbox(imgSrc, caption) {
   const modal = document.getElementById('lightbox');
   const modalImg = document.getElementById('lightbox-img');
@@ -38,6 +38,7 @@ function openLightbox(imgSrc, caption) {
     modalImg.src = imgSrc;
     modalCaption.textContent = caption || 'Lot 7836 Architectural Detail';
     modal.classList.add('active');
+    document.body.classList.add('no-scroll');
   }
 }
 
@@ -45,8 +46,16 @@ function closeLightbox() {
   const modal = document.getElementById('lightbox');
   if (modal) {
     modal.classList.remove('active');
+    document.body.classList.remove('no-scroll');
   }
 }
+
+// Keyboard ESC support for Lightbox
+window.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    closeLightbox();
+  }
+});
 
 // Copy Share Link
 function copyShareLink() {
