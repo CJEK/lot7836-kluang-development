@@ -16,8 +16,8 @@ const languages = {
     'recommended.text': '采用 Batu Angin 通风花砖双层防热墙、30° 高坡斜屋顶与中央 Raised Jack Roof 拔风天窗 (+47ft 顶高)，利用热浮力自然对流排热，配合 50mm PU 隔热包覆，打造自然降温 3-5°C 的热带仓储别墅。',
     'recommended.reviewTitle': '专业设计与工程控制要点',
     'recommended.reviewText': '• 布局：左右侧摆 2 个 40ft HC 集装箱 (各 8ft 宽)，中间打通 34ft 挑高大厅。\n• 水电：左集装箱后段设开放式厨房与油脂拦截器，右集装箱设双卫生间集中排污至后方 8PE 化粪池。\n• 结构：集装箱切口全围焊接 100x100mm 方钢圈补强，地面 150mm 加厚混凝土地坪。',
-    'styles.title': '3 套独立度假风外观与室内 3D 效果图',
-    'styles.text': '每套风格均受同一设计控制线约束（50x75ft 占地、双 40ft HC、34ft 大厅、30° 屋顶）。点击任意图片均可全屏放大查看。',
+    'styles.title': '3 套独立度假风外观与室内 3D 效果图 (每套 4 视角可滚动切图)',
+    'styles.text': '每套风格均包含 4 张完整视角 3D 效果图（正面全景、75ft 侧立面、45° 轴测后方、室内大厅）。点击图片可左右全屏顺序切图。',
     'styles.controls': '共享控制线：2 × 40ft HC 集装箱, 34ft 中厅, 35ft 后区 Loft, 30° 屋顶 (+24\' 檐高 / +38\'-5" 屋脊 / +47\' 拔风塔顶)。',
     'drawings.title': '2D 概念工程示意图集 (点击图片全屏查看)',
     'drawings.text': '包含 7 张标准 AutoCAD 工程规图（平面图、立面图、集装箱切割 Detail、厨房排水图、BOMBA 消防图、T&C 测试图、总平面图）。点击任意图纸均可放大查看细节。',
@@ -50,8 +50,8 @@ const languages = {
     'recommended.text': 'Featuring Batu Angin breeze block double-skin facade, 30° pitched roof and Raised Jack Roof monitor (+47ft peak), using thermal buoyancy for passive cooling (3-5°C temperature reduction).',
     'recommended.reviewTitle': 'Design & Engineering Highlights',
     'recommended.reviewText': '• Layout: Two 40ft HC containers on sides, opening a 34ft high-ceiling central hall.\n• Plumbing: Open kitchen with grease trap on left; twin restrooms on right connecting to rear 8PE septic tank.\n• Structure: Cut-outs reinforced with 100x100mm RHS steel frames on 150mm concrete slab.',
-    'styles.title': '3 Distinct Architectural & Interior 3D Renders',
-    'styles.text': 'All 3 style packages follow the exact same design controls. Click any image to view in full-screen Lightbox.',
+    'styles.title': '3 Distinct Architectural & Interior 3D Renders (4 Angles Each)',
+    'styles.text': 'Each style features 4 complete 3D renders (Front, 75ft Side, 45° Rear, Interior). Click any image to slide left/right in Lightbox mode.',
     'styles.controls': 'Shared Controls: 2 × 40ft HC, 34ft Hall, 35ft Rear Loft, 30° Roof (+24\' Eave / +38\'-5" Ridge / +47\' Jack Roof).',
     'drawings.title': '2D Conceptual Drawing Set (Click to View Fullscreen)',
     'drawings.text': 'Complete set of 7 AutoCAD-standard engineering diagrams. Click any card to inspect drawing details.',
@@ -69,6 +69,7 @@ const languages = {
   }
 };
 
+// 4 distinct 3D views for each style package
 const styles = [
   {
     key: 'style2',
@@ -80,8 +81,12 @@ const styles = [
       '✅ 全天候穿堂风：利用风砖网格形成天然微风对流，大幅减少空调电费开支。',
       '✅ 度假村高级质感：粗抹灰结合热带绿植中庭，打造极其独特的现代奢华度假气质。'
     ],
-    front: 'assets/style2-ext.jpg?v=12',
-    interior: 'assets/style2-int.jpg?v=12'
+    images: [
+      { src: 'assets/style2-ext.jpg?v=13', label: ['1/4 正面 50ft 全景 3D 图', '1/4 Front Exterior 3D'] },
+      { src: 'assets/style2-side.jpg?v=13', label: ['2/4 75ft 侧立面与排水 3D 图', '2/4 75ft Side Facade 3D'] },
+      { src: 'assets/style2-rear.jpg?v=13', label: ['3/4 45° 轴测与拔风塔 3D 图', '3/4 45° Rear Isometric 3D'] },
+      { src: 'assets/style2-int.jpg?v=13', label: ['4/4 室内花砖光影中庭 3D 图', '4/4 Interior Atrium 3D'] }
+    ]
   },
   {
     key: 'style1',
@@ -93,8 +98,12 @@ const styles = [
       '✅ WPC 木塑格栅遮阳：暖木色格栅修饰开窗，兼顾隐私遮阳与传统马来 Kampung 建筑亲切感。',
       '✅ 挑高开放大厅：34ft 大面宽中央大厅结合裸露柚木屋架，室内视野极其开阔通透。'
     ],
-    front: 'assets/style1-ext.jpg?v=12',
-    interior: 'assets/style1-int.jpg?v=12'
+    images: [
+      { src: 'assets/style1-ext.jpg?v=13', label: ['1/4 正面 50ft 全景 3D 图', '1/4 Front Exterior 3D'] },
+      { src: 'assets/style1-side.jpg?v=13', label: ['2/4 75ft 侧立面 3D 图', '2/4 75ft Side Facade 3D'] },
+      { src: 'assets/style1-rear.jpg?v=13', label: ['3/4 45° 轴测与拔风塔 3D 图', '3/4 45° Rear Isometric 3D'] },
+      { src: 'assets/style1-int.jpg?v=13', label: ['4/4 室内挑高大厅 3D 图', '4/4 Interior Hall 3D'] }
+    ]
   },
   {
     key: 'style3',
@@ -106,51 +115,60 @@ const styles = [
       '✅ 南洋殖民风采：深色柚木百叶推拉门与纯白谷仓轮廓形成优雅对比，极富南洋复古会所调性。',
       '✅ 极简明亮空间：室内双倍层高纯白钢桁架 ceiling 结合柚木地板，极简而富有质感。'
     ],
-    front: 'assets/style3-ext.jpg?v=12',
-    interior: 'assets/style3-int.jpg?v=12'
+    images: [
+      { src: 'assets/style3-ext.jpg?v=13', label: ['1/4 正面 50ft 全景 3D 图', '1/4 Front Exterior 3D'] },
+      { src: 'assets/style3-side.jpg?v=13', label: ['2/4 75ft 侧立面 3D 图', '2/4 75ft Side Facade 3D'] },
+      { src: 'assets/style3-rear.jpg?v=13', label: ['3/4 45° 轴测与拔风塔 3D 图', '3/4 45° Rear Isometric 3D'] },
+      { src: 'assets/style3-int.jpg?v=13', label: ['4/4 室内纯白大厅 3D 图', '4/4 Interior White Hall 3D'] }
+    ]
   }
 ];
 
 const drawings = [
-  ['A-101', ['DWG A-101 2D 建筑平面图', 'DWG A-101 Floor Plan'], ['50x75ft 地块、双 40ft HC 集装箱、34ft 挑高大厅与后区 35ft 阁楼平面布局。', '50x75ft footprint, twin 40ft HC containers, 34ft hall and rear loft.'], 'assets/floorplan-bp.jpg?v=12'],
-  ['A-102', ['DWG A-102 建筑正立面图', 'DWG A-102 Elevation'], ['控制标高：+24ft 主屋檐、+38ft-5in 主屋脊与 +47ft 拔风塔顶，30° 坡屋顶结构。', 'Level controls: +24ft eave, +38ft-5in ridge and +47ft Jack Roof.'], 'assets/elevation-bp.jpg?v=12'],
-  ['S-101', ['DWG S-101 集装箱切割加固 Detail', 'DWG S-101 Container Detail'], ['侧墙切割开窗、切口周圈 100x100x4.5mm RHS 方钢框焊接与 M20 锚栓加固。', '100x100x4.5mm RHS steel frame reinforcement & M20 anchor bolts.'], 'assets/container_splicing_blueprint.jpg?v=12'],
-  ['M-101', ['DWG M-101 厨房与集中排水图', 'DWG M-101 Kitchen & Drainage'], ['左集装箱 25ft 厨房、50L 油脂拦截器、DN100 黑水管(1:40坡度)及 8PE 化粪池。', 'Kitchen grease trap, DN100 blackwater pipe (1:40 slope) & 8PE septic tank.'], 'assets/kitchen_drainage_blueprint.jpg?v=12'],
-  ['F-101', ['DWG F-101 BOMBA 消防逃生图', 'DWG F-101 Fire & Egress Plan'], ['SD1-SD6 烟感、FE1-FE4 灭火器、1.5m 门净宽、Loft 第二逃生梯及疏散路线。', 'SD1-SD6 detectors, FE1-FE4 extinguishers, 1.5m exit doors & 2nd escape stair.'], 'assets/fire_safety_egress_blueprint.jpg?v=12'],
-  ['T-101', ['DWG T-101 5 大工程打压测试图', 'DWG T-101 T&C Testing Plan'], ['8 Bar 给水打压、24h 湿区闭水、4h 屋顶高压喷淋及 30mA RCCB 漏电测试。', '8 Bar water pressure, 24h flood test, 4h roof spray & 30mA RCCB tests.'], 'assets/tc_testing_blueprint.jpg?v=12'],
-  ['G-101', ['DWG G-101 总平面规划图', 'DWG G-101 Site Plan'], ['Jalan Pakis 正面沿街、指北针、40x50ft 建筑占地、15ft 前退缩、10ft 后退缩及 U 型排水沟。', 'Jalan Pakis frontage, 40x50ft footprint, 15ft front & 10ft rear setbacks.'], 'assets/siteplan-bp.jpg?v=12']
+  ['A-101', ['DWG A-101 2D 建筑平面图', 'DWG A-101 Floor Plan'], ['50x75ft 地块、双 40ft HC 集装箱、34ft 挑高大厅与后区 35ft 阁楼平面布局。', '50x75ft footprint, twin 40ft HC containers, 34ft hall and rear loft.'], 'assets/floorplan-bp.jpg?v=13'],
+  ['A-102', ['DWG A-102 建筑正立面图', 'DWG A-102 Elevation'], ['控制标高：+24ft 主屋檐、+38ft-5in 主屋脊与 +47ft 拔风塔顶，30° 坡屋顶结构。', 'Level controls: +24ft eave, +38ft-5in ridge and +47ft Jack Roof.'], 'assets/elevation-bp.jpg?v=13'],
+  ['S-101', ['DWG S-101 集装箱切割加固 Detail', 'DWG S-101 Container Detail'], ['侧墙切割开窗、切口周圈 100x100x4.5mm RHS 方钢框焊接与 M20 锚栓加固。', '100x100x4.5mm RHS steel frame reinforcement & M20 anchor bolts.'], 'assets/container_splicing_blueprint.jpg?v=13'],
+  ['M-101', ['DWG M-101 厨房与集中排水图', 'DWG M-101 Kitchen & Drainage'], ['左集装箱 25ft 厨房、50L 油脂拦截器、DN100 黑水管(1:40坡度)及 8PE 化粪池。', 'Kitchen grease trap, DN100 blackwater pipe (1:40 slope) & 8PE septic tank.'], 'assets/kitchen_drainage_blueprint.jpg?v=13'],
+  ['F-101', ['DWG F-101 BOMBA 消防逃生图', 'DWG F-101 Fire & Egress Plan'], ['SD1-SD6 烟感、FE1-FE4 灭火器、1.5m 门净宽、Loft 第二逃生梯及疏散路线。', 'SD1-SD6 detectors, FE1-FE4 extinguishers, 1.5m exit doors & 2nd escape stair.'], 'assets/fire_safety_egress_blueprint.jpg?v=13'],
+  ['T-101', ['DWG T-101 5 大工程打压测试图', 'DWG T-101 T&C Testing Plan'], ['8 Bar 给水打压、24h 湿区闭水、4h 屋顶高压喷淋及 30mA RCCB 漏电测试。', '8 Bar water pressure, 24h flood test, 4h roof spray & 30mA RCCB tests.'], 'assets/tc_testing_blueprint.jpg?v=13'],
+  ['G-101', ['DWG G-101 总平面规划图', 'DWG G-101 Site Plan'], ['Jalan Pakis 正面沿街、指北针、40x50ft 建筑占地、15ft 前退缩、10ft 后退缩及 U 型排水沟。', 'Jalan Pakis frontage, 40x50ft footprint, 15ft front & 10ft rear setbacks.'], 'assets/siteplan-bp.jpg?v=13']
 ];
+
+// Global gallery list for Lightbox navigation
+let activeGallery = [];
+let activeGalleryIndex = 0;
 
 function language() { return document.documentElement.dataset.language || 'zh'; }
 
 function renderCards() {
   const lang = language();
   const isZh = lang === 'zh';
-  const frontLabel = isZh ? '正面外观 3D 渲染图' : 'Front Exterior 3D Render';
-  const intLabel = isZh ? '室内中庭/大厅 3D 渲染图' : 'Interior 3D Render';
   const viewFull = isZh ? '🔍 点击全屏查看' : '🔍 Click to view';
 
   const styleGrid = document.getElementById('style-grid');
   if (styleGrid) {
-    styleGrid.innerHTML = styles.map(style => `
-      <article class="style-card">
-        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
-          <span style="font-size:0.75rem; font-weight:800; color:#059669; background:#ecfdf5; padding:3px 8px; border-radius:4px; border:1px solid #a7f3d0;">${style.badge}</span>
+    styleGrid.innerHTML = styles.map((style, sIndex) => `
+      <article class="style-card" style="margin-bottom: 36px; background: #ffffff; border: 1px solid #e2e8f0; border-radius: 16px; padding: 24px; box-shadow: 0 4px 16px rgba(0,0,0,0.04);">
+        <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px; margin-bottom:10px;">
+          <span style="font-size:0.75rem; font-weight:800; color:#059669; background:#ecfdf5; padding:4px 10px; border-radius:6px; border:1px solid #a7f3d0;">${style.badge}</span>
         </div>
-        <h3 style="font-size:1.15rem; margin-top:0; margin-bottom:6px;">${style.name[isZh ? 0 : 1]}</h3>
-        <p style="font-size:0.83rem; color:#64748b; margin-bottom:12px;">${style.materials[isZh ? 0 : 1]}</p>
-        <div class="image-pair">
-          <button class="image-button" data-image="${style.front}" data-caption="${style.name[isZh ? 0 : 1]} — ${frontLabel}">
-            <img src="${style.front}" alt="${frontLabel}" loading="lazy">
-            <span>${frontLabel}</span>
-          </button>
-          <button class="image-button" data-image="${style.interior}" data-caption="${style.name[isZh ? 0 : 1]} — ${intLabel}">
-            <img src="${style.interior}" alt="${intLabel}" loading="lazy">
-            <span>${intLabel}</span>
-          </button>
+        <h3 style="font-size:1.25rem; margin-top:0; margin-bottom:6px; color:#0f172a;">${style.name[isZh ? 0 : 1]}</h3>
+        <p style="font-size:0.85rem; color:#64748b; margin-bottom:16px;">${style.materials[isZh ? 0 : 1]}</p>
+
+        <!-- 4-Image Interactive Gallery Grid -->
+        <div class="image-pair-4" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-bottom: 16px;">
+          ${style.images.map((imgObj, iIndex) => `
+            <button class="image-button gallery-trigger" data-style-index="${sIndex}" data-image-index="${iIndex}" style="background:none; border:none; padding:0; cursor:pointer; text-align:left;">
+              <div style="position:relative; overflow:hidden; border-radius:8px; aspect-ratio:1.38; box-shadow:0 2px 8px rgba(0,0,0,0.06);">
+                <img src="${imgObj.src}" alt="${imgObj.label[isZh ? 0 : 1]}" style="width:100%; height:100%; object-fit:cover; display:block;" loading="lazy">
+                <span style="position:absolute; bottom:6px; right:6px; background:rgba(15,23,42,0.85); color:#fff; padding:3px 8px; border-radius:4px; font-size:0.7rem; font-weight:600;">${imgObj.label[isZh ? 0 : 1]}</span>
+              </div>
+            </button>
+          `).join('')}
         </div>
-        <div style="background:#f8fafc; border-radius:8px; padding:12px; margin-top:12px; border:1px solid #f1f5f9;">
-          <ul style="margin:0; padding-left:16px; color:#334155; font-size:0.83rem; line-height:1.6;">
+
+        <div style="background:#f8fafc; border-radius:10px; padding:14px; border:1px solid #f1f5f9;">
+          <ul style="margin:0; padding-left:18px; color:#334155; font-size:0.85rem; line-height:1.6;">
             ${style.features.map(feat => `<li>${feat}</li>`).join('')}
           </ul>
         </div>
@@ -160,10 +178,12 @@ function renderCards() {
   const drawingGrid = document.getElementById('drawing-grid');
   if (drawingGrid) {
     drawingGrid.innerHTML = drawings.map(([number, title, description, hdSrc]) => `
-      <article class="drawing-card image-button" data-image="${hdSrc || `assets/drawings/${number.toLowerCase()}-preview.png?v=12`}" data-caption="${number} ${title[isZh ? 0 : 1]}">
-        <img src="assets/drawings/${number.toLowerCase()}-preview.png?v=12" alt="${number}" loading="lazy">
-        <span style="font-size:0.75rem; font-weight:800; color:#0284c7;">${number}</span>
-        <h3 style="font-size:1.05rem; margin:4px 0 6px;">${title[isZh ? 0 : 1]}</h3>
+      <article class="drawing-card image-button" data-image="${hdSrc || `assets/drawings/${number.toLowerCase()}-preview.png?v=13`}" data-caption="${number} ${title[isZh ? 0 : 1]}" style="cursor:pointer; background:#fff; border:1px solid #e2e8f0; border-radius:12px; padding:16px; transition: transform 0.2s, box-shadow 0.2s;">
+        <div style="position:relative; aspect-ratio:1.42; overflow:hidden; border-radius:8px; margin-bottom:12px; border:1px solid #cbd5e1;">
+          <img src="assets/drawings/${number.toLowerCase()}-preview.png?v=13" alt="${number}" style="width:100%; height:100%; object-fit:cover; display:block;" loading="lazy">
+          <span style="position:absolute; top:8px; left:8px; background:#0284c7; color:#fff; padding:2px 8px; border-radius:4px; font-size:0.75rem; font-weight:700;">${number}</span>
+        </div>
+        <h3 style="font-size:1.05rem; margin:0 0 6px; color:#0f172a;">${title[isZh ? 0 : 1]}</h3>
         <p style="font-size:0.83rem; color:#64748b; margin-bottom:8px;">${description[isZh ? 0 : 1]}</p>
         <span style="color:#0284c7; font-size:0.8rem; font-weight:700;">${viewFull}</span>
       </article>`).join('');
@@ -192,20 +212,44 @@ function setLanguage(next) {
   renderCards();
 }
 
-function openLightbox(src, caption) {
+function openLightboxGallery(gallery, index) {
+  activeGallery = gallery;
+  activeGalleryIndex = index;
+  updateLightboxContent();
+
   const modal = document.getElementById('lightbox');
+  if (modal) {
+    if (typeof modal.showModal === 'function') modal.showModal();
+    else modal.classList.add('active');
+  }
+}
+
+function updateLightboxContent() {
+  if (!activeGallery.length) return;
+  const current = activeGallery[activeGalleryIndex];
   const modalImg = document.getElementById('lightbox-img');
   const modalCaption = document.getElementById('lightbox-caption');
+  const modalCounter = document.getElementById('lightbox-counter');
 
-  if (modal && modalImg) {
-    modalImg.src = src;
-    if (modalCaption) modalCaption.textContent = caption || 'Lot 7836 Architectural Detail';
-    if (typeof modal.showModal === 'function') {
-      modal.showModal();
-    } else {
-      modal.classList.add('active');
-    }
-  }
+  if (modalImg) modalImg.src = current.src || current;
+  if (modalCaption) modalCaption.textContent = current.caption || current.label || 'Lot 7836 View';
+  if (modalCounter) modalCounter.textContent = `${activeGalleryIndex + 1} / ${activeGallery.length}`;
+}
+
+function nextLightboxImage() {
+  if (!activeGallery.length) return;
+  activeGalleryIndex = (activeGalleryIndex + 1) % activeGallery.length;
+  updateLightboxContent();
+}
+
+function prevLightboxImage() {
+  if (!activeGallery.length) return;
+  activeGalleryIndex = (activeGalleryIndex - 1 + activeGallery.length) % activeGallery.length;
+  updateLightboxContent();
+}
+
+function openSingleLightbox(src, caption) {
+  openLightboxGallery([{ src: src, caption: caption }], 0);
 }
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -223,11 +267,33 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.nav-links a').forEach(link => link.addEventListener('click', () => document.body.classList.remove('menu-open')));
   
   document.addEventListener('click', event => {
+    // Style card gallery trigger
+    const galBtn = event.target.closest('.gallery-trigger');
+    if (galBtn) {
+      const sIndex = parseInt(galBtn.dataset.styleIndex, 10);
+      const iIndex = parseInt(galBtn.dataset.imageIndex, 10);
+      const isZh = language() === 'zh';
+      const styleObj = styles[sIndex];
+      const galleryList = styleObj.images.map(img => ({
+        src: img.src,
+        caption: `${styleObj.name[isZh ? 0 : 1]} — ${img.label[isZh ? 0 : 1]}`
+      }));
+      openLightboxGallery(galleryList, iIndex);
+      return;
+    }
+
+    // Generic image button
     const card = event.target.closest('.image-button');
     if (card && card.dataset.image) {
-      openLightbox(card.dataset.image, card.dataset.caption);
+      openSingleLightbox(card.dataset.image, card.dataset.caption);
     }
   });
+
+  // Lightbox arrow navigation
+  const prevBtn = document.getElementById('lightbox-prev');
+  const nextBtn = document.getElementById('lightbox-next');
+  if (prevBtn) prevBtn.addEventListener('click', e => { e.stopPropagation(); prevLightboxImage(); });
+  if (nextBtn) nextBtn.addEventListener('click', e => { e.stopPropagation(); nextLightboxImage(); });
 
   const dialogClose = document.querySelector('.dialog-close');
   if (dialogClose) {
@@ -239,6 +305,19 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
+
+  // Keyboard Navigation (ESC, Left, Right Arrow)
+  window.addEventListener('keydown', e => {
+    const modal = document.getElementById('lightbox');
+    if (modal && (modal.open || modal.classList.contains('active'))) {
+      if (e.key === 'ArrowRight') nextLightboxImage();
+      if (e.key === 'ArrowLeft') prevLightboxImage();
+      if (e.key === 'Escape') {
+        if (typeof modal.close === 'function') modal.close();
+        else modal.classList.remove('active');
+      }
+    }
+  });
 
   const printBtn = document.querySelector('[data-action="print"]');
   if (printBtn) printBtn.addEventListener('click', () => window.print());
