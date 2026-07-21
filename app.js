@@ -1,64 +1,147 @@
 const languages = {
   zh: {
-    'menu.aria': '打开菜单', 'nav.overview': '项目总览', 'nav.recommended': '推荐方案', 'nav.styles': '风格比较', 'nav.drawings': '图纸包', 'nav.budget': '造价',
-    'action.print': '打印提案', 'action.share': '复制分享链接', 'hero.title': '50 × 75ft 现代热带集装箱住宅概念提案', 'hero.lead': '以两只纵向 40ft High Cube 集装箱、34ft 挑高大厅与后方钢构 Loft 组成的中英双语概念方案。',
-    'hero.notice': '概念设计，非施工或送审图。所有结构、消防、排水、退缩与主管机关要求须由 Ar./P.Eng/MPK/BOMBA/IWK 确认。', 'caption.concept': '概念渲染 - 空间及施工细节仍须经专业设计确认。',
-    'recommended.title': '推荐：Batu Angin 风砖屏风方案', 'recommended.text': '以通风花砖、深檐、PU 隔热屋面和 Raised Jack Roof 作为热带被动降温策略。5,087 CFM 为概念输入下的预估值，并非保证风量。', 'recommended.gif': '概念流程示意；集装箱切割、补强和防水须以经签署的施工节点为准。', 'recommended.reviewTitle': '施工前必须完成专业审查', 'recommended.reviewText': '退缩、消防接近、污水接驳、箱体改造、整体稳定及验收标准均须先获得现场及专业确认。',
-    'styles.title': '三组外观与氛围研究', 'styles.text': '每组均受同一设计控制线约束。正面与室内为概念渲染；侧后图仅作材料、景观与氛围参考，不表示已核定体量或立面。', 'styles.controls': '共同控制：2 × 40ft HC 集装箱、34ft 大厅、后方 35ft 钢构延伸、30° 屋顶、+24′ 檐高 / +38′-5″ 主脊 / +47′ Jack Roof。',
-    'drawings.title': '英文概念图纸与 CAD 源文件', 'drawings.text': '下载包包含 7 张英文概念图纸 PDF 和可编辑 DXF 源文件。所有图纸明确标示为非施工、非报批文件。', 'drawings.pdf': '打开英文概念图纸集', 'drawings.dxf': '下载可编辑 CAD 源文件', 'drawings.dxfNote': '可在兼容 AutoCAD 的软件中打开；需要时另存为 DWG。', 'drawings.notice': '退缩、BOMBA 消防接近、污水接驳、结构承载及测试验收均未被表示为已获批准；须待测量图与专业审查完成。',
-    'budget.title': 'RM400k–RM450k 初步造价范围', 'budget.text': '仅作概念阶段预算。报价、税费、审批、地勘、专业签证和不可预见工程须另行核定。', 'budget.foundation': '基础及地坪工程', 'budget.structure': '集装箱改造及钢构', 'budget.loft': '阁楼及楼梯', 'budget.roof': '屋面及 Jack Roof', 'budget.mep': '排水、卫生及电气', 'footer': '施工前须完成专业审查。',
-    'image.style2.front': '风格二概念渲染', 'image.gif': '风格二概念施工流程'
+    'nav.overview': '项目总览',
+    'nav.recommended': '主推方案',
+    'nav.styles': '3套风格比较',
+    'nav.drawings': '2D 概念图集',
+    'nav.budget': '造价拆解',
+    'action.print': '打印提案',
+    'action.share': '分享链接',
+    'menu.aria': '切换导航菜单',
+    'hero.title': '50 × 75ft 现代热带 Container Loft Bungalow 完整开发提案',
+    'hero.lead': '正面 50ft 面宽 × 75ft 进深 (3,750 sqft) | 双 40ft High Cube 集装箱 + 34ft 挑高大厅 + 900sqft 二层 Loft 阁楼 | 包含开放式厨房、双卫生间与集中排水管线。',
+    'hero.notice': '概念设计提案，所有结构、消防、排水及退缩最终须由注册建筑师 (Ar.)、P.Eng 及主管机构 (MPK/BOMBA/IWK) 确认。',
+    'recommended.title': '主推：马六甲 Batu Angin 风砖屏风度假风',
+    'recommended.text': '采用 Batu Angin 通风花砖双层防热墙、30° 高坡斜屋顶与中央 Raised Jack Roof 拔风天窗 (+47ft 顶高)，利用热浮力自然对流排热，配合 50mm PU 隔热包覆，打造自然降温 3-5°C 的热带仓储别墅。',
+    'recommended.reviewTitle': '专业设计与工程控制要点',
+    'recommended.reviewText': '• 布局：左右侧摆 2 个 40ft HC 集装箱 (各 8ft 宽)，中间打通 34ft 挑高大厅。\n• 水电：左集装箱后段设开放式厨房与油脂拦截器，右集装箱设双卫生间集中排污至后方 8PE 化粪池。\n• 结构：集装箱切口全围焊接 100x100mm 方钢圈补强，地面 150mm 加厚混凝土地坪。',
+    'styles.title': '3 套独立度假风外观与室内 3D 效果图',
+    'styles.text': '每套风格均受同一设计控制线约束（50x75ft 占地、双 40ft HC、34ft 大厅、30° 屋顶）。点击任意图片均可全屏高清放大查看。',
+    'styles.controls': '共享控制线：2 × 40ft HC 集装箱, 34ft 中厅, 35ft 后区 Loft, 30° 屋顶 (+24\' 檐高 / +38\'-5" 屋脊 / +47\' 拔风塔顶)。',
+    'drawings.title': '2D 概念工程示意图集 (点击图片全屏查看)',
+    'drawings.text': '包含 7 张标准 AutoCAD 工程规图（平面图、立面图、集装箱切割 Detail、厨房排水图、BOMBA 消防图、T&C 测试图、总平面图）。点击任意图纸均可放大查看细节。',
+    'drawings.notice': '注：本图集为概念工程示意图，点击图纸即可放大查看细节，不提供文件下载。',
+    'budget.title': 'RM400k – RM450k 精准预算拆解',
+    'budget.text': '通过模组化集装箱改造与柱网优化节约 30% 结构资金，重投入于地坪基坑、防热拔风与防水管线。',
+    'budget.foundation': '150mm 工业加厚地坪与基坑工程',
+    'budget.structure': '集装箱改造、切割加固与钢骨架',
+    'budget.loft': '900sqft Mezzanine Loft 阁楼与楼梯',
+    'budget.roof': '30° 坡屋面、PU 隔热板与拔风塔',
+    'budget.mep': '厨房排水、双厕湿区、生化化粪池与三相电',
+    'footer': '© 2026 Lot 7836 Kluang Development Pack. 概念设计提案。',
+    'image.style2.front': '风格 2 外观 3D 全景',
+    'image.gif': '风格 2 0-1 集装箱改造施工动画'
   },
   en: {
-    'menu.aria': 'Open menu', 'nav.overview': 'Overview', 'nav.recommended': 'Preferred', 'nav.styles': 'Styles', 'nav.drawings': 'Drawing Set', 'nav.budget': 'Cost',
-    'action.print': 'Print proposal', 'action.share': 'Copy share link', 'hero.title': '50 × 75ft Modern Tropical Container Bungalow', 'hero.lead': 'A bilingual concept proposal organised around two longitudinal 40ft High Cube containers, a 34ft double-height hall and a rear steel loft zone.',
-    'hero.notice': 'Concept design only - not for construction or submission. Structure, fire, drainage, setbacks and authority requirements require Ar./P.Eng/MPK/BOMBA/IWK confirmation.', 'caption.concept': 'Concept render - spatial and construction details remain subject to professional design.',
-    'recommended.title': 'Preferred direction: Batu Angin screen wall', 'recommended.text': 'Vent blocks, deep eaves, an insulated roof and the Raised Jack Roof form a tropical passive-cooling strategy. 5,087 CFM is a conceptual estimate, not a guaranteed airflow.', 'recommended.gif': 'Concept sequence only; final cutting, reinforcement and waterproofing require signed construction details.', 'recommended.reviewTitle': 'Required professional review', 'recommended.reviewText': 'Confirm site setbacks, fire access, sanitary connection, container modifications, structural stability and all testing criteria before construction.',
-    'styles.title': 'Three exterior and atmosphere studies', 'styles.text': 'Each study is constrained by the same design controls. Front and interior images are concept renders; side and rear images are finish, landscape and atmosphere references only - not approved massing or elevations.', 'styles.controls': 'Shared control: 2 × 40ft HC containers, 34ft hall, 35ft rear steel extension, 30° roof, +24′ eave / +38′-5″ ridge / +47′ Jack Roof.',
-    'drawings.title': 'English concept drawings and CAD source', 'drawings.text': 'The download pack includes seven English concept-drawing PDF sheets and editable DXF source files. Every sheet is clearly marked not for construction or submission.', 'drawings.pdf': 'Open English concept drawing set', 'drawings.dxf': 'Download editable CAD source', 'drawings.dxfNote': 'Open in AutoCAD-compatible software; save as DWG when required.', 'drawings.notice': 'No setback, BOMBA access, sewer connection, structural capacity or test acceptance is represented as approved. These remain pending site survey and professional review.',
-    'budget.title': 'RM400k–RM450k preliminary cost range', 'budget.text': 'Concept-stage budget only. Tender pricing, taxes, approvals, investigations, professional sign-off and contingencies remain to be confirmed.', 'budget.foundation': 'Foundation and ground works', 'budget.structure': 'Container conversion and steelwork', 'budget.loft': 'Loft and stair', 'budget.roof': 'Roof and Jack Roof monitor', 'budget.mep': 'Drainage, sanitary and electrical', 'footer': 'Professional review required before construction.',
-    'image.style2.front': 'Style 2 concept render', 'image.gif': 'Style 2 concept construction sequence'
+    'nav.overview': 'Overview',
+    'nav.recommended': 'Recommended',
+    'nav.styles': '3 Style Studies',
+    'nav.drawings': '2D Drawings',
+    'nav.budget': 'Budget Plan',
+    'action.print': 'Print',
+    'action.share': 'Share',
+    'menu.aria': 'Toggle Menu',
+    'hero.title': '50 × 75ft Modern Tropical Container Loft Bungalow Proposal',
+    'hero.lead': '50ft Frontage × 75ft Depth (3,750 sqft) | Twin 40ft HC Containers + 34ft Hall + 900sqft Loft | Integrated Kitchen & Wet-Core Drainage.',
+    'hero.notice': 'Conceptual proposal. All structure, fire safety, drainage and setbacks subject to Ar. / P.Eng / MPK / BOMBA / IWK review.',
+    'recommended.title': 'Recommended: Batu Angin Breeze Block Resort Style',
+    'recommended.text': 'Featuring Batu Angin breeze block double-skin facade, 30° pitched roof and Raised Jack Roof monitor (+47ft peak), using thermal buoyancy for passive cooling (3-5°C temperature reduction).',
+    'recommended.reviewTitle': 'Design & Engineering Highlights',
+    'recommended.reviewText': '• Layout: Two 40ft HC containers on sides, opening a 34ft high-ceiling central hall.\n• Plumbing: Open kitchen with grease trap on left; twin restrooms on right connecting to rear 8PE septic tank.\n• Structure: Cut-outs reinforced with 100x100mm RHS steel frames on 150mm concrete slab.',
+    'styles.title': '3 Distinct Architectural & Interior 3D Renders',
+    'styles.text': 'All 3 style packages follow the exact same design controls. Click any image to view in full-screen Lightbox.',
+    'styles.controls': 'Shared Controls: 2 × 40ft HC, 34ft Hall, 35ft Rear Loft, 30° Roof (+24\' Eave / +38\'-5" Ridge / +47\' Jack Roof).',
+    'drawings.title': '2D Conceptual Drawing Set (Click to View Fullscreen)',
+    'drawings.text': 'Complete set of 7 AutoCAD-standard engineering diagrams. Click any card to inspect drawing details.',
+    'drawings.notice': 'Note: Conceptual diagrams only. Click any drawing to view fullscreen.',
+    'budget.title': 'RM400k – RM450k Budget Breakdown',
+    'budget.text': 'Optimized container modularity saves 30% structural cost, re-invested into foundation, heat insulation and waterproofing.',
+    'budget.foundation': '150mm Concrete Slab & Substructure',
+    'budget.structure': 'Container Conversion & Steel Frame',
+    'budget.loft': '900sqft Mezzanine Loft & Stair',
+    'budget.roof': '30° Roof, PU Insulation & Jack Roof Monitor',
+    'budget.mep': 'Kitchen Drainage, Restrooms, Septic Tank & Electrical',
+    'footer': '© 2026 Lot 7836 Kluang Development Pack. Conceptual Proposal.',
+    'image.style2.front': 'Style 2 Exterior 3D Render',
+    'image.gif': 'Style 2 Container Build Sequence GIF'
   }
 };
 
 const styles = [
-  { key: 'style2', name: ['风格 2 · Batu Angin 风砖屏风', 'Style 2 · Batu Angin Screen Wall'], front: 'assets/style2-ext.jpg?v=6', interior: 'assets/style2-int.jpg?v=6', side: 'assets/style2-side.jpg?v=6', rear: 'assets/style2-rear.jpg?v=6' },
-  { key: 'style1', name: ['风格 1 · 赤陶现代热带', 'Style 1 · Terracotta Modern Tropical'], front: 'assets/style1-ext.jpg?v=6', interior: 'assets/style1-int.jpg?v=6', side: 'assets/style1-side.jpg?v=6', rear: 'assets/style1-rear.jpg?v=6' },
-  { key: 'style3', name: ['风格 3 · 南洋纯白谷仓', 'Style 3 · Nanyang White Barn'], front: 'assets/style3-ext.jpg?v=6', interior: 'assets/style3-int.jpg?v=6', side: 'assets/style3-side.jpg?v=6', rear: 'assets/style3-rear.jpg?v=6' }
+  { key: 'style2', name: ['风格 2 · 马六甲 Batu Angin 风砖屏风墙 (推荐主推)', 'Style 2 · Batu Angin Screen Wall (Recommended)'], front: 'assets/style2-ext.jpg?v=9', interior: 'assets/style2-int.jpg?v=9', side: 'assets/style2-side.jpg?v=9', rear: 'assets/style2-rear.jpg?v=9' },
+  { key: 'style1', name: ['风格 1 · 居銮赤陶红现代热带风', 'Style 1 · Terracotta Modern Tropical'], front: 'assets/style1-ext.jpg?v=9', interior: 'assets/style1-int.jpg?v=9', side: 'assets/style1-side.jpg?v=9', rear: 'assets/style1-rear.jpg?v=9' },
+  { key: 'style3', name: ['风格 3 · 南洋纯白复古谷仓风', 'Style 3 · Nanyang White Barn'], front: 'assets/style3-ext.jpg?v=9', interior: 'assets/style3-int.jpg?v=9', side: 'assets/style3-side.jpg?v=9', rear: 'assets/style3-rear.jpg?v=9' }
 ];
 
 const drawings = [
-  ['A-101', ['平面控制图', 'Floor plan'], ['两只 40ft HC、34ft 大厅与后方 35ft 钢构区的平面控制。', 'Plan control: two 40ft HC containers, 34ft hall and rear 35ft steel zone.']],
-  ['A-102', ['正立面与标高', 'Front elevation'], ['标高控制：+24ft 檐高、+38ft-5in 主脊和 +47ft Jack Roof。', 'Level controls: +24ft eave, +38ft-5in ridge and +47ft Jack Roof.']],
-  ['S-101', ['集装箱改造审查', 'Container modification'], ['仅为概念补强；切割和连接须经结构设计。', 'Concept reinforcement only; final cutting and connections require structural design.']],
-  ['M-101', ['湿区排水审查', 'Wet-core drainage'], ['卫生排水协调概念；最终管路和接驳待 MEP 设计。', 'Concept sanitary coordination; final pipework and connection remain to be designed.']],
-  ['F-101', ['消防与疏散审查', 'Fire and egress review'], ['仅为审查清单；BOMBA 策略须由专业人士确认。', 'Review checklist only; BOMBA strategy requires specialist approval.']],
-  ['T-101', ['测试与调试计划', 'Testing schedule'], ['建议测试项目；方法和验收标准须经专业确认。', 'Proposed testing subjects; methods and acceptance criteria require professional confirmation.']],
-  ['G-101', ['总平面审查图', 'Site review plan'], ['测量、退缩、消防接近与公共排水接驳待确认。', 'Survey, setbacks, fire access and public drainage connection remain pending confirmation.']]
+  ['A-101', ['DWG A-101 2D 建筑平面图', 'DWG A-101 Floor Plan'], ['50x75ft 地块、双 40ft HC 集装箱、34ft 挑高大厅与后区 35ft 阁楼平面布局。', '50x75ft footprint, twin 40ft HC containers, 34ft hall and rear loft.'], 'assets/floorplan-bp.jpg?v=9'],
+  ['A-102', ['DWG A-102 建筑正立面图', 'DWG A-102 Elevation'], ['控制标高：+24ft 主屋檐、+38ft-5in 主屋脊与 +47ft 拔风塔顶，30° 坡屋顶结构。', 'Level controls: +24ft eave, +38ft-5in ridge and +47ft Jack Roof.'], 'assets/elevation-bp.jpg?v=9'],
+  ['S-101', ['DWG S-101 集装箱切割加固 Detail', 'DWG S-101 Container Detail'], ['侧墙切割开窗、切口周圈 100x100x4.5mm RHS 方钢框焊接与 M20 锚栓加固。', '100x100x4.5mm RHS steel frame reinforcement & M20 anchor bolts.'], 'assets/container_splicing_blueprint.jpg?v=9'],
+  ['M-101', ['DWG M-101 厨房与集中排水图', 'DWG M-101 Kitchen & Drainage'], ['左集装箱 25ft 厨房、50L 油脂拦截器、DN100 黑水管(1:40坡度)及 8PE 化粪池。', 'Kitchen grease trap, DN100 blackwater pipe (1:40 slope) & 8PE septic tank.'], 'assets/kitchen_drainage_blueprint.jpg?v=9'],
+  ['F-101', ['DWG F-101 BOMBA 消防逃生图', 'DWG F-101 Fire & Egress Plan'], ['SD1-SD6 烟感、FE1-FE4 灭火器、1.5m 门净宽、Loft 第二逃生梯及疏散路线。', 'SD1-SD6 detectors, FE1-FE4 extinguishers, 1.5m exit doors & 2nd escape stair.'], 'assets/fire_safety_egress_blueprint.jpg?v=9'],
+  ['T-101', ['DWG T-101 5 大工程打压测试图', 'DWG T-101 T&C Testing Plan'], ['8 Bar 给水打压、24h 湿区闭水、4h 屋顶高压喷淋及 30mA RCCB 漏电测试。', '8 Bar water pressure, 24h flood test, 4h roof spray & 30mA RCCB tests.'], 'assets/G-101', ['DWG G-101 总平面规划图', 'DWG G-101 Site Plan'], ['Jalan Pakis 正面沿街、指北针、40x50ft 建筑占地、15ft 前退缩、10ft 后退缩及 U 型排水沟。', 'Jalan Pakis frontage, 40x50ft footprint, 15ft front & 10ft rear setbacks.'], 'assets/siteplan-bp.jpg?v=9']
 ];
 
 function language() { return document.documentElement.dataset.language || 'zh'; }
+
 function renderCards() {
   const lang = language();
   const isZh = lang === 'zh';
-  const conceptLabel = isZh ? '概念渲染' : 'Concept render';
-  const interiorLabel = isZh ? '室内概念渲染' : 'Interior concept render';
-  const moodLabel = isZh ? '风格氛围参考' : 'Style mood reference';
-  const sourceLabel = isZh ? 'DXF 源文件 ↓' : 'DXF source ↓';
-  document.getElementById('style-grid').innerHTML = styles.map(style => `
-    <article class="style-card">
-      <h3>${style.name[lang === 'zh' ? 0 : 1]}</h3>
-      <div class="image-pair">
-        <button class="image-button" data-image="${style.front}" data-caption="${style.name[isZh ? 0 : 1]} — ${conceptLabel}"><img src="${style.front}" alt="${style.name[isZh ? 0 : 1]} ${conceptLabel}" loading="lazy" decoding="async"><span>${conceptLabel}</span></button>
-        <button class="image-button" data-image="${style.interior}" data-caption="${style.name[isZh ? 0 : 1]} — ${interiorLabel}"><img src="${style.interior}" alt="${style.name[isZh ? 0 : 1]} ${interiorLabel}" loading="lazy" decoding="async"><span>${interiorLabel}</span></button>
-      </div>
-      <div class="image-pair reference-pair">
-        <button class="image-button" data-image="${style.side}" data-caption="${style.name[isZh ? 0 : 1]} — ${moodLabel}"><img src="${style.side}" alt="${style.name[isZh ? 0 : 1]} ${moodLabel}" loading="lazy" decoding="async"><span>${moodLabel}</span></button>
-        <button class="image-button" data-image="${style.rear}" data-caption="${style.name[isZh ? 0 : 1]} — ${moodLabel}"><img src="${style.rear}" alt="${style.name[isZh ? 0 : 1]} ${moodLabel}" loading="lazy" decoding="async"><span>${moodLabel}</span></button>
-      </div>
-    </article>`).join('');
-  document.getElementById('drawing-grid').innerHTML = drawings.map(([number, title, description]) => `
-    <article class="drawing-card"><img src="assets/drawings/${number.toLowerCase()}-preview.png?v=1" alt="${number} English concept drawing preview" loading="lazy" decoding="async"><span>${number}</span><h3>${title[isZh ? 0 : 1]}</h3><p>${description[isZh ? 0 : 1]}</p><a href="deliverables/dxf/${number.toLowerCase()}.dxf?v=1" download>${sourceLabel}</a></article>`).join('');
+  const frontLabel = isZh ? '正面全景 3D 图' : 'Front 3D View';
+  const intLabel = isZh ? '室内挑高大厅 3D 图' : 'Interior 3D View';
+  const sideLabel = isZh ? '75ft 侧立面 3D 图' : '75ft Side View';
+  const rearLabel = isZh ? '45° 轴测全景 3D 图' : '45° Rear View';
+  const viewFull = isZh ? '🔍 点击全屏放大查看' : '🔍 Click to view full screen';
+
+  const styleGrid = document.getElementById('style-grid');
+  if (styleGrid) {
+    styleGrid.innerHTML = styles.map(style => `
+      <article class="style-card" style="margin-bottom: 32px; background: #ffffff; border: 1px solid #e2e8f0; border-radius: 16px; padding: 24px; box-shadow: 0 4px 12px rgba(0,0,0,0.04);">
+        <h3 style="font-size: 1.25rem; margin-top: 0; margin-bottom: 16px; color: #0f172a;">${style.name[isZh ? 0 : 1]}</h3>
+        <div class="image-pair" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px;">
+          <button class="image-button" data-image="${style.front}" data-caption="${style.name[isZh ? 0 : 1]} — ${frontLabel}" style="background:none; border:none; padding:0; cursor:pointer; text-align:left;">
+            <div style="position:relative; overflow:hidden; border-radius:10px; aspect-ratio:16/9;">
+              <img src="${style.front}" alt="${frontLabel}" style="width:100%; height:100%; object-fit:cover; display:block;" loading="lazy">
+              <span style="position:absolute; bottom:8px; right:8px; background:rgba(0,0,0,0.7); color:#fff; padding:4px 10px; border-radius:6px; font-size:0.75rem;">${frontLabel}</span>
+            </div>
+          </button>
+          <button class="image-button" data-image="${style.side}" data-caption="${style.name[isZh ? 0 : 1]} — ${sideLabel}" style="background:none; border:none; padding:0; cursor:pointer; text-align:left;">
+            <div style="position:relative; overflow:hidden; border-radius:10px; aspect-ratio:16/9;">
+              <img src="${style.side}" alt="${sideLabel}" style="width:100%; height:100%; object-fit:cover; display:block;" loading="lazy">
+              <span style="position:absolute; bottom:8px; right:8px; background:rgba(0,0,0,0.7); color:#fff; padding:4px 10px; border-radius:6px; font-size:0.75rem;">${sideLabel}</span>
+            </div>
+          </button>
+          <button class="image-button" data-image="${style.rear}" data-caption="${style.name[isZh ? 0 : 1]} — ${rearLabel}" style="background:none; border:none; padding:0; cursor:pointer; text-align:left;">
+            <div style="position:relative; overflow:hidden; border-radius:10px; aspect-ratio:16/9;">
+              <img src="${style.rear}" alt="${rearLabel}" style="width:100%; height:100%; object-fit:cover; display:block;" loading="lazy">
+              <span style="position:absolute; bottom:8px; right:8px; background:rgba(0,0,0,0.7); color:#fff; padding:4px 10px; border-radius:6px; font-size:0.75rem;">${rearLabel}</span>
+            </div>
+          </button>
+          <button class="image-button" data-image="${style.interior}" data-caption="${style.name[isZh ? 0 : 1]} — ${intLabel}" style="background:none; border:none; padding:0; cursor:pointer; text-align:left;">
+            <div style="position:relative; overflow:hidden; border-radius:10px; aspect-ratio:16/9;">
+              <img src="${style.interior}" alt="${intLabel}" style="width:100%; height:100%; object-fit:cover; display:block;" loading="lazy">
+              <span style="position:absolute; bottom:8px; right:8px; background:rgba(0,0,0,0.7); color:#fff; padding:4px 10px; border-radius:6px; font-size:0.75rem;">${intLabel}</span>
+            </div>
+          </button>
+        </div>
+      </article>`).join('');
+  }
+
+  const drawingGrid = document.getElementById('drawing-grid');
+  if (drawingGrid) {
+    drawingGrid.innerHTML = drawings.map(([number, title, description, hdSrc]) => `
+      <article class="drawing-card image-button" data-image="${hdSrc || `assets/drawings/${number.toLowerCase()}-preview.png?v=9`}" data-caption="${number} ${title[isZh ? 0 : 1]}" style="cursor:pointer; background:#fff; border:1px solid #e2e8f0; border-radius:12px; padding:16px; transition: transform 0.2s;">
+        <div style="position:relative; aspect-ratio:1.42; overflow:hidden; border-radius:8px; margin-bottom:12px;">
+          <img src="assets/drawings/${number.toLowerCase()}-preview.png?v=9" alt="${number}" style="width:100%; height:100%; object-fit:cover; display:block;" loading="lazy">
+          <span style="position:absolute; top:8px; left:8px; background:#0284c7; color:#fff; padding:2px 8px; border-radius:4px; font-size:0.75rem; font-weight:700;">${number}</span>
+        </div>
+        <h3 style="font-size:1.05rem; margin:0 0 6px; color:#0f172a;">${title[isZh ? 0 : 1]}</h3>
+        <p style="font-size:0.85rem; color:#64748b; margin:0 0 10px; line-height:1.5;">${description[isZh ? 0 : 1]}</p>
+        <div style="color:#0284c7; font-size:0.82rem; font-weight:600; display:flex; align-items:center; gap:4px;">
+          ${viewFull}
+        </div>
+      </article>`).join('');
+  }
 }
 
 function setLanguage(next) {
@@ -69,29 +152,80 @@ function setLanguage(next) {
   document.querySelectorAll('[data-i18n]').forEach(el => { if (dictionary[el.dataset.i18n]) el.textContent = dictionary[el.dataset.i18n]; });
   document.querySelectorAll('[data-i18n-alt]').forEach(el => { if (dictionary[el.dataset.i18nAlt]) el.alt = dictionary[el.dataset.i18nAlt]; });
   document.querySelectorAll('[data-i18n-title]').forEach(el => { if (dictionary[el.dataset.i18nTitle]) el.title = dictionary[el.dataset.i18nTitle]; });
-  document.querySelector('.menu-toggle').setAttribute('aria-label', dictionary['menu.aria']);
-  document.querySelectorAll('.language-btn').forEach(btn => { const active = btn.dataset.lang === next; btn.classList.toggle('active', active); btn.setAttribute('aria-pressed', String(active)); });
+  
+  const menuToggle = document.querySelector('.menu-toggle');
+  if (menuToggle) menuToggle.setAttribute('aria-label', dictionary['menu.aria']);
+
+  document.querySelectorAll('.language-btn').forEach(btn => {
+    const active = btn.dataset.lang === next;
+    btn.classList.toggle('active', active);
+    btn.setAttribute('aria-pressed', String(active));
+  });
+
   localStorage.setItem('lot7836-language', next);
   renderCards();
 }
 
 function openLightbox(src, caption) {
-  const dialog = document.getElementById('lightbox');
-  document.getElementById('lightbox-img').src = src;
-  document.getElementById('lightbox-caption').textContent = caption;
-  dialog.showModal();
+  const modal = document.getElementById('lightbox');
+  const modalImg = document.getElementById('lightbox-img');
+  const modalCaption = document.getElementById('lightbox-caption');
+
+  if (modal && modalImg) {
+    modalImg.src = src;
+    if (modalCaption) modalCaption.textContent = caption || 'Lot 7836 Architectural Detail';
+    if (typeof modal.showModal === 'function') {
+      modal.showModal();
+    } else {
+      modal.classList.add('active');
+    }
+  }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
   setLanguage(localStorage.getItem('lot7836-language') || 'zh');
   document.querySelectorAll('.language-btn').forEach(btn => btn.addEventListener('click', () => setLanguage(btn.dataset.lang)));
-  document.querySelector('.menu-toggle').addEventListener('click', event => { const open = document.body.classList.toggle('menu-open'); event.currentTarget.setAttribute('aria-expanded', String(open)); });
+  
+  const menuToggle = document.querySelector('.menu-toggle');
+  if (menuToggle) {
+    menuToggle.addEventListener('click', event => {
+      const open = document.body.classList.toggle('menu-open');
+      event.currentTarget.setAttribute('aria-expanded', String(open));
+    });
+  }
+
   document.querySelectorAll('.nav-links a').forEach(link => link.addEventListener('click', () => document.body.classList.remove('menu-open')));
-  document.addEventListener('click', event => { const card = event.target.closest('.image-button'); if (card) openLightbox(card.dataset.image, card.dataset.caption); });
-  document.querySelector('.dialog-close').addEventListener('click', () => document.getElementById('lightbox').close());
-  document.querySelector('[data-action="print"]').addEventListener('click', () => window.print());
-  document.querySelector('[data-action="share"]').addEventListener('click', async () => {
-    try { await navigator.clipboard.writeText(location.href); alert(language() === 'zh' ? '分享链接已复制。' : 'Share link copied.'); }
-    catch { prompt(language() === 'zh' ? '复制此链接：' : 'Copy this link:', location.href); }
+  
+  document.addEventListener('click', event => {
+    const card = event.target.closest('.image-button');
+    if (card && card.dataset.image) {
+      openLightbox(card.dataset.image, card.dataset.caption);
+    }
   });
+
+  const dialogClose = document.querySelector('.dialog-close');
+  if (dialogClose) {
+    dialogClose.addEventListener('click', () => {
+      const modal = document.getElementById('lightbox');
+      if (modal) {
+        if (typeof modal.close === 'function') modal.close();
+        else modal.classList.remove('active');
+      }
+    });
+  }
+
+  const printBtn = document.querySelector('[data-action="print"]');
+  if (printBtn) printBtn.addEventListener('click', () => window.print());
+
+  const shareBtn = document.querySelector('[data-action="share"]');
+  if (shareBtn) {
+    shareBtn.addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText(location.href);
+        alert(language() === 'zh' ? '分享链接已复制。' : 'Share link copied.');
+      } catch {
+        prompt(language() === 'zh' ? '复制此链接：' : 'Copy this link:', location.href);
+      }
+    });
+  }
 });
