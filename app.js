@@ -5,6 +5,7 @@ const languages = {
     'nav.recommended': '主推方案',
     'nav.styles': '3套风格比较',
     'nav.drawings': '2D 概念图集',
+    'nav.compliance': '规范与测试',
     'nav.budget': '造价拆解',
     'action.print': '打印提案',
     'action.share': '分享链接',
@@ -22,7 +23,7 @@ const languages = {
     'drawings.title': '2D 概念工程示意图集 (点击图片全屏查看)',
     'drawings.text': '包含 7 张标准 AutoCAD 工程规图（平面图、立面图、集装箱切割 Detail、厨房排水图、BOMBA 消防图、T&C 测试图、总平面图）。点击任意图纸均可放大查看细节。',
     'drawings.notice': '注：本图集为概念工程示意图，点击图纸即可放大查看细节，不提供文件下载。',
-    'budget.title': 'RM400k – RM450k 精准预算拆解',
+    'budget.title': 'RM400k – RM450k 精准预算拆解与试算器',
     'budget.text': '通过模组化集装箱改造与柱网优化节约 30% 结构资金，重投入于地坪基坑、防热拔风与防水管线。',
     'budget.foundation': '150mm 工业加厚地坪与基坑工程',
     'budget.structure': '集装箱改造、切割加固与钢骨架',
@@ -39,6 +40,7 @@ const languages = {
     'nav.recommended': 'Recommended',
     'nav.styles': '3 Style Studies',
     'nav.drawings': '2D Drawings',
+    'nav.compliance': 'Compliance & T&C',
     'nav.budget': 'Budget Plan',
     'action.print': 'Print',
     'action.share': 'Share',
@@ -56,7 +58,7 @@ const languages = {
     'drawings.title': '2D Conceptual Drawing Set (Click to View Fullscreen)',
     'drawings.text': 'Complete set of 7 AutoCAD-standard engineering diagrams. Click any card to inspect drawing details.',
     'drawings.notice': 'Note: Conceptual diagrams only. Click any drawing to view fullscreen.',
-    'budget.title': 'RM400k – RM450k Budget Breakdown',
+    'budget.title': 'RM400k – RM450k Budget Breakdown & Estimator',
     'budget.text': 'Optimized container modularity saves 30% structural cost, re-invested into foundation, heat insulation and waterproofing.',
     'budget.foundation': '150mm Concrete Slab & Substructure',
     'budget.structure': 'Container Conversion & Steel Frame',
@@ -69,7 +71,6 @@ const languages = {
   }
 };
 
-// 4 distinct 3D views for each style package
 const styles = [
   {
     key: 'style2',
@@ -82,10 +83,10 @@ const styles = [
       '✅ 度假村高级质感：粗抹灰结合热带绿植中庭，打造极其独特的现代奢华度假气质。'
     ],
     images: [
-      { src: 'assets/style2-ext.jpg?v=13', label: ['1/4 正面 50ft 全景 3D 图', '1/4 Front Exterior 3D'] },
-      { src: 'assets/style2-side.jpg?v=13', label: ['2/4 75ft 侧立面与排水 3D 图', '2/4 75ft Side Facade 3D'] },
-      { src: 'assets/style2-rear.jpg?v=13', label: ['3/4 45° 轴测与拔风塔 3D 图', '3/4 45° Rear Isometric 3D'] },
-      { src: 'assets/style2-int.jpg?v=13', label: ['4/4 室内花砖光影中庭 3D 图', '4/4 Interior Atrium 3D'] }
+      { src: 'assets/style2-ext.jpg?v=15', label: ['1/4 正面 50ft 全景 3D 图', '1/4 Front Exterior 3D'] },
+      { src: 'assets/style2-side.jpg?v=15', label: ['2/4 75ft 侧立面与排水 3D 图', '2/4 75ft Side Facade 3D'] },
+      { src: 'assets/style2-rear.jpg?v=15', label: ['3/4 45° 轴测与拔风塔 3D 图', '3/4 45° Rear Isometric 3D'] },
+      { src: 'assets/style2-int.jpg?v=15', label: ['4/4 室内花砖光影中庭 3D 图', '4/4 Interior Atrium 3D'] }
     ]
   },
   {
@@ -99,10 +100,10 @@ const styles = [
       '✅ 挑高开放大厅：34ft 大面宽中央大厅结合裸露柚木屋架，室内视野极其开阔通透。'
     ],
     images: [
-      { src: 'assets/style1-ext.jpg?v=13', label: ['1/4 正面 50ft 全景 3D 图', '1/4 Front Exterior 3D'] },
-      { src: 'assets/style1-side.jpg?v=13', label: ['2/4 75ft 侧立面 3D 图', '2/4 75ft Side Facade 3D'] },
-      { src: 'assets/style1-rear.jpg?v=13', label: ['3/4 45° 轴测与拔风塔 3D 图', '3/4 45° Rear Isometric 3D'] },
-      { src: 'assets/style1-int.jpg?v=13', label: ['4/4 室内挑高大厅 3D 图', '4/4 Interior Hall 3D'] }
+      { src: 'assets/style1-ext.jpg?v=15', label: ['1/4 正面 50ft 全景 3D 图', '1/4 Front Exterior 3D'] },
+      { src: 'assets/style1-side.jpg?v=15', label: ['2/4 75ft 侧立面 3D 图', '2/4 75ft Side Facade 3D'] },
+      { src: 'assets/style1-rear.jpg?v=15', label: ['3/4 45° 轴测与拔风塔 3D 图', '3/4 45° Rear Isometric 3D'] },
+      { src: 'assets/style1-int.jpg?v=15', label: ['4/4 室内挑高大厅 3D 图', '4/4 Interior Hall 3D'] }
     ]
   },
   {
@@ -116,25 +117,24 @@ const styles = [
       '✅ 极简明亮空间：室内双倍层高纯白钢桁架 ceiling 结合柚木地板，极简而富有质感。'
     ],
     images: [
-      { src: 'assets/style3-ext.jpg?v=13', label: ['1/4 正面 50ft 全景 3D 图', '1/4 Front Exterior 3D'] },
-      { src: 'assets/style3-side.jpg?v=13', label: ['2/4 75ft 侧立面 3D 图', '2/4 75ft Side Facade 3D'] },
-      { src: 'assets/style3-rear.jpg?v=13', label: ['3/4 45° 轴测与拔风塔 3D 图', '3/4 45° Rear Isometric 3D'] },
-      { src: 'assets/style3-int.jpg?v=13', label: ['4/4 室内纯白大厅 3D 图', '4/4 Interior White Hall 3D'] }
+      { src: 'assets/style3-ext.jpg?v=15', label: ['1/4 正面 50ft 全景 3D 图', '1/4 Front Exterior 3D'] },
+      { src: 'assets/style3-side.jpg?v=15', label: ['2/4 75ft 侧立面 3D 图', '2/4 75ft Side Facade 3D'] },
+      { src: 'assets/style3-rear.jpg?v=15', label: ['3/4 45° 轴测与拔风塔 3D 图', '3/4 45° Rear Isometric 3D'] },
+      { src: 'assets/style3-int.jpg?v=15', label: ['4/4 室内纯白大厅 3D 图', '4/4 Interior White Hall 3D'] }
     ]
   }
 ];
 
 const drawings = [
-  ['A-101', ['DWG A-101 2D 建筑平面图', 'DWG A-101 Floor Plan'], ['50x75ft 地块、双 40ft HC 集装箱、34ft 挑高大厅与后区 35ft 阁楼平面布局。', '50x75ft footprint, twin 40ft HC containers, 34ft hall and rear loft.'], 'assets/floorplan-bp.jpg?v=13'],
-  ['A-102', ['DWG A-102 建筑正立面图', 'DWG A-102 Elevation'], ['控制标高：+24ft 主屋檐、+38ft-5in 主屋脊与 +47ft 拔风塔顶，30° 坡屋顶结构。', 'Level controls: +24ft eave, +38ft-5in ridge and +47ft Jack Roof.'], 'assets/elevation-bp.jpg?v=13'],
-  ['S-101', ['DWG S-101 集装箱切割加固 Detail', 'DWG S-101 Container Detail'], ['侧墙切割开窗、切口周圈 100x100x4.5mm RHS 方钢框焊接与 M20 锚栓加固。', '100x100x4.5mm RHS steel frame reinforcement & M20 anchor bolts.'], 'assets/container_splicing_blueprint.jpg?v=13'],
-  ['M-101', ['DWG M-101 厨房与集中排水图', 'DWG M-101 Kitchen & Drainage'], ['左集装箱 25ft 厨房、50L 油脂拦截器、DN100 黑水管(1:40坡度)及 8PE 化粪池。', 'Kitchen grease trap, DN100 blackwater pipe (1:40 slope) & 8PE septic tank.'], 'assets/kitchen_drainage_blueprint.jpg?v=13'],
-  ['F-101', ['DWG F-101 BOMBA 消防逃生图', 'DWG F-101 Fire & Egress Plan'], ['SD1-SD6 烟感、FE1-FE4 灭火器、1.5m 门净宽、Loft 第二逃生梯及疏散路线。', 'SD1-SD6 detectors, FE1-FE4 extinguishers, 1.5m exit doors & 2nd escape stair.'], 'assets/fire_safety_egress_blueprint.jpg?v=13'],
-  ['T-101', ['DWG T-101 5 大工程打压测试图', 'DWG T-101 T&C Testing Plan'], ['8 Bar 给水打压、24h 湿区闭水、4h 屋顶高压喷淋及 30mA RCCB 漏电测试。', '8 Bar water pressure, 24h flood test, 4h roof spray & 30mA RCCB tests.'], 'assets/tc_testing_blueprint.jpg?v=13'],
-  ['G-101', ['DWG G-101 总平面规划图', 'DWG G-101 Site Plan'], ['Jalan Pakis 正面沿街、指北针、40x50ft 建筑占地、15ft 前退缩、10ft 后退缩及 U 型排水沟。', 'Jalan Pakis frontage, 40x50ft footprint, 15ft front & 10ft rear setbacks.'], 'assets/siteplan-bp.jpg?v=13']
+  ['A-101', ['DWG A-101 2D 建筑平面图', 'DWG A-101 Floor Plan'], ['50x75ft 地块、双 40ft HC 集装箱、34ft 挑高大厅与后区 35ft 阁楼平面布局。', '50x75ft footprint, twin 40ft HC containers, 34ft hall and rear loft.'], 'assets/floorplan-bp.jpg?v=15'],
+  ['A-102', ['DWG A-102 建筑正立面图', 'DWG A-102 Elevation'], ['控制标高：+24ft 主屋檐、+38ft-5in 主屋脊与 +47ft 拔风塔顶，30° 坡屋顶结构。', 'Level controls: +24ft eave, +38ft-5in ridge and +47ft Jack Roof.'], 'assets/elevation-bp.jpg?v=15'],
+  ['S-101', ['DWG S-101 集装箱切割加固 Detail', 'DWG S-101 Container Detail'], ['侧墙切割开窗、切口周圈 100x100x4.5mm RHS 方钢框焊接与 M20 锚栓加固。', '100x100x4.5mm RHS steel frame reinforcement & M20 anchor bolts.'], 'assets/container_splicing_blueprint.jpg?v=15'],
+  ['M-101', ['DWG M-101 厨房与集中排水图', 'DWG M-101 Kitchen & Drainage'], ['左集装箱 25ft 厨房、50L 油脂拦截器、DN100 黑水管(1:40坡度)及 8PE 化粪池。', 'Kitchen grease trap, DN100 blackwater pipe (1:40 slope) & 8PE septic tank.'], 'assets/kitchen_drainage_blueprint.jpg?v=15'],
+  ['F-101', ['DWG F-101 BOMBA 消防逃生图', 'DWG F-101 Fire & Egress Plan'], ['SD1-SD6 烟感、FE1-FE4 灭火器、1.5m 门净宽、Loft 第二逃生梯及疏散路线。', 'SD1-SD6 detectors, FE1-FE4 extinguishers, 1.5m exit doors & 2nd escape stair.'], 'assets/fire_safety_egress_blueprint.jpg?v=15'],
+  ['T-101', ['DWG T-101 5 大工程打压测试图', 'DWG T-101 T&C Testing Plan'], ['8 Bar 给水打压、24h 湿区闭水、4h 屋顶高压喷淋及 30mA RCCB 漏电测试。', '8 Bar water pressure, 24h flood test, 4h roof spray & 30mA RCCB tests.'], 'assets/tc_testing_blueprint.jpg?v=15'],
+  ['G-101', ['DWG G-101 总平面规划图', 'DWG G-101 Site Plan'], ['Jalan Pakis 正面沿街、指北针、40x50ft 建筑占地、15ft 前退缩、10ft 后退缩及 U 型排水沟。', 'Jalan Pakis frontage, 40x50ft footprint, 15ft front & 10ft rear setbacks.'], 'assets/siteplan-bp.jpg?v=15']
 ];
 
-// Global gallery list for Lightbox navigation
 let activeGallery = [];
 let activeGalleryIndex = 0;
 
@@ -178,9 +178,9 @@ function renderCards() {
   const drawingGrid = document.getElementById('drawing-grid');
   if (drawingGrid) {
     drawingGrid.innerHTML = drawings.map(([number, title, description, hdSrc]) => `
-      <article class="drawing-card image-button" data-image="${hdSrc || `assets/drawings/${number.toLowerCase()}-preview.png?v=13`}" data-caption="${number} ${title[isZh ? 0 : 1]}" style="cursor:pointer; background:#fff; border:1px solid #e2e8f0; border-radius:12px; padding:16px; transition: transform 0.2s, box-shadow 0.2s;">
+      <article class="drawing-card image-button" data-image="${hdSrc || `assets/drawings/${number.toLowerCase()}-preview.png?v=15`}" data-caption="${number} ${title[isZh ? 0 : 1]}" style="cursor:pointer; background:#fff; border:1px solid #e2e8f0; border-radius:12px; padding:16px; transition: transform 0.2s, box-shadow 0.2s;">
         <div style="position:relative; aspect-ratio:1.42; overflow:hidden; border-radius:8px; margin-bottom:12px; border:1px solid #cbd5e1;">
-          <img src="assets/drawings/${number.toLowerCase()}-preview.png?v=13" alt="${number}" style="width:100%; height:100%; object-fit:cover; display:block;" loading="lazy">
+          <img src="assets/drawings/${number.toLowerCase()}-preview.png?v=15" alt="${number}" style="width:100%; height:100%; object-fit:cover; display:block;" loading="lazy">
           <span style="position:absolute; top:8px; left:8px; background:#0284c7; color:#fff; padding:2px 8px; border-radius:4px; font-size:0.75rem; font-weight:700;">${number}</span>
         </div>
         <h3 style="font-size:1.05rem; margin:0 0 6px; color:#0f172a;">${title[isZh ? 0 : 1]}</h3>
@@ -188,6 +188,28 @@ function renderCards() {
         <span style="color:#0284c7; font-size:0.8rem; font-weight:700;">${viewFull}</span>
       </article>`).join('');
   }
+
+  updateCostCalculator();
+}
+
+function updateCostCalculator() {
+  const loftInput = document.getElementById('loft-area');
+  const styleSelect = document.getElementById('style-select');
+  const areaValue = document.getElementById('loft-area-value');
+  const totalValue = document.getElementById('estimated-total');
+  const rateValue = document.getElementById('estimated-rate');
+  const savingsValue = document.getElementById('estimated-savings');
+
+  if (!loftInput || !styleSelect || !areaValue || !totalValue || !rateValue) return;
+
+  const loftArea = Number(loftInput.value);
+  const styleAllowance = { style1: 0, style2: 15000, style3: 10000 };
+  const estimatedTotal = 425000 + ((loftArea - 900) * 55) + (styleAllowance[styleSelect.value] || 0);
+
+  areaValue.textContent = `${loftArea.toLocaleString('en-MY')} sqft`;
+  totalValue.textContent = `RM ${Math.round(estimatedTotal).toLocaleString('en-MY')}`;
+  rateValue.textContent = `RM ${(estimatedTotal / 3750).toFixed(2)} / sqft`;
+  if (savingsValue) savingsValue.textContent = `RM 35,000 (Clear Span 优化)`;
 }
 
 function setLanguage(next) {
@@ -264,10 +286,14 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  const loftInput = document.getElementById('loft-area');
+  const styleSelect = document.getElementById('style-select');
+  if (loftInput) loftInput.addEventListener('input', updateCostCalculator);
+  if (styleSelect) styleSelect.addEventListener('change', updateCostCalculator);
+
   document.querySelectorAll('.nav-links a').forEach(link => link.addEventListener('click', () => document.body.classList.remove('menu-open')));
   
   document.addEventListener('click', event => {
-    // Style card gallery trigger
     const galBtn = event.target.closest('.gallery-trigger');
     if (galBtn) {
       const sIndex = parseInt(galBtn.dataset.styleIndex, 10);
@@ -282,14 +308,12 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
-    // Generic image button
     const card = event.target.closest('.image-button');
     if (card && card.dataset.image) {
       openSingleLightbox(card.dataset.image, card.dataset.caption);
     }
   });
 
-  // Lightbox arrow navigation
   const prevBtn = document.getElementById('lightbox-prev');
   const nextBtn = document.getElementById('lightbox-next');
   if (prevBtn) prevBtn.addEventListener('click', e => { e.stopPropagation(); prevLightboxImage(); });
@@ -306,7 +330,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Keyboard Navigation (ESC, Left, Right Arrow)
   window.addEventListener('keydown', e => {
     const modal = document.getElementById('lightbox');
     if (modal && (modal.open || modal.classList.contains('active'))) {
