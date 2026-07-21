@@ -31,20 +31,25 @@
         <span class="brand-title">Kluang Development Pack</span>
       </a>
       <nav class="nav-links" id="main-nav">
-        <a href="#overview" class="active">项目总览</a>
-        <a href="#design-control">设计控制线</a>
-        <a href="#engineering">工程预验算</a>
-        <a href="#multi-angle">多方位外观展示</a>
-        <a href="#style2-gif">0-1 施工 GIF</a>
+        <a href="#overview" class="active" data-i18n="nav.overview">项目总览</a>
+        <a href="#design-control" data-i18n="nav.controls">设计控制线</a>
+        <a href="#engineering" data-i18n="nav.engineering">工程预验算</a>
+        <a href="#multi-angle" data-i18n="nav.views">多方位外观展示</a>
+        <a href="#style2-gif" data-i18n="nav.build">0-1 施工 GIF</a>
         <a href="#style2-pkg">风格 2：花砖屏风墙 (推荐)</a>
         <a href="#style1-pkg">风格 1：赤陶红热带</a>
         <a href="#style3-pkg">风格 3：南洋纯白谷仓</a>
-        <a href="#blueprints">CAD 切割/施工图纸</a>
-        <a href="#budget">造价拆解</a>
+        <a href="#blueprints" data-i18n="nav.blueprints">CAD 切割/施工图纸</a>
+        <a href="#budget" data-i18n="nav.budget">造价拆解</a>
       </nav>
       <div class="nav-actions">
-        <button class="btn btn-outline btn-sm" onclick="window.print()">🖨️ 打印提案总册</button>
-        <button class="btn btn-primary btn-sm" id="btn-share" onclick="copyShareLink()">🔗 分享项目链接</button>
+        <div class="language-toggle" role="group" aria-label="Language selection">
+          <button class="language-btn" type="button" data-lang="en" onclick="setLanguage('en')">EN</button>
+          <button class="language-btn" type="button" data-lang="bm" onclick="setLanguage('bm')">BM</button>
+          <button class="language-btn active" type="button" data-lang="zh" onclick="setLanguage('zh')">ZH</button>
+        </div>
+        <button class="btn btn-outline btn-sm" onclick="window.print()" data-i18n="action.print">🖨️ 打印提案总册</button>
+        <button class="btn btn-primary btn-sm" id="btn-share" onclick="copyShareLink()" data-i18n="action.share">🔗 分享项目链接</button>
       </div>
     </div>
   </header>
@@ -381,8 +386,8 @@
     <div class="container">
       <div class="section-header">
         <span class="eyebrow">CAD BLUEPRINTS & DETAILS</span>
-        <h2>2D 施工图纸与集装箱切割工程图 (CAD Engineering Blueprints)</h2>
-        <p>符合马来西亚 MPK 规范的 2D 施工图纸，包含集装箱切割补强、拼接与风砖锚固工程节点。</p>
+        <h2 data-i18n="blueprint.title">2D 施工图纸与集装箱切割工程图 (CAD Engineering Blueprints)</h2>
+        <p data-i18n="blueprint.intro">符合马来西亚 MPK 规范的 2D 施工图纸，包含集装箱切割补强、拼接与风砖锚固工程节点。</p>
       </div>
 
       <!-- Blueprint Selector Tabs -->
@@ -399,6 +404,15 @@
         <div class="bp-main-image" onclick="openLightbox(currentBpSrc, currentBpTitle)">
           <img id="bp-img" src="assets/container_splicing_blueprint.jpg" alt="Blueprint Preview" width="1280" height="800" loading="lazy" decoding="async">
           <div class="bp-overlay"><span>🔍 点击全屏高清查看 CAD 工程图纸</span></div>
+          <button class="blueprint-hotspot hotspot-jack" type="button" aria-label="Raised Jack Roof engineering specification" aria-expanded="false" onclick="event.stopPropagation(); toggleHotspot('jack')"><span class="hotspot-pulse"></span><span>1</span></button>
+          <button class="blueprint-hotspot hotspot-breeze" type="button" aria-label="Batu Angin facade engineering specification" aria-expanded="false" onclick="event.stopPropagation(); toggleHotspot('breeze')"><span class="hotspot-pulse"></span><span>2</span></button>
+          <button class="blueprint-hotspot hotspot-rhs" type="button" aria-label="RHS reinforcement engineering specification" aria-expanded="false" onclick="event.stopPropagation(); toggleHotspot('rhs')"><span class="hotspot-pulse"></span><span>3</span></button>
+          <aside class="hotspot-tooltip" id="hotspot-tooltip" role="status" aria-live="polite">
+            <button class="hotspot-close" type="button" aria-label="Close hotspot specification" onclick="closeHotspot()">×</button>
+            <span class="hotspot-eyebrow" id="hotspot-eyebrow">ENGINEERING HOTSPOT</span>
+            <strong id="hotspot-title">Blueprint detail</strong>
+            <p id="hotspot-detail">Select a numbered pin to inspect the construction specification.</p>
+          </aside>
         </div>
         <div class="bp-desc-bar">
           <h4 id="bp-title">集装箱切割与拼接 CAD 节点图 (Container Modification Detail)</h4>
@@ -413,8 +427,32 @@
     <div class="container">
       <div class="section-header">
         <span class="eyebrow">FINANCIAL PLAN</span>
-        <h2>RM400k - RM450k 预算拆解与降本策略 (Budget Breakdown)</h2>
-        <p>通过内部柱网优化省下 30% 结构资金，重投入于基坑地坪、防热与防水。</p>
+        <h2 data-i18n="budget.title">RM400k - RM450k 预算拆解与降本策略 (Budget Breakdown)</h2>
+        <p data-i18n="budget.intro">通过内部柱网优化省下 30% 结构资金，重投入于基坑地坪、防热与防水。</p>
+      </div>
+
+      <div class="cost-calculator" aria-labelledby="calculator-title">
+        <div class="calculator-copy">
+          <span class="eyebrow" data-i18n="calculator.eyebrow">INTERACTIVE BOQ ESTIMATOR</span>
+          <h3 id="calculator-title" data-i18n="calculator.title">动态 BOQ 造价计算器</h3>
+          <p data-i18n="calculator.note">基准为 900 sqft Loft、Style 1 和 RM425,000；仅供初步预算，报价与审批另计。</p>
+        </div>
+        <div class="calculator-controls">
+          <label for="loft-area"><span data-i18n="calculator.loft">Loft 阁楼面积</span><strong><output id="loft-area-value">900 sqft</output></strong></label>
+          <input id="loft-area" type="range" min="600" max="1200" value="900" step="25" oninput="updateCostCalculator()">
+          <div class="range-labels"><span>600 sqft</span><span>1,200 sqft</span></div>
+          <label for="style-select" data-i18n="calculator.style">风格选择</label>
+          <select id="style-select" onchange="updateCostCalculator()">
+            <option value="style1" data-i18n="style.one">Style 1 · 赤陶红现代热带</option>
+            <option value="style2" data-i18n="style.two">Style 2 · Batu Angin 风砖屏风</option>
+            <option value="style3" data-i18n="style.three">Style 3 · 南洋纯白谷仓</option>
+          </select>
+        </div>
+        <div class="calculator-result" aria-live="polite">
+          <span data-i18n="calculator.total">预估总造价</span>
+          <strong id="estimated-total">RM 425,000</strong>
+          <small><span data-i18n="calculator.rate">每 3,750 sqft 建筑占地</span> <b id="estimated-rate">RM 113.33 / sqft</b></small>
+        </div>
       </div>
 
       <div class="budget-grid">

@@ -125,8 +125,31 @@ a {
 
 .nav-actions {
   display: flex;
+  align-items: center;
   gap: 10px;
 }
+
+.language-toggle {
+  align-items: center;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  display: inline-flex;
+  overflow: hidden;
+}
+
+.language-btn {
+  background: #fff;
+  border: 0;
+  color: var(--text-muted);
+  cursor: pointer;
+  font-size: .67rem;
+  font-weight: 800;
+  min-width: 31px;
+  padding: 6px 7px;
+}
+
+.language-btn + .language-btn { border-left: 1px solid var(--border-color); }
+.language-btn.active { background: var(--primary); color: #fff; }
 
 /* Buttons */
 .btn {
@@ -750,6 +773,68 @@ a {
   opacity: 1;
 }
 
+.blueprint-hotspot {
+  align-items: center;
+  background: var(--accent-gold);
+  border: 2px solid #fff;
+  border-radius: 50%;
+  box-shadow: 0 3px 10px rgba(15, 23, 42, .35);
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  font-size: .76rem;
+  font-weight: 800;
+  height: 31px;
+  justify-content: center;
+  position: absolute;
+  transition: transform .2s ease, background .2s ease;
+  width: 31px;
+  z-index: 3;
+}
+
+.blueprint-hotspot:hover,
+.blueprint-hotspot.active { background: #b45309; transform: scale(1.12); }
+.hotspot-jack { left: 53%; top: 18%; }
+.hotspot-breeze { left: 25%; top: 59%; }
+.hotspot-rhs { left: 70%; top: 68%; }
+
+.hotspot-pulse {
+  animation: hotspot-pulse 1.8s infinite;
+  border: 2px solid var(--accent-gold);
+  border-radius: 50%;
+  inset: -7px;
+  pointer-events: none;
+  position: absolute;
+}
+
+@keyframes hotspot-pulse {
+  0% { opacity: .75; transform: scale(.7); }
+  75%, 100% { opacity: 0; transform: scale(1.45); }
+}
+
+.hotspot-tooltip {
+  background: rgba(15, 23, 42, .96);
+  border: 1px solid rgba(255, 255, 255, .18);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+  color: #fff;
+  display: none;
+  left: 50%;
+  max-width: 330px;
+  padding: 17px 38px 17px 18px;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: calc(100% - 48px);
+  z-index: 5;
+}
+
+.hotspot-tooltip.active { display: block; }
+.hotspot-tooltip strong { display: block; font-size: 1rem; margin: 4px 0 7px; }
+.hotspot-tooltip p { color: #cbd5e1; font-size: .82rem; line-height: 1.5; }
+.hotspot-eyebrow { color: #fbbf24; font-size: .65rem; font-weight: 800; letter-spacing: 1px; }
+.hotspot-close { background: transparent; border: 0; color: #fff; cursor: pointer; font-size: 1.5rem; position: absolute; right: 10px; top: 5px; }
+
 .bp-desc-bar {
   padding: 20px;
   background: #ffffff;
@@ -826,6 +911,31 @@ a {
   font-size: 0.85rem;
   line-height: 1.5;
 }
+
+.cost-calculator {
+  align-items: center;
+  background: linear-gradient(135deg, #fffbeb, #fff);
+  border: 1px solid #fcd34d;
+  border-radius: var(--radius-lg);
+  display: grid;
+  gap: 26px;
+  grid-template-columns: 1fr 1.1fr .8fr;
+  margin-top: 24px;
+  padding: 26px;
+}
+
+.calculator-copy h3 { font-size: 1.15rem; margin-top: 2px; }
+.calculator-copy p { color: var(--text-muted); font-size: .8rem; margin-top: 7px; }
+.calculator-controls { display: grid; gap: 8px; }
+.calculator-controls label { color: var(--primary); display: flex; font-size: .8rem; font-weight: 700; justify-content: space-between; }
+.calculator-controls input[type="range"] { accent-color: var(--accent-gold); width: 100%; }
+.calculator-controls select { background: #fff; border: 1px solid var(--border-color); border-radius: var(--radius-sm); color: var(--primary); padding: 9px 10px; }
+.range-labels { color: var(--text-muted); display: flex; font-size: .68rem; justify-content: space-between; }
+.calculator-result { background: var(--primary); border-radius: var(--radius-md); color: #cbd5e1; padding: 20px; text-align: center; }
+.calculator-result span { display: block; font-size: .72rem; font-weight: 700; }
+.calculator-result strong { color: #fff; display: block; font-size: 1.55rem; margin: 4px 0 6px; }
+.calculator-result small { font-size: .68rem; }
+.calculator-result b { color: #fcd34d; display: block; font-size: .85rem; margin-top: 2px; }
 
 /* ================= Share Box & Footer ================= */
 .share-box {
@@ -934,7 +1044,8 @@ a {
 @media (max-width: 992px) {
   .hero-grid,
   .gif-showcase-box,
-  .budget-grid {
+  .budget-grid,
+  .cost-calculator {
     grid-template-columns: 1fr;
   }
   
@@ -957,7 +1068,7 @@ a {
 
 /* ================= Print Stylesheet Optimization ================= */
 @media print {
-  .topbar, .nav-actions, .quick-access-box, .share-box, .bp-tabs, .bp-overlay {
+  .topbar, .nav-actions, .quick-access-box, .share-box, .bp-tabs, .bp-overlay, .blueprint-hotspot, .hotspot-tooltip, .cost-calculator {
     display: none !important;
   }
 
