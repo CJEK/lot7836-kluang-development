@@ -3,8 +3,12 @@ venv/
 .venv/
 __pycache__/
 *.pyc
+node_modules/
 
 # OS & Temp files
 .DS_Store
 Thumbs.db
 *.log
+
+# Build output
+_site/
