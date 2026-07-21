@@ -371,12 +371,14 @@
       </div>
 
       <!-- Blueprint Selector Tabs -->
-      <div class="bp-tabs">
-        <button class="bp-btn active" data-bp-key="container" onclick="switchBlueprint('assets/container_splicing_blueprint.jpg?v=3', '集装箱切割与拼接 CAD 节点图 (Container Modification Detail)', '包含切口 100x100mm 方钢补强节点、模块拼接与 Batu Angin 花砖锚固 Detail', this)">集装箱切割/拼接 Detail</button>
-        <button class="bp-btn" data-bp-key="siteplan" onclick="switchBlueprint('assets/siteplan-bp.jpg?v=3', '总平面图 (Site Plan)', '50ft 正面边界、75ft 进深、U型排水沟、化粪池与停车场', this)">总平面图 Site Plan</button>
-        <button class="bp-btn" data-bp-key="elevation" onclick="switchBlueprint('assets/elevation-bp.jpg?v=3', '正立面施工图 (Elevation Blueprint)', '标高：+36ft 拔风塔顶、+24ft 屋檐高度，30度坡屋顶结构', this)">正立面图 Elevation</button>
-        <button class="bp-btn" data-bp-key="floorplan" onclick="switchBlueprint('assets/floorplan-bp.jpg?v=3', '2D 平面功能布局图 (Floor Plan)', '前区工作岛、后区货架区、柱网分布与双厕位置', this)">2D 平面图 Floor Plan</button>
-        <button class="bp-btn" data-bp-key="mep" onclick="switchBlueprint('assets/mep-bp.jpg?v=3', 'MEP 水电与排水工程图 (MEP & Drainage)', '黑水/灰水管线、雨水 U 型沟、IC 检修井与照明风扇网格', this)">MEP 水电排水图 MEP Plan</button>
+      <div class="bp-tabs" style="display: flex; flex-wrap: wrap; gap: 8px;">
+        <button class="bp-btn active" data-bp-key="container" onclick="switchBlueprint('assets/container_splicing_blueprint.jpg?v=5', '集装箱切割与拼接 CAD 节点图 (Container Modification Detail)', '包含切口 100x100mm 方钢补强节点、模块拼接与 Batu Angin 花砖锚固 Detail', this)">集装箱切割/拼接 Detail</button>
+        <button class="bp-btn" data-bp-key="kitchen" onclick="switchBlueprint('assets/kitchen_drainage_blueprint.jpg?v=5', '厨房与集中排水系统工程图 (Kitchen & Wet-Core Drainage Plan)', '左集装箱 25ft 开放式厨房、油脂拦截器 (Grease Trap)、DN100 黑水/灰水管及 8PE 生化化粪池走线', this)">🍳 厨房与排水系统图</button>
+        <button class="bp-btn" data-bp-key="fire" onclick="switchBlueprint('assets/fire_safety_egress_blueprint.jpg?v=5', 'BOMBA 消防安全与紧急逃生路线图 (Fire Safety & Egress Plan)', '主逃生门、紧急出口、Smoke Detector 烟雾感应报警器点位与 6kg ABC 灭火器分布', this)">🔥 BOMBA 消防逃生图</button>
+        <button class="bp-btn" data-bp-key="tc" onclick="switchBlueprint('assets/tc_testing_blueprint.jpg?v=5', '5 大工程验收打压测试点位图 (T&C Inspection & Testing Blueprint)', 'PPR 8 Bar 打压点、24h 闭水测试沉箱、4h 坡屋顶高压喷淋防漏及 30mA RCCB 漏电测试点', this)">🧪 5大打压验收测试图</button>
+        <button class="bp-btn" data-bp-key="siteplan" onclick="switchBlueprint('assets/siteplan-bp.jpg?v=5', '总平面图 (Site Plan)', '50ft 正面边界、75ft 进深、U型排水沟、化粪池与停车场', this)">总平面图 Site Plan</button>
+        <button class="bp-btn" data-bp-key="elevation" onclick="switchBlueprint('assets/elevation-bp.jpg?v=5', '正立面施工图 (Elevation Blueprint)', '标高：+36ft 拔风塔顶、+24ft 屋檐高度，30度坡屋顶结构', this)">正立面图 Elevation</button>
+        <button class="bp-btn" data-bp-key="floorplan" onclick="switchBlueprint('assets/floorplan-bp.jpg?v=5', '2D 平面功能布局图 (Floor Plan)', '前区工作岛、后区货架区、柱网分布与双厕位置', this)">2D 平面图 Floor Plan</button>
       </div>
 
       <!-- Interactive Blueprint Display Box -->
