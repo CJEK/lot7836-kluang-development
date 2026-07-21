@@ -55,7 +55,7 @@ def draw_cad_base(title_zh, dwg_no, desc_zh, category_code):
     d.text((tb_left + 535, tb_top + 65), "SCALE: 1:100 NTS", font=f_small, fill=TEXT_MAIN)
     
     d.text((tb_left + 15, tb_top + 120), "STAGE: CONCEPTUAL DIAGRAM (PRE-SUBMISSION)", font=f_small, fill=TEXT_MAIN)
-    d.text((tb_left + 535, tb_top + 120), "REV: C04", font=f_small, fill=(74, 222, 128))
+    d.text((tb_left + 535, tb_top + 120), "REV: C05", font=f_small, fill=(74, 222, 128))
 
     # 4. Top Title Banner
     d.rectangle([(50, 50), (W - 850, 125)], fill=(18, 40, 68), outline=DIM_COLOR, width=1)
@@ -95,10 +95,8 @@ def make_floorplan():
     bx1, by1 = ox, oy
     bx2, by2 = ox + sw_px, oy + sd_px
     
-    # Building Boundary
     d.rectangle([(bx1, by1), (bx2, by2)], outline=WALL_COLOR, width=4)
     
-    # Dimension lines & text
     d.line([(bx1 - 40, by1), (bx1 - 40, by2)], fill=DIM_COLOR, width=2)
     d.line([(bx1 - 50, by1), (bx1 - 30, by1)], fill=DIM_COLOR, width=2)
     d.line([(bx1 - 50, by2), (bx1 - 30, by2)], fill=DIM_COLOR, width=2)
@@ -109,7 +107,6 @@ def make_floorplan():
     d.line([(bx2, by1 - 50), (bx2, by1 - 30)], fill=DIM_COLOR, width=2)
     d.text((ox + sw_px//2 - 140, by1 - 70), "40' 0\" (12.19m) 建筑面宽 (预留两侧 5' 退缩)", font=f_body, fill=DIM_COLOR)
     
-    # Axis lines
     d.line([(bx1 - 60, by1), (bx2 + 60, by1)], fill=AXIS_COLOR, width=1)
     d.line([(bx1 - 60, by2), (bx2 + 60, by2)], fill=AXIS_COLOR, width=1)
     d.line([(bx1, by1 - 60), (bx1, by2 + 60)], fill=AXIS_COLOR, width=1)
@@ -120,7 +117,6 @@ def make_floorplan():
     draw_axis_bubble(d, bx1, by1 - 80, "Ⓐ")
     draw_axis_bubble(d, bx2, by1 - 80, "Ⓓ")
     
-    # Left & Right Containers
     c1 = (bx1, by1, bx1 + 180, by1 + 600)
     d.rectangle(c1, fill=(35, 50, 35), outline=CONTAINER_COLOR, width=3)
     d.text((bx1 + 15, by1 + 140), "左箱 40ft HC\n(8' x 40')", font=f_small, fill=CONTAINER_COLOR)
@@ -129,14 +125,11 @@ def make_floorplan():
     d.rectangle(c2, fill=(35, 50, 35), outline=CONTAINER_COLOR, width=3)
     d.text((bx2 - 165, by1 + 140), "右箱 40ft HC\n(8' x 40')", font=f_small, fill=CONTAINER_COLOR)
     
-    # Central Hall
     d.text((ox + sw_px//2 - 180, by1 + 180), "24ft 挑高中央大厅 (High Ceiling Hall)\n净宽 7.32m / 净高 7.30m", font=f_header, fill=TEXT_MAIN)
     
-    # RHS Frames
     d.rectangle([(bx1 + 175, by1 + 40), (bx1 + 185, by1 + 560)], fill=STEEL_COLOR)
     d.text((bx1 + 195, by1 + 280), "← 100x100mm RHS 方钢加固框", font=f_dim, fill=STEEL_COLOR)
     
-    # Kitchen & Restrooms
     d.rectangle([(bx1, by1 + 600), (bx1 + 320, by2)], fill=(20, 60, 85), outline=(56, 189, 248), width=2)
     d.text((bx1 + 20, by1 + 635), "🍳 开放式厨房 (Kitchen)\n配 DN75 灰水管 & 油脂拦截器", font=f_small, fill=TEXT_MAIN)
     
@@ -160,11 +153,9 @@ def make_elevation():
     ox, oy = 450, 170
     w_px = 1100
     
-    # Ground Line
     d.line([(ox - 100, oy + 540), (ox + w_px + 100, oy + 540)], fill=TEXT_MAIN, width=4)
     d.text((ox - 240, oy + 530), "▼ FL ±0.00m (地坪标高)", font=f_body, fill=TEXT_MAIN)
     
-    # Height Level Lines
     d.line([(ox - 100, oy + 430), (ox + w_px + 100, oy + 430)], fill=DIM_COLOR, width=1)
     d.text((ox - 260, oy + 420), "▼ +9' 6\" (2.90m 集装箱顶)", font=f_body, fill=DIM_COLOR)
     
@@ -177,18 +168,15 @@ def make_elevation():
     d.line([(ox - 100, oy + 40), (ox + w_px + 100, oy + 40)], fill=AXIS_COLOR, width=2)
     d.text((ox - 290, oy + 30), "▲ +47' 0\" (14.33m 拔风塔顶)", font=f_body, fill=AXIS_COLOR)
     
-    # Containers left & right
     d.rectangle([(ox, oy + 430), (ox + 180, oy + 540)], outline=CONTAINER_COLOR, width=3)
     d.text((ox + 15, oy + 475), "左集装箱 8ft", font=f_small, fill=CONTAINER_COLOR)
     
     d.rectangle([(ox + w_px - 180, oy + 430), (ox + w_px, oy + 540)], outline=CONTAINER_COLOR, width=3)
     d.text((ox + w_px - 165, oy + 475), "右集装箱 8ft", font=f_small, fill=CONTAINER_COLOR)
     
-    # Breeze Block Wall
     d.rectangle([(ox + 180, oy + 340), (ox + w_px - 180, oy + 540)], fill=(25, 45, 35), outline=(74, 222, 128), width=3)
     d.text((ox + w_px//2 - 160, oy + 430), "🧱 Batu Angin 通风花砖屏风墙 (24ft)", font=f_header, fill=(74, 222, 128))
     
-    # 30 Roof & Jack Roof
     d.polygon([(ox, oy + 250), (ox + w_px//2, oy + 120), (ox + w_px, oy + 250)], outline=WALL_COLOR, width=3)
     d.rectangle([(ox + w_px//2 - 180, oy + 40), (ox + w_px//2 + 180, oy + 120)], fill=(35, 65, 95), outline=AXIS_COLOR, width=2)
     d.text((ox + w_px//2 - 140, oy + 70), "🪟 Raised Jack Roof (+47' 拔风塔)", font=f_small, fill=TEXT_MAIN)
@@ -210,24 +198,19 @@ def make_siteplan():
     ox, oy = 550, 170
     d.rectangle([(ox, oy), (ox + 1050, oy + 650)], fill=(12, 28, 48), outline=TEXT_MAIN, width=3)
     
-    # North Arrow
     d.line([(ox + 980, oy + 80), (ox + 980, oy + 20)], fill=AXIS_COLOR, width=4)
     d.polygon([(ox + 980, oy + 10), (ox + 970, oy + 35), (ox + 990, oy + 35)], fill=AXIS_COLOR)
     d.text((ox + 970, oy + 90), "NORTH (北)", font=f_body, fill=AXIS_COLOR)
     
-    # Jalan Pakis Road
     d.rectangle([(ox, oy - 60), (ox + 1050, oy)], fill=(35, 35, 45), outline=DIM_COLOR, width=2)
     d.text((ox + 300, oy - 45), "🛣️ JALAN PAKIS 沿街市政道路 (BOMBA 消防车停靠区)", font=f_header, fill=TEXT_MAIN)
     
-    # Building Footprint (40ft x 50ft)
     d.rectangle([(ox + 100, oy + 130), (ox + 940, oy + 560)], fill=(25, 45, 70), outline=TEXT_GOLD, width=2)
     d.text((ox + 300, oy + 300), "集装箱 Bungalow 建筑占地 (40ft W x 50ft D)\n前退缩 15ft | 后退缩 10ft | 侧退缩 5ft", font=f_header, fill=TEXT_MAIN)
     
-    # Foot Access Path
     d.line([(ox + 40, oy), (ox + 40, oy + 650)], fill=(74, 222, 128), width=3)
     d.text((ox + 50, oy + 240), "🚶 消防员步行接近通道 (Foot Access)", font=f_small, fill=(74, 222, 128))
     
-    # Septic Tank
     d.rectangle([(ox + 800, oy + 570), (ox + 1000, oy + 630)], fill=(75, 55, 15), outline=TEXT_GOLD, width=2)
     d.text((ox + 810, oy + 590), "8PE 化粪池与维护通道", font=f_small, fill=TEXT_GOLD)
 
@@ -254,13 +237,11 @@ def make_fire_safety():
     d.rectangle([(ox + 480, oy + 640), (ox + 680, oy + 670)], fill=(0, 180, 90), outline=TEXT_MAIN, width=2)
     d.text((ox + 490, oy + 645), "🟢 Loft 第二逃生梯 Exit 2", font=f_body, fill=TEXT_MAIN)
     
-    # SD1-SD6
     sd_pts = [(ox + 180, oy + 150, "SD1"), (ox + 180, oy + 450, "SD2"), (ox + 580, oy + 200, "SD3"), (ox + 580, oy + 500, "SD4"), (ox + 980, oy + 150, "SD5"), (ox + 980, oy + 450, "SD6")]
     for pt in sd_pts:
         d.ellipse([(pt[0]-15, pt[1]-15), (pt[0]+15, pt[1]+15)], fill=(200, 50, 50), outline=TEXT_MAIN, width=2)
         d.text((pt[0]-12, pt[1]-8), pt[2], font=f_small, fill=TEXT_MAIN)
         
-    # FE1-FE4
     fe_pts = [(ox + 70, oy + 50, "FE1"), (ox + 1070, oy + 50, "FE2"), (ox + 70, oy + 600, "FE3"), (ox + 1070, oy + 600, "FE4")]
     for pt in fe_pts:
         d.rectangle([(pt[0]-15, pt[1]-15), (pt[0]+15, pt[1]+15)], fill=(220, 180, 20), outline=AXIS_COLOR, width=2)
@@ -311,7 +292,6 @@ def make_tc_testing():
     ox, oy = 400, 160
     d.rectangle([(ox, oy), (ox + 1250, oy + 680)], outline=WALL_COLOR, width=3)
     
-    # 5 Test Boxes
     d.rectangle([(ox + 30, oy + 30), (ox + 390, oy + 310)], fill=(18, 48, 85), outline=DIM_COLOR, width=2)
     d.text((ox + 45, oy + 45), "🧪 测1：PPR 8 Bar 打压", font=f_body, fill=DIM_COLOR)
     d.text((ox + 45, oy + 85), "• 依据 SPAN 规范\n• 1.5倍压力保压 2h\n• 责任: 水务承包商\n• 验收: 压降 = 0", font=f_small, fill=TEXT_MAIN)
@@ -356,6 +336,59 @@ def make_container_detail():
     img.save("/Users/cjmac2024/Documents/antigravity/charming-darwin/assets/container_splicing_blueprint.jpg", "JPEG", quality=93)
     print("Generated container_splicing_blueprint.jpg DWG S-101")
 
+# 8. DWG E-101: Electrical & Solar Wiring Blueprint (NEW Detail 1)
+def make_electrical_wiring():
+    img, d = draw_cad_base(
+        "TNB 三相供电、太阳能与避雷接地示意图 (3-Phase Electrical & Solar Blueprint)",
+        "DWG E-101",
+        "1. 电源配置：TNB 3-Phase 63A (415V, 50Hz) 三相配电箱，设 30mA RCCB 漏电保护与 Sub-DB。\n"
+        "2. 防雷接地：+47ft 拔风塔顶装纯铜避雷针 (Air Terminal)，铜绞线直连地沉盘 (< 10 欧姆电阻)。\n"
+        "3. 绿能预留：屋顶预留 10kW 太阳能光伏板 (Solar PV) 支架与逆变器 (Inverter) 接口。",
+        "ELECTRICAL / E"
+    )
+    ox, oy = 400, 160
+    d.rectangle([(ox, oy), (ox + 1250, oy + 680)], outline=WALL_COLOR, width=3)
+    
+    # Grid items
+    d.rectangle([(ox + 50, oy + 50), (ox + 550, oy + 320)], fill=(18, 48, 85), outline=DIM_COLOR, width=2)
+    d.text((ox + 70, oy + 70), "⚡ TNB 3-Phase 63A 主配电箱 (Main DB)", font=f_body, fill=DIM_COLOR)
+    d.text((ox + 70, oy + 115), "• 415V, 50Hz 三相供电均衡相负荷\n• 30mA RCCB 30ms 极速漏电切断\n• 设右箱家政区独立 Sub-DB 分箱", font=f_small, fill=TEXT_MAIN)
+
+    d.rectangle([(ox + 650, oy + 50), (ox + 1150, oy + 320)], fill=(75, 55, 18), outline=TEXT_GOLD, width=2)
+    d.text((ox + 670, oy + 70), "🌩️ +47ft 拔风塔避雷针与接地 (Earthing)", font=f_body, fill=TEXT_GOLD)
+    d.text((ox + 670, oy + 115), "• 纯铜避雷针 (Air Terminal Rod)\n• 70mm² 紫铜接地引下线\n• 铜沉盘接地电阻测试 < 10 欧姆", font=f_small, fill=TEXT_MAIN)
+
+    d.rectangle([(ox + 350, oy + 360), (ox + 850, oy + 630)], fill=(25, 65, 45), outline=(74, 222, 128), width=2)
+    d.text((ox + 370, oy + 380), "☀️ 10kW 太阳能光伏预留 (Solar PV Ready)", font=f_body, fill=(74, 222, 128))
+    d.text((ox + 370, oy + 425), "• 30° 屋顶 Colorbond 支架预留\n• 预敷 6mm² DC 太阳能专线\n• 预留三相双向电表与逆变器位", font=f_small, fill=TEXT_MAIN)
+
+    img.save("/Users/cjmac2024/Documents/antigravity/charming-darwin/assets/electrical_wiring_blueprint.jpg", "JPEG", quality=93)
+    print("Generated electrical_wiring_blueprint.jpg DWG E-101")
+
+# 9. DWG X-101: Soil Termite & Standing Seam Waterproof Blueprint (NEW Detail 2)
+def make_soil_termite_waterproof():
+    img, d = draw_cad_base(
+        "地基防白蚁、防潮膜与直立锁边屋面大样图 (Foundation & Waterproof Detail)",
+        "DWG X-101",
+        "1. 地基防潮：150mm 加厚混凝土地坪下方铺 0.2mm 高密度 HDPE 防潮隔气膜 (DPM)。\n"
+        "2. 化学防蚁：浇筑前对原土施加 MS 828 标准 Fipronil 化学屏障，防止散白蚁侵蚀底盘。\n"
+        "3. 屋面防漏：30° 屋顶采用 Standing Seam 直立锁边 50mm PU 板，表面无暴露自攻螺丝孔。",
+        "DETAIL & SPEC / X"
+    )
+    ox, oy = 400, 160
+    d.rectangle([(ox, oy), (ox + 1250, oy + 680)], outline=WALL_COLOR, width=3)
+    
+    d.rectangle([(ox + 50, oy + 50), (ox + 580, oy + 630)], fill=(25, 45, 65), outline=DIM_COLOR, width=2)
+    d.text((ox + 70, oy + 70), "🧱 地坪防潮与 MS 828 防白蚁剖面", font=f_body, fill=DIM_COLOR)
+    d.text((ox + 70, oy + 120), "1. 150mm Grade 30 钢筋混凝土地坪\n2. 0.2mm 高密度 HDPE 防潮隔气膜 (DPM)\n3. Fipronil 化学防白蚁化学屏障 (MS 828)\n4. 150mm 压实碎石级配垫层", font=f_small, fill=TEXT_MAIN)
+
+    d.rectangle([(ox + 650, oy + 50), (ox + 1180, oy + 630)], fill=(75, 45, 25), outline=STEEL_COLOR, width=2)
+    d.text((ox + 670, oy + 70), "🏠 Standing Seam 直立锁边屋面节点", font=f_body, fill=STEEL_COLOR)
+    d.text((ox + 670, oy + 120), "1. 50mm 高密度 PU 隔热夹芯彩钢板\n2. Standing Seam 270° 机械直立锁边 (无螺丝)\n3. 弹性 PU 结构胶 + 收边泛水压条\n4. 降噪 28dB 暴雨雨击声学吸音层", font=f_small, fill=TEXT_MAIN)
+
+    img.save("/Users/cjmac2024/Documents/antigravity/charming-darwin/assets/soil_termite_waterproof_blueprint.jpg", "JPEG", quality=93)
+    print("Generated soil_termite_waterproof_blueprint.jpg DWG X-101")
+
 if __name__ == "__main__":
     make_floorplan()
     make_elevation()
@@ -364,3 +397,5 @@ if __name__ == "__main__":
     make_fire_safety()
     make_tc_testing()
     make_siteplan()
+    make_electrical_wiring()
+    make_soil_termite_waterproof()
