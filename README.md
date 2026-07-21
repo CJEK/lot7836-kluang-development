@@ -13,7 +13,7 @@
 包含：
 * **3 套独立风格外观与内部图纸**（居銮赤陶红现代热带风、马六甲 Batu Angin 风砖屏风墙主推风格、南洋纯白复古谷仓风）。
 * **集装箱 0-1 步骤与进度条 GIF 动图**（真实呈现纵向双侧 40ft HC 集装箱切割、补强与花砖屏风墙砌筑过程）。
-* **符合 MPK 规范的 2D CAD 工程蓝图集**（总平面图、平面图、正立面图、MEP 水电图、切割节点 Detail）。
+* **英文概念图纸包**（A-101、A-102、S-101、M-101、F-101、T-101、G-101 的 PDF 与可编辑 DXF 源文件）。所有图纸均标注 `NOT FOR CONSTRUCTION / NOT FOR SUBMISSION`，不可替代注册专业人士签署的施工或报批图。
 * **RM 400k - RM 450k 精细化造价拆解与降本策略**。
 
 ---
@@ -59,3 +59,10 @@ python3 -m http.server 8080
 # 推送发布至 Vercel 生产环境
 vercel --prod --yes
 ```
+
+## 📐 英文概念图纸包 (English Concept Drawing Set)
+
+* PDF 图纸集：[deliverables/lot7836-concept-drawing-set.pdf](./deliverables/lot7836-concept-drawing-set.pdf)
+* 可编辑 DXF 源文件：[deliverables/lot7836-concept-dxf-source.zip](./deliverables/lot7836-concept-dxf-source.zip)
+
+DXF 可在兼容 AutoCAD 的软件中打开，并按项目/顾问要求另存为 DWG。图纸只用于概念协调；退缩、消防车接近、排水接驳、卫生容量、结构连接和测试验收仍须由 Ar.、P.Eng、MPK、BOMBA 与 IWK 确认。
