@@ -1,34 +1,12 @@
 /* ==========================================================================
-   Lot 7836 Development Pack - Application Logic
+   Lot 7836 Development Pack - Application Logic (V3 Optimized)
    ========================================================================== */
 
-let currentBpSrc = 'assets/siteplan-bp.jpg';
-let currentBpTitle = '总平面图 (Site Plan)';
+let currentBpSrc = 'assets/container_splicing_blueprint.jpg';
+let currentBpTitle = '集装箱切割与拼接 CAD 节点图 (Container Modification Detail)';
 
-// Style Tab Switcher
-function switchStyleTab(index) {
-  const tabs = document.querySelectorAll('.tab-btn');
-  const panels = document.querySelectorAll('.style-panel');
-  
-  tabs.forEach((tab, i) => {
-    if (i === index) {
-      tab.classList.add('active');
-    } else {
-      tab.classList.remove('active');
-    }
-  });
-
-  panels.forEach((panel, i) => {
-    if (i === index) {
-      panel.classList.add('active');
-    } else {
-      panel.classList.remove('active');
-    }
-  });
-}
-
-// Blueprint Selector Switcher
-function switchBlueprint(src, title, desc) {
+// Blueprint Selector Switcher using precise button reference or data attribute
+function switchBlueprint(src, title, desc, btnEl) {
   const bpImg = document.getElementById('bp-img');
   const bpTitle = document.getElementById('bp-title');
   const bpDesc = document.getElementById('bp-desc');
@@ -42,7 +20,7 @@ function switchBlueprint(src, title, desc) {
   if (bpDesc) bpDesc.textContent = desc;
 
   bpBtns.forEach(btn => {
-    if (btn.textContent.includes(title.split(' ')[0])) {
+    if (btn === btnEl) {
       btn.classList.add('active');
     } else {
       btn.classList.remove('active');
@@ -93,7 +71,7 @@ window.addEventListener('scroll', () => {
   
   sections.forEach(current => {
     const sectionHeight = current.offsetHeight;
-    const sectionTop = current.offsetTop - 100;
+    const sectionTop = current.offsetTop - 120;
     const sectionId = current.getAttribute('id');
     
     if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
