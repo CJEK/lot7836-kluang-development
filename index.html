@@ -1,53 +1,37 @@
-<!DOCTYPE html>
-<html lang="zh-Hans">
+<!doctype html>
+<html lang="zh-CN" data-language="zh">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lot 7836 居銮 50x75ft 现代热带 Loft Bungalow 完整开发提案</title>
-  <meta name="description" content="Kluang Lot 7836 50x75ft Modern Tropical Malay Bungalow Warehouse complete architectural development pack, Style 2 Breeze Block Container Build GIF, CAD blueprints.">
-  
-  <!-- Favicon -->
-  <link rel="icon" type="image/x-icon" href="favicon.ico?v=3">
-  <link rel="icon" type="image/png" sizes="192x192" href="favicon.png?v=3">
-  <link rel="apple-touch-icon" href="favicon.png?v=3">
-  
-  <!-- Open Graph / Social Sharing Meta -->
-  <meta property="og:title" content="Lot 7836 居銮 50x75ft 现代热带 Loft Bungalow 完整开发提案">
-  <meta property="og:description" content="3套独立风格外观与内部设计图纸 | 集装箱0-1施工GIF动画 | 2D CAD工程图纸 | RM400k造价拆解">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="assets/style2-ext.jpg?v=3">
-  <meta name="twitter:card" content="summary_large_image">
-  
-  <!-- Fonts -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Lot 7836 Kluang - bilingual conceptual container bungalow proposal.">
+  <title>Lot 7836 | Kluang Concept Proposal</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  
-  <link rel="stylesheet" href="styles.css?v=3">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=4">
+  <style>.drawing-card img{display:block;width:100%;aspect-ratio:1.42;object-fit:cover;border:1px solid var(--line);border-radius:6px;margin-bottom:12px}</style>
 </head>
 <body>
-
-  <!-- Top Navigation Bar -->
   <header class="topbar">
     <div class="container nav-container">
-      <a href="#overview" class="brand">
-        <span class="brand-badge">LOT 7836</span>
-        <span class="brand-title">Kluang Development Pack</span>
+      <a class="brand" href="#overview" aria-label="Lot 7836">
+        <span class="brand-badge">LOT 7836</span><span class="brand-title">KLUANG</span>
       </a>
-      <nav class="nav-links" id="main-nav">
-        <a href="#overview" class="active">项目总览</a>
-        <a href="#multi-angle">3D 框架全景</a>
-        <a href="#style2-pkg">🟢 风格 2：花砖屏风墙 (推荐)</a>
-        <a href="#style1-pkg">🔴 风格 1：赤陶红热带</a>
-        <a href="#style3-pkg">⚪ 风格 3：纯白谷仓</a>
-        <a href="#style2-gif">0-1 施工 GIF</a>
-        <a href="#blueprints">CAD 施工图纸</a>
-        <a href="#compliance-testing">🛡️ 入住合规与测试</a>
-        <a href="#budget">造价拆解</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" data-i18n-aria="menu.aria">Menu</button>
+      <nav id="primary-nav" class="nav-links" aria-label="Primary navigation">
+        <a href="#overview" data-i18n="nav.overview">项目总览</a>
+        <a href="#recommended" data-i18n="nav.recommended">推荐方案</a>
+        <a href="#styles" data-i18n="nav.styles">风格比较</a>
+        <a href="#drawings" data-i18n="nav.drawings">图纸包</a>
+        <a href="#budget" data-i18n="nav.budget">造价</a>
       </nav>
       <div class="nav-actions">
-        <button class="btn btn-outline btn-sm" onclick="window.print()">🖨️ 打印提案总册</button>
-        <button class="btn btn-primary btn-sm" id="btn-share" onclick="copyShareLink()">🔗 分享项目链接</button>
+        <div class="language-toggle" aria-label="Language">
+          <button class="language-btn active" type="button" data-lang="zh" aria-pressed="true">中文</button>
+          <button class="language-btn" type="button" data-lang="en" aria-pressed="false">EN</button>
+        </div>
+        <button class="icon-btn" type="button" data-action="print" data-i18n-title="action.print">⌘P</button>
+        <button class="icon-btn" type="button" data-action="share" data-i18n-title="action.share">↗</button>
       </div>
     </div>
   </header>
@@ -108,448 +92,63 @@
           </div>
         </div>
       </div>
+    </section>
 
-      <!-- Hero Visual Cover GIF -->
-      <div class="hero-cover-card" onclick="openLightbox('assets/style2_container_to_breeze_block_build.gif?v=3', '风格2 马六甲度假村风砖屏风墙 0-1 施工 GIF')">
-        <div class="image-wrapper">
-          <img src="assets/style2_container_to_breeze_block_build.gif?v=3" alt="Style 2 Breeze Block Container Build GIF" width="1280" height="720" decoding="async" fetchpriority="high">
-          <span class="view-tag">🎞️ 点击全屏播放 0-1 施工 GIF 动画</span>
+    <section class="section muted" id="styles">
+      <div class="container">
+        <div class="section-heading compact">
+          <p class="eyebrow">STYLE STUDIES</p>
+          <h2 data-i18n="styles.title">三组外观与氛围研究</h2>
+          <p data-i18n="styles.text">每组均受同一设计控制线约束。正面与室内为概念渲染；侧后图仅作材料、景观与氛围参考，不表示已核定体量或立面。</p>
         </div>
-        <div class="cover-caption">
-          <strong>集装箱 0-1 改造施工 GIF 动画</strong>：展示地基定位、等离子切割、100mm 方钢补强、柱网与 Batu Angin 花砖砌筑至竣工全过程。
+        <div class="style-grid" id="style-grid"></div>
+        <p class="control-caption" data-i18n="styles.controls">Shared control: 2 × 40ft HC containers, 34ft hall, 35ft rear steel extension, 30° roof, +24' eave / +38'-5" ridge / +47' Jack Roof.</p>
+      </div>
+    </section>
+
+    <section class="section" id="drawings">
+      <div class="container">
+        <div class="section-heading compact">
+          <p class="eyebrow">ENGLISH CONCEPT DRAWING SET</p>
+          <h2 data-i18n="drawings.title">英文概念图纸与 CAD 源文件</h2>
+          <p data-i18n="drawings.text">下载包包含 7 张英文概念图纸 PDF 和可编辑 DXF 源文件。所有图纸明确标示为非施工、非报批文件。</p>
+        </div>
+        <div class="drawing-downloads">
+          <a class="download-card primary" href="deliverables/lot7836-concept-drawing-set.pdf?v=1" target="_blank" rel="noopener">
+            <span>PDF</span><strong data-i18n="drawings.pdf">Open English concept drawing set</strong><small>A-101 / A-102 / S-101 / M-101 / F-101 / T-101 / G-101</small>
+          </a>
+          <a class="download-card" href="deliverables/lot7836-concept-dxf-source.zip?v=1" download>
+            <span>DXF</span><strong data-i18n="drawings.dxf">Download editable CAD source</strong><small data-i18n="drawings.dxfNote">Open in AutoCAD-compatible software; save as DWG when required.</small>
+          </a>
+        </div>
+        <div class="drawing-grid" id="drawing-grid"></div>
+        <p class="notice" data-i18n="drawings.notice">No setback, BOMBA access, sewer connection, structural capacity or test acceptance is represented as approved. These items remain pending site survey and professional review.</p>
+      </div>
+    </section>
+
+    <section class="section muted" id="budget">
+      <div class="container budget-layout">
+        <div class="section-heading">
+          <p class="eyebrow">PRELIMINARY COST PLAN</p>
+          <h2 data-i18n="budget.title">RM400k–RM450k 初步造价范围</h2>
+          <p data-i18n="budget.text">仅作概念阶段预算。报价、税费、审批、地勘、专业签证和不可预见工程须另行核定。</p>
+        </div>
+        <div class="budget-list">
+          <div><span data-i18n="budget.foundation">Foundation and ground works</span><b>23%</b></div>
+          <div><span data-i18n="budget.structure">Container conversion and steelwork</span><b>15%</b></div>
+          <div><span data-i18n="budget.loft">Loft and stair</span><b>11%</b></div>
+          <div><span data-i18n="budget.roof">Roof and Jack Roof monitor</span><b>12%</b></div>
+          <div><span data-i18n="budget.mep">Drainage, sanitary and electrical</span><b>17%</b></div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
-
-
-  <!-- Global Section: Multi-Angle Viewports (Overall 3D Architectural Renders) -->
-  <section class="section" id="multi-angle">
-    <div class="container">
-      <div class="section-header">
-        <span class="eyebrow">3D ARCHITECTURAL VIEWPORTS</span>
-        <h2>项目 3D 整体框架多方位透视图 (Overall 3D Renders)</h2>
-        <p>提供 50x75ft 建筑全景 3/4 轴测、鸟瞰视角与 75ft 侧立面工程排水规划，全方位呈现整体框架逻辑。</p>
-      </div>
-
-      <div class="style-views-grid" style="grid-template-columns: repeat(3, 1fr); gap: 24px;">
-        <div class="view-card" onclick="openLightbox('assets/iso-3d.jpg?v=3', '项目 3/4 轴测透视全景图')">
-          <div class="img-box"><img src="assets/iso-3d.jpg?v=3" alt="3/4 轴测图" width="1376" height="768" loading="lazy" decoding="async"></div>
-          <div class="view-caption">
-            <h4>1. 3/4 轴测全景透视 (3/4 Isometric 3D View)</h4>
-            <p>展现 50ft 面宽与 75ft 进深比例，高坡屋顶与中央拔风塔对流结构。</p>
-          </div>
-        </div>
-
-        <div class="view-card" onclick="openLightbox('assets/birds-eye.jpg?v=3', '项目鸟瞰全景图')">
-          <div class="img-box"><img src="assets/birds-eye.jpg?v=3" alt="鸟瞰全景图" width="1376" height="768" loading="lazy" decoding="async"></div>
-          <div class="view-caption">
-            <h4>2. 鸟瞰全景视角 (Bird's Eye Aerial 3D View)</h4>
-            <p>呈现地块退缩线、绿化景观中庭、后区服务通道与高空采光布局。</p>
-          </div>
-        </div>
-
-        <div class="view-card" onclick="openLightbox('assets/side-facade.jpg?v=3', '75ft 侧立面与服务排水沟图')">
-          <div class="img-box"><img src="assets/side-facade.jpg?v=3" alt="75ft 侧立面图" width="1376" height="768" loading="lazy" decoding="async"></div>
-          <div class="view-caption">
-            <h4>3. 75ft 侧立面与排水沟 (75ft Side Facade 3D View)</h4>
-            <p>展示高位侧采光窗、深檐遮阳避雨结构及周圈 U 型服务排水沟。</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Section 2: Style Package 2 (100% Grouped - Recommended Main Focus) -->
-  <section class="section bg-light" id="style2-pkg">
-    <div class="container">
-      <div class="style-package-header">
-        <span class="pkg-number gold">STYLE PACKAGE 02 (RECOMMENDED MAIN FOCUS)</span>
-        <h2>🟢 风格 2：马六甲度假村风砖屏风墙 3D 设计视角 (Breeze Block Screen Wall)</h2>
-        <p>材质组合：橄榄森林绿 PU 隔热屋顶 + 赤陶与白色 Batu Angin 通风花砖屏风墙 + 暖沙色粗抹灰质感漆</p>
-      </div>
-
-      <div class="style-views-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px;">
-        <div class="view-card" onclick="openLightbox('assets/style2-ext.jpg?v=6', '风格2：外观正立面高清 3D 透视图')">
-          <div class="img-box"><img src="assets/style2-ext.jpg?v=6" alt="风格2 外观正立面" loading="lazy"></div>
-          <div class="view-caption">
-            <h4>1. 50ft 外观正立面 3D 全景 (Front Elevation Render)</h4>
-            <p>森林绿屋顶与红陶/白色 Batu Angin 通风花砖透气屏风墙，正面 50ft 全景。</p>
-          </div>
-        </div>
-
-        <div class="view-card" onclick="openLightbox('assets/style2-side.jpg?v=6', '风格2：75ft 侧立面与排水沟 3D 透视图')">
-          <div class="img-box"><img src="assets/style2-side.jpg?v=6" alt="风格2 侧立面" loading="lazy"></div>
-          <div class="view-caption">
-            <h4>2. 75ft 侧立面与防雨檐口 3D 透视 (Side Elevation Render)</h4>
-            <p>展现 75ft 屋身进深、高位侧采光窗与周圈 U 型排水沟系统。</p>
-          </div>
-        </div>
-
-        <div class="view-card" onclick="openLightbox('assets/style2-rear.jpg?v=6', '风格2：45° 轴测与后方框架 3D 透视图')">
-          <div class="img-box"><img src="assets/style2-rear.jpg?v=6" alt="风格2 轴测全景" loading="lazy"></div>
-          <div class="view-caption">
-            <h4>3. 45° 轴测全景与拔风塔 3D 透视 (3/4 Isometric Render)</h4>
-            <p>展现高坡屋顶与中央 Raised Monitor 拔风塔排热气流路径。</p>
-          </div>
-        </div>
-
-        <div class="view-card" onclick="openLightbox('assets/style2-int.jpg?v=6', '风格2：室内花砖日光影中庭高清 3D 透视图')">
-          <div class="img-box"><img src="assets/style2-int.jpg?v=6" alt="风格2 室内中庭" loading="lazy"></div>
-          <div class="view-caption">
-            <h4>4. 室内花砖日光光影中庭 3D 全景 (Interior Atrium Render)</h4>
-            <p>阳光透过风砖在水磨石地面上投射几何阴影，设室内热带天井中庭。</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="style-spec-box highlight">
-        <h4>🌟 风格 2 核心防热与美学优势解构</h4>
-        <ul class="spec-checklist">
-          <li><strong>双层墙防热屏风 (Double-Skin Facade)</strong>：Batu Angin 通风花砖隔绝正午热辐射，降低室内温度 3-5°C。</li>
-          <li><strong>自然穿堂风</strong>：利用风砖网格形成全天候微风流动，大幅减少空调依赖。</li>
-          <li><strong>度假村高级感</strong>：暖沙色粗抹灰结合热带蕨类景观，极富现代高端度假别墅气质。</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- Section 3: Style Package 1 (100% Grouped) -->
-  <section class="section" id="style1-pkg">
-    <div class="container">
-      <div class="style-package-header">
-        <span class="pkg-number">STYLE PACKAGE 01</span>
-        <h2>🔴 风格 1：居銮现代热带传统风格 3D 设计视角 (Modern Tropical Malay)</h2>
-        <p>材质组合：赤陶红高坡屋顶 + 米白色波纹钢板外墙 + 暖木色 WPC 木塑格栅 + 柚木百叶通风塔</p>
-      </div>
-
-      <div class="style-views-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px;">
-        <div class="view-card" onclick="openLightbox('assets/style1-ext.jpg?v=6', '风格1：外观正立面高清 3D 透视图')">
-          <div class="img-box"><img src="assets/style1-ext.jpg?v=6" alt="风格1 外观正立面" loading="lazy"></div>
-          <div class="view-caption">
-            <h4>1. 50ft 外观正立面 3D 全景 (Exterior Front Render)</h4>
-            <p>赤陶红斜屋顶与 50ft 度假村风入口，极简防热开窗。</p>
-          </div>
-        </div>
-
-        <div class="view-card" onclick="openLightbox('assets/style1-side.jpg?v=6', '风格1：75ft 侧立面 3D 透视图')">
-          <div class="img-box"><img src="assets/style1-side.jpg?v=6" alt="风格1 侧立面" loading="lazy"></div>
-          <div class="view-caption">
-            <h4>2. 75ft 侧立面与坡屋顶 3D 透视 (Side Facade Render)</h4>
-            <p>展现居銮热带高坡屋顶与 Kampung 暖木色 WPC 格栅布局。</p>
-          </div>
-        </div>
-
-        <div class="view-card" onclick="openLightbox('assets/style1-rear.jpg?v=6', '风格1：45° 轴测 3D 透视图')">
-          <div class="img-box"><img src="assets/style1-rear.jpg?v=6" alt="风格1 轴测透视" loading="lazy"></div>
-          <div class="view-caption">
-            <h4>3. 45° 轴测全景与拔风塔 3D 透视 (3/4 Isometric Render)</h4>
-            <p>呈现中央Raised Monitor拔风塔与全区斜坡避雨檐口。</p>
-          </div>
-        </div>
-
-        <div class="view-card" onclick="openLightbox('assets/style1-int.jpg?v=6', '风格1：内部挑高大厅高清 3D 透视图')">
-          <div class="img-box"><img src="assets/style1-int.jpg?v=6" alt="风格1 内部大厅" loading="lazy"></div>
-          <div class="view-caption">
-            <h4>4. 内部挑高大厅 3D 全景 (Interior Hall Render)</h4>
-            <p>裸露柚木屋架与中空采光窗，抛光混凝土地板与二层办公平台。</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="style-spec-box">
-        <h4>🔴 风格 1 设计解构</h4>
-        <ul class="spec-checklist">
-          <li><strong>高耸拔风塔 (Jack Roof)</strong>：中央 Raised Monitor 利用热浮力快速排出高空蓄热。</li>
-          <li><strong>WPC 木塑格栅</strong>：暖木色格栅修饰开窗，兼顾防防热与马来传统 Kampung 建筑亲切感。</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- Section 4: Style Package 3 (100% Grouped) -->
-  <section class="section bg-light" id="style3-pkg">
-    <div class="container">
-      <div class="style-package-header">
-        <span class="pkg-number">STYLE PACKAGE 03</span>
-        <h2>⚪ 风格 3：南洋殖民复古纯白谷仓 3D 设计视角 (Colonial Nanyang White Barn)</h2>
-        <p>材质组合：全纯白波纹金属板墙面与屋顶 (最高太阳反射率 SRI) + 深色柚木百叶窗扇 (Plantation Shutters)</p>
-      </div>
-
-      <div class="style-views-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px;">
-        <div class="view-card" onclick="openLightbox('assets/style3-ext.jpg?v=6', '风格3：外观正立面高清 3D 透视图')">
-          <div class="img-box"><img src="assets/style3-ext.jpg?v=6" alt="风格3 外观正立面" loading="lazy"></div>
-          <div class="view-caption">
-            <h4>1. 50ft 外观正立面 3D 全景 (Exterior Front Render)</h4>
-            <p>纯白谷仓轮廓搭配深色柚木百叶推拉门与高通风窗。</p>
-          </div>
-        </div>
-
-        <div class="view-card" onclick="openLightbox('assets/style3-side.jpg?v=6', '风格3：75ft 侧立面 3D 透视图')">
-          <div class="img-box"><img src="assets/style3-side.jpg?v=6" alt="风格3 侧立面" loading="lazy"></div>
-          <div class="view-caption">
-            <h4>2. 75ft 侧立面与纯白金属波纹板 3D 透视 (Side Elevation Render)</h4>
-            <p>展现高太阳反射率纯白波纹板包覆与深色柚木百叶窗。</p>
-          </div>
-        </div>
-
-        <div class="view-card" onclick="openLightbox('assets/style3-rear.jpg?v=6', '风格3：45° 轴测 3D 透视图')">
-          <div class="img-box"><img src="assets/style3-rear.jpg?v=6" alt="风格3 轴测透视" loading="lazy"></div>
-          <div class="view-caption">
-            <h4>3. 45° 轴测全景与白钢桁架 3D 透视 (3/4 Isometric Render)</h4>
-            <p>呈现纯白谷仓后区框架与南洋殖民复古会所整体轮廓。</p>
-          </div>
-        </div>
-
-        <div class="view-card" onclick="openLightbox('assets/style3-int.jpg?v=6', '风格3：纯白大厅高清 3D 透视图')">
-          <div class="img-box"><img src="assets/style3-int.jpg?v=6" alt="风格3 内部大厅" loading="lazy"></div>
-          <div class="view-caption">
-            <h4>4. 纯白大厅与柚木地板 3D 全景 (Interior Hall Render)</h4>
-            <p>双倍层高纯白钢桁架 ceiling，柚木实木地板与百叶推拉门。</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="style-spec-box">
-        <h4>⚪ 风格 3 设计解构</h4>
-        <ul class="spec-checklist">
-          <li><strong>超高 SRI 太阳反射率</strong>：全纯白包覆极强反射太阳热辐射，室内吸热降至最低。</li>
-          <li><strong>南洋殖民风采</strong>：深色柚木百叶窗形成典雅对比，打造高雅奢华的私人会所质感。</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- Section 1: Style 2 Specific GIF Build Process -->
-  <section class="section" id="style2-gif">
-    <div class="container">
-      <div class="section-header">
-        <span class="eyebrow">STAGE 0-1 CONSTRUCTION ANIMATION</span>
-        <h2>集装箱改造马六甲风砖屏风墙 0-1 GIF 动画 (Build Process GIF)</h2>
-        <p>带步骤进度条的 CAD 施工演进动图：完整演示从 40ft 二手集装箱定位、侧墙切割补强到花砖砌筑与竣工。</p>
-      </div>
-
-      <div class="gif-showcase-box">
-        <div class="gif-frame-container" onclick="openLightbox('assets/style2_container_to_breeze_block_build.gif?v=3', '风格2 风砖屏风墙 8 阶段施工演示')">
-          <img src="assets/style2_container_to_breeze_block_build.gif?v=3" alt="Style 2 Breeze Block Build GIF">
-        </div>
-        <div class="build-steps-timeline">
-          <div class="timeline-item">
-            <div class="timeline-badge">STAGE 01</div>
-            <h4>40ft 集装箱定位与桩基点交</h4>
-            <p>40ft HC 集装箱落位于 150mm 工业加厚混凝土地坪上，精准对齐 50x75ft 建筑网格。</p>
-          </div>
-          <div class="timeline-item">
-            <div class="timeline-badge">STAGE 02</div>
-            <h4>波纹板等离子切割与 100mm 方钢补强</h4>
-            <p>等离子切割开出 36'×16' 大厅与屏风窗框，切口周圈焊接 100mm×100mm RHS 方钢防止变形。</p>
-          </div>
-          <div class="timeline-item">
-            <div class="timeline-badge">STAGE 03</div>
-            <h4>H-Beam 柱网与 900sqft Mezzanine 阁楼</h4>
-            <p>立 150mm×150mm H-beam 钢柱，在后区 35ft 高顶钢构区（檐高 24ft）铺设 Bondek 钢承板搭建二层 Loft 办公平台（一楼/二楼净高各 11ft）。</p>
-          </div>
-          <div class="timeline-item">
-            <div class="timeline-badge">STAGE 04</div>
-            <h4>30° 高坡屋顶与 Raised Jack Roof 拔风塔</h4>
-            <p>架设轻钢坡屋顶与中央拔风塔，敷设 50mm PU 聚氨酯防热隔音夹芯板。</p>
-          </div>
-          <div class="timeline-item">
-            <div class="timeline-badge">STAGE 05</div>
-            <h4>马六甲 Batu Angin 通风花砖屏风墙砌筑</h4>
-            <p>在切割开口框内砌筑赤陶与白色通风花砖，形成防热透风双层墙。</p>
-          </div>
-          <div class="timeline-item">
-            <div class="timeline-badge">STAGE 06</div>
-            <h4>热带仓储别墅完工交付</h4>
-            <p>施工粗抹灰暖沙漆与热带庭院，实现自然降温 3-5°C 节能度假体验。</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Section 5: 2D CAD Blueprints (Including Container Cutting Detail) -->
-  <section class="section bg-light" id="blueprints">
-    <div class="container">
-      <div class="section-header">
-        <span class="eyebrow">CAD CONCEPTUAL DIAGRAMS & DETAILS</span>
-        <h2>2D 概念工程示意图与集装箱切割图 (CAD Conceptual Diagrams)</h2>
-        <p>2D 概念工程示意图，包含集装箱切割补强、拼接与风砖锚固工程节点（待注册专业人士及主管机构最终确认）。</p>
-      </div>
-
-      <!-- Blueprint Selector Tabs -->
-      <div class="bp-tabs" style="display: flex; flex-wrap: wrap; gap: 8px;">
-        <button class="bp-btn active" data-bp-key="container" onclick="switchBlueprint('assets/container_splicing_blueprint.jpg?v=8', '集装箱切割与拼接 CAD 节点图 (Container Modification Detail)', '包含切口 100x100mm 方钢补强节点、模块拼接与 Batu Angin 花砖锚固 Detail', this)">集装箱切割/拼接 Detail</button>
-        <button class="bp-btn" data-bp-key="kitchen" onclick="switchBlueprint('assets/kitchen_drainage_blueprint.jpg?v=8', '厨房与集中排水系统工程图 (Kitchen & Wet-Core Drainage Plan)', '左集装箱 25ft 开放式厨房、油脂拦截器 (Grease Trap)、DN100 黑水/灰水管及 8PE 生化化粪池走线', this)">🍳 厨房与排水系统图</button>
-        <button class="bp-btn" data-bp-key="fire" onclick="switchBlueprint('assets/fire_safety_egress_blueprint.jpg?v=8', 'BOMBA 消防安全与紧急逃生路线图 (Fire Safety & Egress Plan)', '主逃生门、紧急出口、Smoke Detector 烟雾感应报警器点位与 6kg ABC 灭火器分布', this)">🔥 BOMBA 消防逃生图</button>
-        <button class="bp-btn" data-bp-key="tc" onclick="switchBlueprint('assets/tc_testing_blueprint.jpg?v=8', '5 大工程验收打压测试点位图 (T&C Inspection & Testing Blueprint)', 'PPR 8 Bar 打压点、24h 闭水测试沉箱、4h 坡屋顶高压喷淋防漏及 30mA RCCB 漏电测试点', this)">🧪 5大打压验收测试图</button>
-        <button class="bp-btn" data-bp-key="siteplan" onclick="switchBlueprint('assets/siteplan-bp.jpg?v=8', '总平面图 (Site Plan)', '50ft 正面边界、75ft 进深、U型排水沟、化粪池与停车场', this)">总平面图 Site Plan</button>
-        <button class="bp-btn" data-bp-key="elevation" onclick="switchBlueprint('assets/elevation-bp.jpg?v=8', '正立面施工图 (Elevation Blueprint)', '标高：+47ft 拔风塔顶、+38-5ft 主屋脊、+24ft 屋檐高度，30度坡屋顶结构', this)">正立面图 Elevation</button>
-        <button class="bp-btn" data-bp-key="floorplan" onclick="switchBlueprint('assets/floorplan-bp.jpg?v=8', '2D 平面功能布局图 (Floor Plan)', '前区工作岛、后区货架区、柱网分布与双厕位置', this)">2D 平面图 Floor Plan</button>
-      </div>
-
-      <!-- Interactive Blueprint Display Box -->
-      <div class="blueprint-viewer-box">
-        <div class="bp-main-image" onclick="openLightbox(currentBpSrc, currentBpTitle)">
-          <img id="bp-img" src="assets/container_splicing_blueprint.jpg?v=8" alt="Blueprint Preview" loading="lazy">
-          <div class="bp-overlay"><span>🔍 点击全屏高清查看 CAD 概念工程示意图</span></div>
-        </div>
-        <div class="bp-desc-bar">
-          <h4 id="bp-title">集装箱切割与拼接 CAD 节点图 (Container Modification Detail)</h4>
-          <p id="bp-desc">包含切口 100x100mm 方钢补强节点、模块拼接与 Batu Angin 花砖锚固 Detail</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Section 6: Budget & Cost Breakdown -->
-  <section class="section" id="budget">
-    <div class="container">
-      <div class="section-header">
-        <span class="eyebrow">FINANCIAL PLAN</span>
-        <h2>RM400k - RM450k 预算拆解与降本策略 (Budget Breakdown)</h2>
-        <p>通过内部柱网优化省下 30% 结构资金，重投入于基坑地坪、防热与防水。</p>
-      </div>
-
-      <div class="budget-grid">
-        <div class="budget-card">
-          <h3>💰 造价占比分布 (Cost Allocation)</h3>
-          <div class="bar-group">
-            <div class="bar-item">
-              <div class="bar-label"><span>6in 工业加厚地坪与基坑 (Flooring & Substructure)</span> <strong>RM 94,000 - 105,000 (23%)</strong></div>
-              <div class="bar-track"><div class="bar-fill" style="width: 23%; background: #2563eb;"></div></div>
-            </div>
-            <div class="bar-item">
-              <div class="bar-label"><span>集装箱改建、切割与钢骨架 (Container & Steel Structure)</span> <strong>RM 58,000 - 64,000 (15%)</strong></div>
-              <div class="bar-track"><div class="bar-fill" style="width: 15%; background: #059669;"></div></div>
-            </div>
-            <div class="bar-item">
-              <div class="bar-label"><span>900 sqft Mezzanine 平台与楼梯 (Loft Platform)</span> <strong>RM 42,000 - 50,000 (11%)</strong></div>
-              <div class="bar-track"><div class="bar-fill" style="width: 11%; background: #d97706;"></div></div>
-            </div>
-            <div class="bar-item">
-              <div class="bar-label"><span>隔热屋面与拔风塔 (PU Roof & Jack Roof Monitor)</span> <strong>RM 48,000 - 55,000 (12%)</strong></div>
-              <div class="bar-track"><div class="bar-fill" style="width: 12%; background: #7c3aed;"></div></div>
-            </div>
-            <div class="bar-item">
-              <div class="bar-label"><span>外墙与 Batu Angin 通风花砖屏风 (Walls & Breeze Blocks)</span> <strong>RM 38,000 - 45,000 (10%)</strong></div>
-              <div class="bar-track"><div class="bar-fill" style="width: 10%; background: #db2777;"></div></div>
-            </div>
-            <div class="bar-item">
-              <div class="bar-label"><span>排水系统、化粪池与服务沟 (Drainage & Septic)</span> <strong>RM 32,000 - 38,000 (8%)</strong></div>
-              <div class="bar-track"><div class="bar-fill" style="width: 8%; background: #0891b2;"></div></div>
-            </div>
-            <div class="bar-item">
-              <div class="bar-label"><span>双厕湿区、水喉与三相电容 (MEP & Sanitary)</span> <strong>RM 35,000 - 40,000 (9%)</strong></div>
-              <div class="bar-track"><div class="bar-fill" style="width: 9%; background: #4b5563;"></div></div>
-            </div>
-          </div>
-        </div>
-
-        <div class="budget-card bg-highlight">
-          <h3>💡 降本增效核心策略 (Cost Optimization Strategy)</h3>
-          <ul class="checklist">
-            <li>✅ <strong>集装箱高强度模组化改造</strong>：利用二手 40ft HC 集装箱主体结构，切割开窗后补强 100mm 方钢，节约主体工期 40%。</li>
-            <li>✅ <strong>取消昂贵 50ft Clear Span</strong>：在中段增设两排 150mm×150mm H-beam 钢柱，直接节省 RM 35,000 巨型桁架费用。</li>
-            <li>✅ <strong>湿区背靠背共享管线</strong>：双厕所紧贴后墙，管路长度缩短 60%，防漏水风险降低。</li>
-            <li>✅ <strong>被动式防热拔风塔</strong>：靠自然热浮力排热，节约空调大功率工业电费达 45%。</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Section 7: Mandatory Building Compliance, Testing & Commissioning (T&C) & Essential Occupancy Facilities -->
-  <section class="section bg-light" id="compliance-testing">
-    <div class="container">
-      <div class="section-header">
-        <span class="eyebrow">REGULATORY COMPLIANCE & TESTING (CCC HANDOVER)</span>
-        <h2>🛡️ 入住规范合规、工程验收测试与必需设施清单 (Occupancy Compliance & T&C)</h2>
-        <p>遵循马来西亚 UBBL 统一建筑规范与 MPK 入住标准，提供严格的工程验收打压测试与必需生活设施。</p>
-      </div>
-
-      <!-- Compliance 3 Grid -->
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; margin-bottom: 32px;">
-        
-        <!-- Grid 1: Compliance Standards -->
-        <div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 24px; box-shadow: 0 4px 6px rgba(0,0,0,0.03);">
-          <h3 style="color: #0f172a; font-size: 1.1rem; margin-top: 0; margin-bottom: 16px; display: flex; align-items: center; gap: 8px;">
-            <span style="font-size: 1.4rem;">📜</span> 建筑规范合规标准 (UBBL & MPK Standard)
-          </h3>
-          <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.88rem; color: #475569; line-height: 1.7;">
-            <li style="margin-bottom: 10px;">🔥 <strong>BOMBA 消防安全规范</strong>：配备前后双向紧急逃生出口、自吸式烟雾感应报警器及 6kg ABC 干粉灭火器；集装箱切割构件涂刷 2 小时防火漆。</li>
-            <li style="margin-bottom: 10px;">☀️ <strong>采光与自然通风率</strong>：采光开窗面积达到室内地坪的 12%（规范要求 10%），依靠拔风塔形成自然对流换气。</li>
-            <li style="margin-bottom: 10px;">❄️ <strong>防热隔音舒适度</strong>：外墙及屋顶全覆盖 50mm PU 高密度隔热板，室内噪音降至 45dB 以下，彻底解决集装箱闷热响声问题。</li>
-          </ul>
-        </div>
-
-        <!-- Grid 2: T&C Testing Protocols -->
-        <div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 24px; box-shadow: 0 4px 6px rgba(0,0,0,0.03);">
-          <h3 style="color: #0f172a; font-size: 1.1rem; margin-top: 0; margin-bottom: 16px; display: flex; align-items: center; gap: 8px;">
-            <span style="font-size: 1.4rem;">🧪</span> 5 大工程验收打压测试 (T&C Protocol)
-          </h3>
-          <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.88rem; color: #475569; line-height: 1.7;">
-            <li style="margin-bottom: 10px;">💧 <strong>给水管路打压测试</strong>：全屋 PPR 水管施加 1.5 倍工作压力（8 Bar）保持 2 小时零压降。</li>
-            <li style="margin-bottom: 10px;">🌊 <strong>湿区蓄水闭水测试</strong>：厨房与双卫生间沉箱注入 100mm 深积水持续 24 小时，底层防漏水验收。</li>
-            <li style="margin-bottom: 10px;">☔ <strong>屋顶防雨喷淋测试</strong>：采用高压水枪对 30° 斜坡屋顶及集装箱接缝持续喷淋 4 小时无渗漏。</li>
-            <li style="margin-bottom: 10px;">⚡ <strong>电气接地与 RCCB 测试</strong>：接地电阻值小于 10 欧姆，30mA 漏电保护断路器 30ms 极速切断保护。</li>
-            <li style="margin-bottom: 10px;">💨 <strong>通风排烟功能测试</strong>：厨房油烟机风量测试与 Monitor 拔风塔排热负压压差测试。</li>
-          </ul>
-        </div>
-
-        <!-- Grid 3: Essential Facilities -->
-        <div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 24px; box-shadow: 0 4px 6px rgba(0,0,0,0.03);">
-          <h3 style="color: #0f172a; font-size: 1.1rem; margin-top: 0; margin-bottom: 16px; display: flex; align-items: center; gap: 8px;">
-            <span style="font-size: 1.4rem;">🏡</span> 必需入住生活设施 (Essential Facilities)
-          </h3>
-          <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.88rem; color: #475569; line-height: 1.7;">
-            <li style="margin-bottom: 10px;">🚰 <strong>蓄水塔与增压水泵</strong>：后区配备 1,500L PE 食品级不锈钢蓄水塔 + 0.5HP 智能静音增压水泵，供水水压稳定。</li>
-            <li style="margin-bottom: 10px;">🌱 <strong>三级生化化粪池 (PE Septic)</strong>：符合 JKR 标准的 HDPE 8PE 生化滤池化粪池，排污达标。</li>
-            <li style="margin-bottom: 10px;">🍳 <strong>开放式烹饪厨房 Core</strong>：不锈钢水槽、耐高温台面、排烟风道与独立油脂拦截器 (Grease Trap)。</li>
-            <li style="margin-bottom: 10px;">🛏️ <strong>二层 900sqft Loft 卧室休息区</strong>：阁楼实木复合地板、独立隐蔽采光窗与避雷接地防雷针。</li>
-          </ul>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Share Box -->
-  <div class="container" style="margin-bottom: 80px;">
-    <div class="share-box">
-      <h3>📤 实时分享此开发提案 (Share Project Proposal)</h3>
-      <p>您可以将本链接分享给合作伙伴、承包商或 family 成员，随时在线查看风格 2 集装箱 0-1 施工 GIF、切割 Detail 图纸与造价估算。</p>
-      <div class="share-input-group">
-        <input type="text" id="share-link-input" readonly value="">
-        <button class="btn btn-primary" onclick="copyShareLink()">📋 复制链接 (Copy Link)</button>
-      </div>
-    </div>
-  </div>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container footer-content">
-      <p>© 2026 Lot 7836 Kluang Development Pack. Master Architectural Proposal.</p>
-      <p class="subtext">50ft Frontage x 75ft Depth | Style 2 Breeze Block Container Modification Architecture</p>
-    </div>
+  <footer>
+    <div class="container"><span>LOT 7836 / CONCEPT DESIGN</span><span data-i18n="footer">Professional review required before construction.</span></div>
   </footer>
 
-  <!-- Lightbox Modal -->
-  <div class="lightbox-modal" id="lightbox" onclick="closeLightbox()">
-    <span class="close-btn">&times;</span>
-    <img id="lightbox-img" src="" alt="Full view">
-    <div class="lightbox-caption" id="lightbox-caption"></div>
-  </div>
-
-  <script src="app.js?v=3"></script>
-  <script>
-    // Auto-detect and set the share link to current page URL
-    document.addEventListener('DOMContentLoaded', function() {
-      var shareInput = document.getElementById('share-link-input');
-      if (shareInput) shareInput.value = window.location.href.split('#')[0].split('?')[0];
-    });
-  </script>
+  <dialog id="lightbox" aria-label="Image preview"><button type="button" class="dialog-close" aria-label="Close">×</button><img id="lightbox-img" src="" alt=""><p id="lightbox-caption"></p></dialog>
+  <script src="app.js?v=4"></script>
 </body>
 </html>
