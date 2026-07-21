@@ -12,3 +12,4 @@ Thumbs.db
 
 # Build output
 _site/
+.vercel
