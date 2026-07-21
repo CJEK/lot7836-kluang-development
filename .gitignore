@@ -1,0 +1,10 @@
+# Dependencies & Virtual Envs
+venv/
+.venv/
+__pycache__/
+*.pyc
+
+# OS & Temp files
+.DS_Store
+Thumbs.db
+*.log
