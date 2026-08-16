@@ -1,50 +1,90 @@
 import os
 from PIL import Image, ImageDraw, ImageFont
 
-# Source clean images for 8-phase single-storey construction sequence
+# Source clean images for 8-phase single-storey construction sequence (100% Pure International English)
 frame_sources = [
-    ("assets/siteplan-bp.jpg", "PHASE 01: 50'x75' LOT & 150mm CONCRETE GROUND SLAB", "阶段 01: 50x75ft 地块平整与 150mm 加厚地坪浇筑"),
-    ("assets/iso-3d.jpg", "PHASE 02: 25T CRANE HOISTING TWIN 40ft HC CONTAINERS", "阶段 02: 吊装双 40ft HC 集装箱至地坪锚固点"),
-    ("assets/container_splicing_blueprint.jpg", "PHASE 03: CUT-OUT & 100x100mm RHS STEEL FRAME WELDING", "阶段 03: 集装箱侧墙切割开窗与 100mm 方钢框焊接"),
-    ("assets/side-facade.jpg", "PHASE 04: 20'x15' 2-CAR PORCH & 300mm U-DRAIN NETWORK", "阶段 04: 双车位车廊与周圈 300mm U 型雨水渠"),
-    ("assets/elevation-bp.jpg", "PHASE 05: 22° TROPICAL PITCHED ROOF & 1.2m EAVE OVERHANG", "阶段 05: 22° 经典热带坡屋顶与 1.2m 宽深挑檐"),
-    ("assets/style2-ext.jpg", "PHASE 06: BATU ANGIN BREEZE BLOCK RESORT FRONT FACADE", "阶段 06: 风格 2 马六甲风砖屏风门廊正面全景"),
-    ("assets/style2-int.jpg", "PHASE 07: 24ft OPEN-PLAN LIVING & DRY/WET KITCHEN SUITE", "阶段 07: 24ft 挑高客餐厅与干湿双厨房全景"),
-    ("assets/birds-eye.jpg", "PHASE 08: COMPLETED 2,300 sqft SINGLE-STOREY BUNGALOW", "阶段 08: 2,300 sqft 单层热带别墅建成交付 (CCC)")
+    (
+        "assets/siteplan-bp.jpg",
+        "PHASE 01 / 08 : 50'x75' LOT PREPARATION & 150mm REINFORCED SLAB",
+        "MS 828 Soil Anti-Termite Treatment & 0.2mm HDPE Moisture Barrier"
+    ),
+    (
+        "assets/iso-3d.jpg",
+        "PHASE 02 / 08 : 25T CRANE HOISTING TWIN 40ft HIGH CUBE CONTAINERS",
+        "Modular High Cube containers placed onto 100mm reinforced concrete plinth kerbs"
+    ),
+    (
+        "assets/container_splicing_blueprint.jpg",
+        "PHASE 03 / 08 : WALL CUT-OUTS & 100x100mm RHS STEEL FRAME WELDING",
+        "Perimeter structural reinforcement with M20 chemical anchor bolts (45kN tension)"
+    ),
+    (
+        "assets/side-facade.jpg",
+        "PHASE 04 / 08 : 20'x15' COVERED 2-CAR PORCH & 300mm U-DRAIN NETWORK",
+        "Integrated front setback 2-car porch canopy & perimeter storm drainage channel"
+    ),
+    (
+        "assets/elevation-bp.jpg",
+        "PHASE 05 / 08 : 22° TROPICAL PITCHED ROOF & 1.2m DEEP EAVE OVERHANG",
+        "50mm PU insulated standing seam roof & 250x150mm Colorbond rainwater gutters"
+    ),
+    (
+        "assets/style2-ext.jpg",
+        "PHASE 06 / 08 : BATU ANGIN BREEZE BLOCK RESORT FOYER SCREEN",
+        "Double-skin passive thermal barrier reducing indoor temperature by 3-5°C"
+    ),
+    (
+        "assets/style2-int.jpg",
+        "PHASE 07 / 08 : 24ft OPEN-PLAN LIVING HALL & DRY/WET KITCHEN SUITE",
+        "3.8m vaulted timber truss ceiling, 50L grease trap & DN100 blackwater plumbing"
+    ),
+    (
+        "assets/birds-eye.jpg",
+        "PHASE 08 / 08 : COMPLETED 2,300 sqft SINGLE-STOREY BUNGALOW (CCC)",
+        "5 mandatory T&C testing certifications, BOMBA approval & turnkey key handover"
+    )
 ]
 
 font_path = "/System/Library/Fonts/STHeiti Light.ttc"
 try:
-    font_en = ImageFont.truetype(font_path, 24)
-    font_zh = ImageFont.truetype(font_path, 16)
+    font_en_title = ImageFont.truetype(font_path, 22)
+    font_en_sub = ImageFont.truetype(font_path, 15)
+    font_brand = ImageFont.truetype(font_path, 12)
 except Exception:
-    font_en = font_zh = ImageFont.load_default()
+    font_en_title = font_en_sub = font_brand = ImageFont.load_default()
 
 gif_frames = []
 W, H = 1280, 720
 
-for src, en_title, zh_title in frame_sources:
+for idx, (src, en_title, en_sub) in enumerate(frame_sources):
     if os.path.exists(src):
         with Image.open(src) as img:
             img_c = img.convert("RGB")
             img_resized = img_c.resize((W, H), Image.Resampling.LANCZOS)
             d = ImageDraw.Draw(img_resized)
             
-            # Sleek Dark Slate Header Banner
-            d.rectangle([(0, 0), (W, 85)], fill=(15, 23, 42))
-            d.line([(0, 85), (W, 85)], fill=(56, 189, 248), width=3)
+            # 1. Sleek Top Engineering Header Banner (Dark Slate Blue + Cyan Accent)
+            d.rectangle([(0, 0), (W, 80)], fill=(15, 23, 42))
+            d.line([(0, 80), (W, 80)], fill=(56, 189, 248), width=3)
             
-            # Pure English Main Header
-            d.text((24, 14), f"🏗️ {en_title}", font=font_en, fill=(255, 255, 255))
+            # Project ID Tag (Top Right)
+            d.rectangle([(W - 260, 14), (W - 20, 42)], fill=(30, 41, 59), outline=(56, 189, 248), width=1)
+            d.text((W - 248, 20), "LOT 7836 · KLUANG DEVELOPMENT", font=font_brand, fill=(56, 189, 248))
             
-            # Clean Chinese Secondary Subtitle
-            d.text((24, 52), f"中文说明: {zh_title}", font=font_zh, fill=(56, 189, 248))
+            # Pure English Main Phase Title
+            d.text((24, 14), f"🏗️ {en_title}", font=font_en_title, fill=(255, 255, 255))
             
-            # Bottom Progress Indicator
-            i_idx = len(gif_frames)
-            d.rectangle([(0, H - 10), (W, H)], fill=(30, 41, 59))
-            p_w = int(W * ((i_idx + 1) / len(frame_sources)))
-            d.rectangle([(0, H - 10), (p_w, H)], fill=(74, 222, 128))
+            # Pure English Engineering Subtitle
+            d.text((24, 48), f"⚙️ Spec: {en_sub}", font=font_en_sub, fill=(148, 163, 184))
+            
+            # 2. Bottom Progress Bar
+            d.rectangle([(0, H - 8), (W, H)], fill=(30, 41, 59))
+            p_w = int(W * ((idx + 1) / len(frame_sources)))
+            d.rectangle([(0, H - 8), (p_w, H)], fill=(74, 222, 128))
+            
+            # Bottom Corner Stage Indicator
+            d.rectangle([(W - 120, H - 34), (W - 16, H - 12)], fill=(15, 23, 42), outline=(74, 222, 128), width=1)
+            d.text((W - 108, H - 30), f"STAGE {idx + 1} OF 8", font=font_brand, fill=(74, 222, 128))
             
             gif_frames.append(img_resized)
     else:
@@ -57,7 +97,7 @@ if gif_frames:
         save_all=True,
         append_images=gif_frames[1:],
         optimize=False,
-        duration=1500, # 1.5 seconds per frame
+        duration=1600, # 1.6 seconds per frame
         loop=0
     )
-    print(f"Successfully generated single-storey English construction GIF with {len(gif_frames)} frames!")
+    print(f"Successfully generated 100% pure English single-storey construction GIF with {len(gif_frames)} frames!")
