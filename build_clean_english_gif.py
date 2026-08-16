@@ -1,16 +1,16 @@
 import os
 from PIL import Image, ImageDraw, ImageFont
 
-# Source clean images for 8-phase construction sequence
+# Source clean images for 8-phase single-storey construction sequence
 frame_sources = [
-    ("assets/siteplan-bp.jpg", "PHASE 01: GROUND SLAB & SITE BOUNDARY (50' x 75' / 150mm SLAB)", "阶段 01: 50x75ft 地块平整与 150mm 加厚地坪浇筑"),
-    ("assets/iso-3d.jpg", "PHASE 02: HOISTING TWIN 40ft HIGH CUBE CONTAINERS", "阶段 02: 吊装双 40ft HC 集装箱至地坪锚固点"),
+    ("assets/siteplan-bp.jpg", "PHASE 01: 50'x75' LOT & 150mm CONCRETE GROUND SLAB", "阶段 01: 50x75ft 地块平整与 150mm 加厚地坪浇筑"),
+    ("assets/iso-3d.jpg", "PHASE 02: 25T CRANE HOISTING TWIN 40ft HC CONTAINERS", "阶段 02: 吊装双 40ft HC 集装箱至地坪锚固点"),
     ("assets/container_splicing_blueprint.jpg", "PHASE 03: CUT-OUT & 100x100mm RHS STEEL FRAME WELDING", "阶段 03: 集装箱侧墙切割开窗与 100mm 方钢框焊接"),
-    ("assets/side-facade.jpg", "PHASE 04: BATU ANGIN BREEZE BLOCK & 75ft SIDE DRAINAGE", "阶段 04: 75ft 侧立面与周圈 300mm U 型服务排水沟"),
-    ("assets/elevation-bp.jpg", "PHASE 05: 30° PITCHED ROOF & +47ft JACK ROOF MONITOR", "阶段 05: 30° 坡屋顶与 +47ft Raised Jack Roof 拔风塔"),
-    ("assets/style2-ext.jpg", "PHASE 06: STYLE 02 RESORT BUNGALOW FRONT FACADE", "阶段 06: 风格 2 马六甲风砖屏风墙外观全景"),
-    ("assets/style2-int.jpg", "PHASE 07: INTERIOR SUNLIT ATRIUM & 24ft HIGH CEILING HALL", "阶段 07: 室内 24ft 挑高大厅与日光风砖中庭"),
-    ("assets/birds-eye.jpg", "PHASE 08: COMPLETED 2,830 sqft CONTAINER LOFT BUNGALOW", "阶段 08: 2,830 sqft 全案建成交付 (CCC HANDOVER)")
+    ("assets/side-facade.jpg", "PHASE 04: 20'x15' 2-CAR PORCH & 300mm U-DRAIN NETWORK", "阶段 04: 双车位车廊与周圈 300mm U 型雨水渠"),
+    ("assets/elevation-bp.jpg", "PHASE 05: 22° TROPICAL PITCHED ROOF & 1.2m EAVE OVERHANG", "阶段 05: 22° 经典热带坡屋顶与 1.2m 宽深挑檐"),
+    ("assets/style2-ext.jpg", "PHASE 06: BATU ANGIN BREEZE BLOCK RESORT FRONT FACADE", "阶段 06: 风格 2 马六甲风砖屏风门廊正面全景"),
+    ("assets/style2-int.jpg", "PHASE 07: 24ft OPEN-PLAN LIVING & DRY/WET KITCHEN SUITE", "阶段 07: 24ft 挑高客餐厅与干湿双厨房全景"),
+    ("assets/birds-eye.jpg", "PHASE 08: COMPLETED 2,300 sqft SINGLE-STOREY BUNGALOW", "阶段 08: 2,300 sqft 单层热带别墅建成交付 (CCC)")
 ]
 
 font_path = "/System/Library/Fonts/STHeiti Light.ttc"
@@ -26,7 +26,6 @@ W, H = 1280, 720
 for src, en_title, zh_title in frame_sources:
     if os.path.exists(src):
         with Image.open(src) as img:
-            # Crop/Resize to exact 16:9 1280x720 canvas
             img_c = img.convert("RGB")
             img_resized = img_c.resize((W, H), Image.Resampling.LANCZOS)
             d = ImageDraw.Draw(img_resized)
@@ -61,4 +60,4 @@ if gif_frames:
         duration=1500, # 1.5 seconds per frame
         loop=0
     )
-    print(f"Successfully generated pure, crisp English construction GIF with {len(gif_frames)} frames!")
+    print(f"Successfully generated single-storey English construction GIF with {len(gif_frames)} frames!")
