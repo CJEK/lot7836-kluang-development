@@ -81,10 +81,10 @@ const styles = [
       '✅ 纯单层全龄宜居：零楼梯全平地布局，主卧套房+双次卧，配 20x15ft 遮阳双车位车廊。'
     ],
     images: [
-      { src: 'assets/style2-ext.jpg?v=32', label: ['1/4 正面 50ft 单层外观 (含车廊与风砖)', '1/4 Front Exterior 3D'] },
-      { src: 'assets/style2-side.jpg?v=32', label: ['2/4 75ft 侧立面与 1.2m 挑檐 3D 图', '2/4 75ft Side Facade 3D'] },
-      { src: 'assets/style2-rear.jpg?v=32', label: ['3/4 45° 轴测后方与坡屋顶天窗 3D 图', '3/4 45° Rear Isometric 3D'] },
-      { src: 'assets/style2-int.jpg?v=32', label: ['4/4 室内 24ft 挑高客餐厅全景 3D 图', '4/4 Interior Living/Dining 3D'] }
+      { src: 'assets/style2-ext.jpg?v=33', label: ['1/4 正面 50ft 主立面基准 (车廊与风砖门廊)', '1/4 Front Main Facade Baseline'] },
+      { src: 'assets/style2-side.jpg?v=33', label: ['2/4 75ft 侧立面材质意向 (1.2m 挑檐与暗渠)', '2/4 75ft Side Material Concept'] },
+      { src: 'assets/style2-rear.jpg?v=33', label: ['3/4 45° 后院服务动线意向 (湿厨门与化粪池)', '3/4 45° Rear Service Yard Concept'] },
+      { src: 'assets/style2-int.jpg?v=33', label: ['4/4 室内 24ft 挑高客餐厅意向 (3.8m 桁架)', '4/4 Interior Hall Concept'] }
     ]
   },
   {
@@ -98,10 +98,10 @@ const styles = [
       '✅ 挑高开放大厅：24ft 大面宽中央大厅结合裸露柚木屋架，室内视野极其开阔通透。'
     ],
     images: [
-      { src: 'assets/style1-ext.jpg?v=32', label: ['1/4 正面 50ft 单层外观全景', '1/4 Front Exterior 3D'] },
-      { src: 'assets/style1-side.jpg?v=32', label: ['2/4 75ft 侧立面 3D 图', '2/4 75ft Side Facade 3D'] },
-      { src: 'assets/style1-rear.jpg?v=32', label: ['3/4 45° 轴测后方全景 3D 图', '3/4 45° Rear Isometric 3D'] },
-      { src: 'assets/style1-int.jpg?v=32', label: ['4/4 室内挑高客餐厅 3D 图', '4/4 Interior Hall 3D'] }
+      { src: 'assets/style1-ext.jpg?v=33', label: ['1/4 正面 50ft 主立面基准 (赤陶瓦与格栅)', '1/4 Front Main Facade Baseline'] },
+      { src: 'assets/style1-side.jpg?v=33', label: ['2/4 75ft 侧立面材质意向 (木格栅遮阳窗)', '2/4 75ft Side Material Concept'] },
+      { src: 'assets/style1-rear.jpg?v=33', label: ['3/4 45° 后院服务动线意向 (湿厨出口与草坪)', '3/4 45° Rear Service Yard Concept'] },
+      { src: 'assets/style1-int.jpg?v=33', label: ['4/4 室内 24ft 挑高客餐厅意向 (裸露柚木梁)', '4/4 Interior Hall Concept'] }
     ]
   },
   {
@@ -115,10 +115,10 @@ const styles = [
       '✅ 极简明亮空间：室内单层 3.8m 挑高纯白钢桁架天花结合抛光地坪，极简而富有质感。'
     ],
     images: [
-      { src: 'assets/style3-ext.jpg?v=32', label: ['1/4 正面 50ft 单层外观全景', '1/4 Front Exterior 3D'] },
-      { src: 'assets/style3-side.jpg?v=32', label: ['2/4 75ft 侧立面 3D 图', '2/4 75ft Side Facade 3D'] },
-      { src: 'assets/style3-rear.jpg?v=32', label: ['3/4 45° 轴测后方全景 3D 图', '3/4 45° Rear Isometric 3D'] },
-      { src: 'assets/style3-int.jpg?v=32', label: ['4/4 室内纯白客餐厅 3D 图', '4/4 Interior White Hall 3D'] }
+      { src: 'assets/style3-ext.jpg?v=33', label: ['1/4 正面 50ft 主立面基准 (纯白坡顶与深柚木百叶)', '1/4 Front Main Facade Baseline'] },
+      { src: 'assets/style3-side.jpg?v=33', label: ['2/4 75ft 侧立面材质意向 (连续百叶走廊)', '2/4 75ft Side Material Concept'] },
+      { src: 'assets/style3-rear.jpg?v=33', label: ['3/4 45° 后院服务动线意向 (户外水槽与排热顶)', '3/4 45° Rear Service Yard Concept'] },
+      { src: 'assets/style3-int.jpg?v=33', label: ['4/4 室内 24ft 挑高客餐厅意向 (纯白钢桁架)', '4/4 Interior Hall Concept'] }
     ]
   }
 ];
