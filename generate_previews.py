@@ -10,7 +10,10 @@ mapping = {
     "t-101": "assets/tc_testing_blueprint.jpg",
     "g-101": "assets/siteplan-bp.jpg",
     "e-101": "assets/electrical_wiring_blueprint.jpg",
-    "x-101": "assets/soil_termite_waterproof_blueprint.jpg"
+    "x-101": "assets/soil_termite_waterproof_blueprint.jpg",
+    "d-101": "assets/breeze_block_detail_blueprint.jpg",
+    "k-101": "assets/kitchen_millwork_blueprint.jpg",
+    "m-102": "assets/hvac_aircon_blueprint.jpg"
 }
 
 os.makedirs("assets/drawings", exist_ok=True)
