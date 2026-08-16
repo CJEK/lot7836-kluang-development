@@ -77,10 +77,10 @@ const styles = [
       '✅ 纯单层全龄宜居：零楼梯全平地布局，主卧套房+双次卧，配 20x15ft 遮阳双车位车廊。'
     ],
     images: [
-      { src: 'assets/style2-ext.jpg?v=28', label: ['1/4 正面 50ft 单层外观 (含车廊与风砖)', '1/4 Front Exterior 3D'] },
-      { src: 'assets/style2-side.jpg?v=28', label: ['2/4 75ft 侧立面与 1.2m 挑檐 3D 图', '2/4 75ft Side Facade 3D'] },
-      { src: 'assets/style2-rear.jpg?v=28', label: ['3/4 45° 轴测后方与坡屋顶天窗 3D 图', '3/4 45° Rear Isometric 3D'] },
-      { src: 'assets/style2-int.jpg?v=28', label: ['4/4 室内 24ft 挑高客餐厅全景 3D 图', '4/4 Interior Living/Dining 3D'] }
+      { src: 'assets/style2-ext.jpg?v=29', label: ['1/4 正面 50ft 单层外观 (含车廊与风砖)', '1/4 Front Exterior 3D'] },
+      { src: 'assets/style2-side.jpg?v=29', label: ['2/4 75ft 侧立面与 1.2m 挑檐 3D 图', '2/4 75ft Side Facade 3D'] },
+      { src: 'assets/style2-rear.jpg?v=29', label: ['3/4 45° 轴测后方与坡屋顶天窗 3D 图', '3/4 45° Rear Isometric 3D'] },
+      { src: 'assets/style2-int.jpg?v=29', label: ['4/4 室内 24ft 挑高客餐厅全景 3D 图', '4/4 Interior Living/Dining 3D'] }
     ]
   },
   {
@@ -94,10 +94,10 @@ const styles = [
       '✅ 挑高开放大厅：24ft 大面宽中央大厅结合裸露柚木屋架，室内视野极其开阔通透。'
     ],
     images: [
-      { src: 'assets/style1-ext.jpg?v=28', label: ['1/4 正面 50ft 单层外观全景', '1/4 Front Exterior 3D'] },
-      { src: 'assets/style1-side.jpg?v=28', label: ['2/4 75ft 侧立面 3D 图', '2/4 75ft Side Facade 3D'] },
-      { src: 'assets/style1-rear.jpg?v=28', label: ['3/4 45° 轴测后方全景 3D 图', '3/4 45° Rear Isometric 3D'] },
-      { src: 'assets/style1-int.jpg?v=28', label: ['4/4 室内挑高客餐厅 3D 图', '4/4 Interior Hall 3D'] }
+      { src: 'assets/style1-ext.jpg?v=29', label: ['1/4 正面 50ft 单层外观全景', '1/4 Front Exterior 3D'] },
+      { src: 'assets/style1-side.jpg?v=29', label: ['2/4 75ft 侧立面 3D 图', '2/4 75ft Side Facade 3D'] },
+      { src: 'assets/style1-rear.jpg?v=29', label: ['3/4 45° 轴测后方全景 3D 图', '3/4 45° Rear Isometric 3D'] },
+      { src: 'assets/style1-int.jpg?v=29', label: ['4/4 室内挑高客餐厅 3D 图', '4/4 Interior Hall 3D'] }
     ]
   },
   {
@@ -111,24 +111,24 @@ const styles = [
       '✅ 极简明亮空间：室内单层 3.8m 挑高纯白钢桁架天花结合抛光地坪，极简而富有质感。'
     ],
     images: [
-      { src: 'assets/style3-ext.jpg?v=28', label: ['1/4 正面 50ft 单层外观全景', '1/4 Front Exterior 3D'] },
-      { src: 'assets/style3-side.jpg?v=28', label: ['2/4 75ft 侧立面 3D 图', '2/4 75ft Side Facade 3D'] },
-      { src: 'assets/style3-rear.jpg?v=28', label: ['3/4 45° 轴测后方全景 3D 图', '3/4 45° Rear Isometric 3D'] },
-      { src: 'assets/style3-int.jpg?v=28', label: ['4/4 室内纯白客餐厅 3D 图', '4/4 Interior White Hall 3D'] }
+      { src: 'assets/style3-ext.jpg?v=29', label: ['1/4 正面 50ft 单层外观全景', '1/4 Front Exterior 3D'] },
+      { src: 'assets/style3-side.jpg?v=29', label: ['2/4 75ft 侧立面 3D 图', '2/4 75ft Side Facade 3D'] },
+      { src: 'assets/style3-rear.jpg?v=29', label: ['3/4 45° 轴测后方全景 3D 图', '3/4 45° Rear Isometric 3D'] },
+      { src: 'assets/style3-int.jpg?v=29', label: ['4/4 室内纯白客餐厅 3D 图', '4/4 Interior White Hall 3D'] }
     ]
   }
 ];
 
 const drawings = [
-  ['A-101', ['DWG A-101 2D 单层住宅建筑平面图', 'DWG A-101 Floor Plan'], ['50x75ft 地块、双 40ft HC 集装箱、20x15ft 双车位车廊、24ft 客餐厅、主卧套房+2次卧+干湿厨房。', '50x75ft footprint, twin 40ft HC containers, 2-car porch, 24ft living/dining, 3 beds, wet/dry kitchens.'], 'assets/floorplan-bp.jpg?v=28'],
-  ['A-102', ['DWG A-102 单层建筑正立面与标高图', 'DWG A-102 Elevation'], ['严格住宅标高：FL ±0.00m 地坪、+12ft 主屋檐 (1.2m 深挑檐) 与 +19ft 22° 经典热带坡屋脊。', 'Residential levels: FL ±0.00m slab, +12ft eave (1.2m overhang) and +19ft 22° pitch ridge.'], 'assets/elevation-bp.jpg?v=28'],
-  ['S-101', ['DWG S-101 集装箱切割加固 Detail', 'DWG S-101 Container Detail'], ['侧墙切割开窗、切口周圈 100x100x4.5mm RHS 方钢框焊接与 M20 锚栓加固。', '100x100x4.5mm RHS steel frame reinforcement & M20 anchor bolts.'], 'assets/container_splicing_blueprint.jpg?v=28'],
-  ['M-101', ['DWG M-101 干湿双厨房与集中排水图', 'DWG M-101 Kitchen & Drainage'], ['湿厨房 50L 隔油池、主客卫 DN100 黑水管(1:40坡度)及后区 8PE 生化化粪池。', 'Wet kitchen grease trap, DN100 blackwater pipe (1:40 slope) & 8PE septic tank.'], 'assets/kitchen_drainage_blueprint.jpg?v=28'],
-  ['F-101', ['DWG F-101 单层 BOMBA 消防逃生图', 'DWG F-101 Fire & Egress Plan'], ['平地双向出口、1.5m 门净宽、SD1-SD4 烟感、FE1-FE3 灭火器与 <12m 直线逃生距离。', 'Ground dual exits, 1.5m doors, SD1-SD4 detectors, FE1-FE3 extinguishers (<12m egress).'], 'assets/fire_safety_egress_blueprint.jpg?v=28'],
-  ['T-101', ['DWG T-101 5 大工程打压测试图', 'DWG T-101 T&C Testing Plan'], ['8 Bar 给水打压、24h 湿区闭水、4h 屋顶高压喷淋及 30mA RCCB 漏电测试。', '8 Bar water pressure, 24h flood test, 4h roof spray & 30mA RCCB tests.'], 'assets/tc_testing_blueprint.jpg?v=28'],
-  ['G-101', ['DWG G-101 单层总平面与退缩图', 'DWG G-101 Site Plan'], ['Jalan Pakis 沿街、指北针、15ft 前退缩 (双车位车廊)、10ft 后退缩与两侧 5ft 排水沟。', 'Jalan Pakis frontage, 15ft front (2-car porch), 10ft rear & 5ft side setbacks.'], 'assets/siteplan-bp.jpg?v=28'],
-  ['E-101', ['DWG E-101 三相供电与避雷接地图', 'DWG E-101 Electrical & Solar'], ['TNB 3-Phase 63A 配电箱、30mA RCCB、+19ft 屋脊纯铜避雷针与 10kW 光伏预留。', 'TNB 3-Phase 63A DB, 30mA RCCB, +19ft copper lightning rod & 10kW solar PV ready.'], 'assets/electrical_wiring_blueprint.jpg?v=28'],
-  ['X-101', ['DWG X-101 地基防白蚁防潮剖面图', 'DWG X-101 Foundation & Spec'], ['150mm 地坪、0.2mm HDPE 防潮隔气膜、MS 828 防白蚁屏障与 Standing Seam 坡屋面大样。', '150mm slab, 0.2mm HDPE DPM, MS 828 anti-termite barrier & standing seam detail.'], 'assets/soil_termite_waterproof_blueprint.jpg?v=28']
+  ['A-101', ['DWG A-101 2D 单层住宅建筑平面图', 'DWG A-101 Floor Plan'], ['50x75ft 地块、双 40ft HC 集装箱、20x15ft 双车位车廊、24ft 客餐厅、主卧套房+2次卧+干湿厨房。', '50x75ft footprint, twin 40ft HC containers, 2-car porch, 24ft living/dining, 3 beds, wet/dry kitchens.'], 'assets/floorplan-bp.jpg?v=29'],
+  ['A-102', ['DWG A-102 单层建筑正立面与标高图', 'DWG A-102 Elevation'], ['严格住宅标高：FL ±0.00m 地坪、+12ft 主屋檐 (1.2m 深挑檐) 与 +19ft 22° 经典热带坡屋脊。', 'Residential levels: FL ±0.00m slab, +12ft eave (1.2m overhang) and +19ft 22° pitch ridge.'], 'assets/elevation-bp.jpg?v=29'],
+  ['S-101', ['DWG S-101 集装箱切割加固 Detail', 'DWG S-101 Container Detail'], ['侧墙切割开窗、切口周圈 100x100x4.5mm RHS 方钢框焊接与 M20 锚栓加固。', '100x100x4.5mm RHS steel frame reinforcement & M20 anchor bolts.'], 'assets/container_splicing_blueprint.jpg?v=29'],
+  ['M-101', ['DWG M-101 干湿双厨房与集中排水图', 'DWG M-101 Kitchen & Drainage'], ['湿厨房 50L 隔油池、主客卫 DN100 黑水管(1:40坡度)及后区 8PE 生化化粪池。', 'Wet kitchen grease trap, DN100 blackwater pipe (1:40 slope) & 8PE septic tank.'], 'assets/kitchen_drainage_blueprint.jpg?v=29'],
+  ['F-101', ['DWG F-101 单层 BOMBA 消防逃生图', 'DWG F-101 Fire & Egress Plan'], ['平地双向出口、1.5m 门净宽、SD1-SD4 烟感、FE1-FE3 灭火器与 <12m 直线逃生距离。', 'Ground dual exits, 1.5m doors, SD1-SD4 detectors, FE1-FE3 extinguishers (<12m egress).'], 'assets/fire_safety_egress_blueprint.jpg?v=29'],
+  ['T-101', ['DWG T-101 5 大工程打压测试图', 'DWG T-101 T&C Testing Plan'], ['8 Bar 给水打压、24h 湿区闭水、4h 屋顶高压喷淋及 30mA RCCB 漏电测试。', '8 Bar water pressure, 24h flood test, 4h roof spray & 30mA RCCB tests.'], 'assets/tc_testing_blueprint.jpg?v=29'],
+  ['G-101', ['DWG G-101 单层总平面与退缩图', 'DWG G-101 Site Plan'], ['Jalan Pakis 沿街、指北针、15ft 前退缩 (双车位车廊)、10ft 后退缩与两侧 5ft 排水沟。', 'Jalan Pakis frontage, 15ft front (2-car porch), 10ft rear & 5ft side setbacks.'], 'assets/siteplan-bp.jpg?v=29'],
+  ['E-101', ['DWG E-101 三相供电与避雷接地图', 'DWG E-101 Electrical & Solar'], ['TNB 3-Phase 63A 配电箱、30mA RCCB、+19ft 屋脊纯铜避雷针与 10kW 光伏预留。', 'TNB 3-Phase 63A DB, 30mA RCCB, +19ft copper lightning rod & 10kW solar PV ready.'], 'assets/electrical_wiring_blueprint.jpg?v=29'],
+  ['X-101', ['DWG X-101 地基防白蚁防潮剖面图', 'DWG X-101 Foundation & Spec'], ['150mm 地坪、0.2mm HDPE 防潮隔气膜、MS 828 防白蚁屏障与 Standing Seam 坡屋面大样。', '150mm slab, 0.2mm HDPE DPM, MS 828 anti-termite barrier & standing seam detail.'], 'assets/soil_termite_waterproof_blueprint.jpg?v=29']
 ];
 
 let activeGallery = [];
@@ -174,9 +174,9 @@ function renderCards() {
   const drawingGrid = document.getElementById('drawing-grid');
   if (drawingGrid) {
     drawingGrid.innerHTML = drawings.map(([number, title, description, hdSrc]) => `
-      <article class="drawing-card image-button" data-image="${hdSrc || `assets/drawings/${number.toLowerCase()}-preview.png?v=28`}" data-caption="${number} ${title[isZh ? 0 : 1]}" style="cursor:pointer; background:#fff; border:1px solid #e2e8f0; border-radius:12px; padding:16px; transition: transform 0.2s, box-shadow 0.2s;">
+      <article class="drawing-card image-button" data-image="${hdSrc || `assets/drawings/${number.toLowerCase()}-preview.png?v=29`}" data-caption="${number} ${title[isZh ? 0 : 1]}" style="cursor:pointer; background:#fff; border:1px solid #e2e8f0; border-radius:12px; padding:16px; transition: transform 0.2s, box-shadow 0.2s;">
         <div style="position:relative; aspect-ratio:1.42; overflow:hidden; border-radius:8px; margin-bottom:12px; border:1px solid #cbd5e1;">
-          <img src="assets/drawings/${number.toLowerCase()}-preview.png?v=28" alt="${number}" style="width:100%; height:100%; object-fit:cover; display:block;" loading="lazy">
+          <img src="assets/drawings/${number.toLowerCase()}-preview.png?v=29" alt="${number}" style="width:100%; height:100%; object-fit:cover; display:block;" loading="lazy">
           <span style="position:absolute; top:8px; left:8px; background:#0284c7; color:#fff; padding:2px 8px; border-radius:4px; font-size:0.75rem; font-weight:700;">${number}</span>
         </div>
         <h3 style="font-size:1.05rem; margin:0 0 6px; color:#0f172a;">${title[isZh ? 0 : 1]}</h3>
