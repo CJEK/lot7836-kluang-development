@@ -81,10 +81,10 @@ const styles = [
       '✅ 纯单层全龄宜居：零楼梯全平地布局，主卧套房+双次卧，配 20x15ft 遮阳双车位车廊。'
     ],
     images: [
-      { src: 'assets/style2-ext.jpg?v=37', label: ['1/4 正面 50ft 主立面基准 (车廊与风砖门廊)', '1/4 Front Main Facade Baseline'] },
-      { src: 'assets/style2-side.jpg?v=37', label: ['2/4 75ft 侧立面材质意向 (1.2m 挑檐与暗渠)', '2/4 75ft Side Material Concept'] },
-      { src: 'assets/style2-rear.jpg?v=37', label: ['3/4 45° 后院服务动线意向 (湿厨门与化粪池)', '3/4 45° Rear Service Yard Concept'] },
-      { src: 'assets/style2-int.jpg?v=37', label: ['4/4 室内 24ft 挑高客餐厅意向 (3.8m 桁架)', '4/4 Interior Hall Concept'] }
+      { src: 'assets/style2-ext.jpg?v=38', label: ['1/4 正面 50ft 主立面基准 (车廊与风砖门廊)', '1/4 Front Main Facade Baseline'] },
+      { src: 'assets/style2-side.jpg?v=38', label: ['2/4 75ft 侧立面材质意向 (1.2m 挑檐与暗渠)', '2/4 75ft Side Material Concept'] },
+      { src: 'assets/style2-rear.jpg?v=38', label: ['3/4 45° 后院服务动线意向 (湿厨门与化粪池)', '3/4 45° Rear Service Yard Concept'] },
+      { src: 'assets/style2-int.jpg?v=38', label: ['4/4 室内 24ft 挑高客餐厅意向 (3.8m 桁架)', '4/4 Interior Hall Concept'] }
     ]
   },
   {
@@ -98,10 +98,10 @@ const styles = [
       '✅ 挑高开放大厅：24ft 大面宽中央大厅结合裸露柚木屋架，室内视野极其开阔通透。'
     ],
     images: [
-      { src: 'assets/style1-ext.jpg?v=37', label: ['1/4 正面 50ft 主立面基准 (赤陶瓦与格栅)', '1/4 Front Main Facade Baseline'] },
-      { src: 'assets/style1-side.jpg?v=37', label: ['2/4 75ft 侧立面材质意向 (木格栅遮阳窗)', '2/4 75ft Side Material Concept'] },
-      { src: 'assets/style1-rear.jpg?v=37', label: ['3/4 45° 后院服务动线意向 (湿厨出口与草坪)', '3/4 45° Rear Service Yard Concept'] },
-      { src: 'assets/style1-int.jpg?v=37', label: ['4/4 室内 24ft 挑高客餐厅意向 (裸露柚木梁)', '4/4 Interior Hall Concept'] }
+      { src: 'assets/style1-ext.jpg?v=38', label: ['1/4 正面 50ft 主立面基准 (赤陶瓦与格栅)', '1/4 Front Main Facade Baseline'] },
+      { src: 'assets/style1-side.jpg?v=38', label: ['2/4 75ft 侧立面材质意向 (木格栅遮阳窗)', '2/4 75ft Side Material Concept'] },
+      { src: 'assets/style1-rear.jpg?v=38', label: ['3/4 45° 后院服务动线意向 (湿厨出口与草坪)', '3/4 45° Rear Service Yard Concept'] },
+      { src: 'assets/style1-int.jpg?v=38', label: ['4/4 室内 24ft 挑高客餐厅意向 (裸露柚木梁)', '4/4 Interior Hall Concept'] }
     ]
   },
   {
@@ -115,27 +115,27 @@ const styles = [
       '✅ 极简明亮空间：室内单层 3.8m 挑高纯白钢桁架天花结合抛光地坪，极简而富有质感。'
     ],
     images: [
-      { src: 'assets/style3-ext.jpg?v=37', label: ['1/4 正面 50ft 主立面基准 (纯白坡顶与深柚木百叶)', '1/4 Front Main Facade Baseline'] },
-      { src: 'assets/style3-side.jpg?v=37', label: ['2/4 75ft 侧立面材质意向 (连续百叶走廊)', '2/4 75ft Side Material Concept'] },
-      { src: 'assets/style3-rear.jpg?v=37', label: ['3/4 45° 后院服务动线意向 (户外水槽与排热顶)', '3/4 45° Rear Service Yard Concept'] },
-      { src: 'assets/style3-int.jpg?v=37', label: ['4/4 室内 24ft 挑高客餐厅意向 (纯白钢桁架)', '4/4 Interior Hall Concept'] }
+      { src: 'assets/style3-ext.jpg?v=38', label: ['1/4 正面 50ft 主立面基准 (纯白坡顶与深柚木百叶)', '1/4 Front Main Facade Baseline'] },
+      { src: 'assets/style3-side.jpg?v=38', label: ['2/4 75ft 侧立面材质意向 (连续百叶走廊)', '2/4 75ft Side Material Concept'] },
+      { src: 'assets/style3-rear.jpg?v=38', label: ['3/4 45° 后院服务动线意向 (户外水槽与排热顶)', '3/4 45° Rear Service Yard Concept'] },
+      { src: 'assets/style3-int.jpg?v=38', label: ['4/4 室内 24ft 挑高客餐厅意向 (纯白钢桁架)', '4/4 Interior Hall Concept'] }
     ]
   }
 ];
 
 const drawings = [
-  ['A-101', ['DWG A-101 2D 单层住宅建筑平面图', 'DWG A-101 Floor Plan'], ['50x75ft 地块、双 40ft HC 集装箱、20x15ft 双车位车廊、24ft 客餐厅、主卧套房+2次卧+干湿厨房。', '50x75ft footprint, twin 40ft HC containers, 2-car porch, 24ft living/dining, 3 beds, wet/dry kitchens.'], 'assets/floorplan-bp.jpg?v=37'],
-  ['A-102', ['DWG A-102 单层建筑正立面与标高图', 'DWG A-102 Elevation'], ['严格住宅标高：FL ±0.00m 地坪、+12ft 主屋檐 (1.2m 深挑檐) 与 +19ft 22° 经典热带坡屋脊。', 'Residential levels: FL ±0.00m slab, +12ft eave (1.2m overhang) and +19ft 22° pitch ridge.'], 'assets/elevation-bp.jpg?v=37'],
-  ['S-101', ['DWG S-101 集装箱切割加固 Detail', 'DWG S-101 Container Detail'], ['侧墙切割开窗、切口周圈 100x100x4.5mm RHS 方钢框焊接与 M20 锚栓加固。', '100x100x4.5mm RHS steel frame reinforcement & M20 anchor bolts.'], 'assets/container_splicing_blueprint.jpg?v=37'],
-  ['M-101', ['DWG M-101 干湿双厨房与集中排水图', 'DWG M-101 Kitchen & Drainage'], ['湿厨房 50L 隔油池、主客卫 DN100 黑水管(1:40坡度)及后区 8PE 生化化粪池。', 'Wet kitchen grease trap, DN100 blackwater pipe (1:40 slope) & 8PE septic tank.'], 'assets/kitchen_drainage_blueprint.jpg?v=37'],
-  ['F-101', ['DWG F-101 单层 BOMBA 消防逃生图', 'DWG F-101 Fire & Egress Plan'], ['平地双向出口、1.5m 门净宽、SD1-SD4 烟感、FE1-FE3 灭火器与 <12m 直线逃生距离。', 'Ground dual exits, 1.5m doors, SD1-SD4 detectors, FE1-FE3 extinguishers (<12m egress).'], 'assets/fire_safety_egress_blueprint.jpg?v=37'],
-  ['T-101', ['DWG T-101 5 大工程打压测试图', 'DWG T-101 T&C Testing Plan'], ['8 Bar 给水打压、24h 湿区闭水、4h 屋顶高压喷淋及 30mA RCCB 漏电测试。', '8 Bar water pressure, 24h flood test, 4h roof spray & 30mA RCCB tests.'], 'assets/tc_testing_blueprint.jpg?v=37'],
-  ['G-101', ['DWG G-101 单层总平面与退缩图', 'DWG G-101 Site Plan'], ['Jalan Pakis 沿街、指北针、15ft 前退缩 (双车位车廊)、10ft 后退缩与两侧 5ft 排水沟。', 'Jalan Pakis frontage, 15ft front (2-car porch), 10ft rear & 5ft side setbacks.'], 'assets/siteplan-bp.jpg?v=37'],
-  ['E-101', ['DWG E-101 三相供电与避雷接地图', 'DWG E-101 Electrical & Solar'], ['TNB 3-Phase 63A 配电箱、30mA RCCB、+19ft 屋脊纯铜避雷针与 10kW 光伏预留。', 'TNB 3-Phase 63A DB, 30mA RCCB, +19ft copper lightning rod & 10kW solar PV ready.'], 'assets/electrical_wiring_blueprint.jpg?v=37'],
-  ['X-101', ['DWG X-101 地基防白蚁防潮剖面图', 'DWG X-101 Foundation & Spec'], ['150mm 地坪、0.2mm HDPE 防潮隔气膜、MS 828 防白蚁屏障与 Standing Seam 坡屋面大样。', '150mm slab, 0.2mm HDPE DPM, MS 828 anti-termite barrier & standing seam detail.'], 'assets/soil_termite_waterproof_blueprint.jpg?v=37'],
-  ['D-101', ['DWG D-101 Batu Angin 花砖砌筑大样图', 'DWG D-101 Breeze Block Detail'], ['200x200mm 防裂花砖、Y10 镀锌竖向拉结钢筋(间距600mm)、100mm 方钢挑梁锚固。', '200x200mm breeze block masonry, Y10 rebar ties @ 600mm & steel beam anchorage.'], 'assets/breeze_block_detail_blueprint.jpg?v=37'],
-  ['K-101', ['DWG K-101 干湿双厨房与隔油池详图', 'DWG K-101 Kitchen Millwork & GT'], ['12ft 石英石干厨吧台、16ft 不锈钢湿厨台面、50L 隔油池安装位与 DN150 排烟风道。', '12ft quartz dry bar, 16ft stainless wet counter, 50L grease trap & DN150 exhaust.'], 'assets/kitchen_millwork_blueprint.jpg?v=37'],
-  ['M-102', ['DWG M-102 全屋空调与保温冷凝管图', 'DWG M-102 HVAC & Drain Scheme'], ['全屋 4 台空调 (6.0HP)、预埋 25mm PVC 保温暗管(1:50坡度)与右侧 5ft 减震机位。', '4 AC units (6.0HP), pre-embedded 25mm PVC insulated drains (1:50) & condenser ledge.'], 'assets/hvac_aircon_blueprint.jpg?v=37']
+  ['A-101', ['DWG A-101 2D 单层住宅建筑平面图', 'DWG A-101 Floor Plan'], ['50x75ft 地块、双 40ft HC 集装箱、20x15ft 双车位车廊、24ft 客餐厅、主卧套房+2次卧+干湿厨房。', '50x75ft footprint, twin 40ft HC containers, 2-car porch, 24ft living/dining, 3 beds, wet/dry kitchens.'], 'assets/floorplan-bp.jpg?v=38'],
+  ['A-102', ['DWG A-102 单层建筑正立面与标高图', 'DWG A-102 Elevation'], ['严格住宅标高：FL ±0.00m 地坪、+12ft 主屋檐 (1.2m 深挑檐) 与 +19ft 22° 经典热带坡屋脊。', 'Residential levels: FL ±0.00m slab, +12ft eave (1.2m overhang) and +19ft 22° pitch ridge.'], 'assets/elevation-bp.jpg?v=38'],
+  ['S-101', ['DWG S-101 集装箱切割加固 Detail', 'DWG S-101 Container Detail'], ['侧墙切割开窗、切口周圈 100x100x4.5mm RHS 方钢框焊接与 M20 锚栓加固。', '100x100x4.5mm RHS steel frame reinforcement & M20 anchor bolts.'], 'assets/container_splicing_blueprint.jpg?v=38'],
+  ['M-101', ['DWG M-101 干湿双厨房与集中排水图', 'DWG M-101 Kitchen & Drainage'], ['湿厨房 50L 隔油池、主客卫 DN100 黑水管(1:40坡度)及后区 8PE 生化化粪池。', 'Wet kitchen grease trap, DN100 blackwater pipe (1:40 slope) & 8PE septic tank.'], 'assets/kitchen_drainage_blueprint.jpg?v=38'],
+  ['F-101', ['DWG F-101 单层 BOMBA 消防逃生图', 'DWG F-101 Fire & Egress Plan'], ['平地双向出口、1.5m 门净宽、SD1-SD4 烟感、FE1-FE3 灭火器与 <12m 直线逃生距离。', 'Ground dual exits, 1.5m doors, SD1-SD4 detectors, FE1-FE3 extinguishers (<12m egress).'], 'assets/fire_safety_egress_blueprint.jpg?v=38'],
+  ['T-101', ['DWG T-101 5 大工程打压测试图', 'DWG T-101 T&C Testing Plan'], ['8 Bar 给水打压、24h 湿区闭水、4h 屋顶高压喷淋及 30mA RCCB 漏电测试。', '8 Bar water pressure, 24h flood test, 4h roof spray & 30mA RCCB tests.'], 'assets/tc_testing_blueprint.jpg?v=38'],
+  ['G-101', ['DWG G-101 单层总平面与退缩图', 'DWG G-101 Site Plan'], ['Jalan Pakis 沿街、指北针、15ft 前退缩 (双车位车廊)、10ft 后退缩与两侧 5ft 排水沟。', 'Jalan Pakis frontage, 15ft front (2-car porch), 10ft rear & 5ft side setbacks.'], 'assets/siteplan-bp.jpg?v=38'],
+  ['E-101', ['DWG E-101 三相供电与避雷接地图', 'DWG E-101 Electrical & Solar'], ['TNB 3-Phase 63A 配电箱、30mA RCCB、+19ft 屋脊纯铜避雷针与 10kW 光伏预留。', 'TNB 3-Phase 63A DB, 30mA RCCB, +19ft copper lightning rod & 10kW solar PV ready.'], 'assets/electrical_wiring_blueprint.jpg?v=38'],
+  ['X-101', ['DWG X-101 地基防白蚁防潮剖面图', 'DWG X-101 Foundation & Spec'], ['150mm 地坪、0.2mm HDPE 防潮隔气膜、MS 828 防白蚁屏障与 Standing Seam 坡屋面大样。', '150mm slab, 0.2mm HDPE DPM, MS 828 anti-termite barrier & standing seam detail.'], 'assets/soil_termite_waterproof_blueprint.jpg?v=38'],
+  ['D-101', ['DWG D-101 Batu Angin 花砖砌筑大样图', 'DWG D-101 Breeze Block Detail'], ['200x200mm 防裂花砖、Y10 镀锌竖向拉结钢筋(间距600mm)、100mm 方钢挑梁锚固。', '200x200mm breeze block masonry, Y10 rebar ties @ 600mm & steel beam anchorage.'], 'assets/breeze_block_detail_blueprint.jpg?v=38'],
+  ['K-101', ['DWG K-101 干湿双厨房与隔油池详图', 'DWG K-101 Kitchen Millwork & GT'], ['12ft 石英石干厨吧台、16ft 不锈钢湿厨台面、50L 隔油池安装位与 DN150 排烟风道。', '12ft quartz dry bar, 16ft stainless wet counter, 50L grease trap & DN150 exhaust.'], 'assets/kitchen_millwork_blueprint.jpg?v=38'],
+  ['M-102', ['DWG M-102 全屋空调与保温冷凝管图', 'DWG M-102 HVAC & Drain Scheme'], ['全屋 4 台空调 (6.0HP)、预埋 25mm PVC 保温暗管(1:50坡度)与右侧 5ft 减震机位。', '4 AC units (6.0HP), pre-embedded 25mm PVC insulated drains (1:50) & condenser ledge.'], 'assets/hvac_aircon_blueprint.jpg?v=38']
 ];
 
 let activeGallery = [];
